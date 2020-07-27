@@ -1,0 +1,58 @@
+.investigaciones {
+	display: block;
+	@include mq('md') {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&-block {
+		display: block;
+		min-height: rem(200px);
+		text-align: center;
+		padding: rem(30px);
+		@include bgcover;
+		border-bottom: rem(10px) solid $white;
+		@include mq('md') {
+			width: 50%;
+			min-height: rem(400px);
+			padding: rem(60px) rem(30px);
+			border-bottom: rem(20px) solid $white;
+		}
+
+		&:nth-child(odd) {
+			@include mq('md') {
+				border-right: rem(10px) solid $white;
+			}
+		}
+
+		&:nth-child(even) {
+			@include mq('md') {
+				border-left: rem(10px) solid $white;
+			}
+		}
+		
+		img {
+			display: inline-block;
+			max-width: 100%;
+		}
+
+		.investigaciones-block--white { 
+			display: none;
+		}
+
+		&:hover {
+			.investigaciones-block--white {
+				display: inline-block;
+			}
+			.investigaciones-block--color {
+				display: none;
+			}
+		}
+
+		h2 {
+			a {
+				color: $white;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+.congreso-footer {
+	padding: rem(12px);
+	margin: 0 0 0 0;
+	background-color: $l-blue;
+	&__wrapper {
+		display: block;
+		text-align: center;
+		@include mq('md'){
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&-item {
+			padding: rem(10px) rem(40px);
+			@include mq('md'){
+				padding: rem(10px) rem(40px);
+			}
+			p,
+			a {
+				color: $white;
+			}
+			img {
+				display: inline-block;
+			}
+		}
+	}
+}

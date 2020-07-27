@@ -1,0 +1,92 @@
+.wpcf7 {
+	form {
+		input {
+			&[type="text"],
+			&[type="email"],
+			&[type="tel"],
+			&[type="date"],
+			&[type="number"] {
+				display: block;
+				color: $gray;
+				border-radius: 0;
+				width: 100%;
+				height: auto;
+				background-color: $gray-e6;
+				border: rem(1px) solid $gray-d8;
+				padding: rem(10px);
+				@include placeholder {
+					color: $gray;
+				}
+			}
+
+			&[type="submit"] {
+				margin: rem(20px) 0;
+				@include marineBtn(14px);
+			}
+		}
+		select {
+			display: block;
+			color: $gray;
+			border-radius: 0;
+			width: 100%;
+			height: auto;
+			border: rem(1px) solid $gray-d8;
+			background-color: $gray-e6;
+			padding: rem(10px);
+		}
+		textarea {
+			display: block;
+			color: $gray;
+			border-radius: 0;
+			width: 100%;
+			border: rem(1px) solid $gray-d8;
+			background-color: $gray-e6;
+			padding: rem(10px);
+			@include placeholder {
+				color: $gray;
+			}
+		}
+	}
+}
+
+// Form layout
+.form {
+	&-wrap {
+		@include mq('md') {
+			display: flex;
+			flex-wrap: wrap;
+			text-align: left;
+		}
+	}
+
+	&-col {
+		padding: rem(20px);
+		@include mq('md') {
+			width: 33.3%;
+			padding: inherit;
+			padding-right: rem(15px);
+		}
+
+		&:last-child {
+			@include mq('md') {
+				padding-right: 0;
+			}
+		}
+
+		br {
+			display: none;
+		}
+		span {
+			&.wpcf7-form-control-wrap {
+				display: block;
+				margin-bottom: rem(20px);
+			}
+		}
+	}
+}
+
+.disclaimer {
+	padding: rem(25px) 0;
+	margin: rem(20px) auto;
+	background-color: $gray-e6;
+}

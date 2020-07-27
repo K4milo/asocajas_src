@@ -1,0 +1,60 @@
+section {
+	&#giass-info {
+		.block1 {
+			display: block;
+			padding: rem(20px) 0;
+			@include mq('md') {
+				padding: rem(50px) 0;
+			}
+
+			&--logo,
+			&--text {
+				display: block;
+				text-align: center;
+				@include mq('md') {
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+			
+			&--logo {
+				@include mq('md') {
+					width: 40%;
+				}
+				img {
+					max-width: 100%;
+				}
+			}
+			&--text {
+				@include mq('md') {
+					width: 59%;
+					padding-left: rem(30px);
+					border-left: rem(3px) solid;
+					text-align: left;
+				}
+			}				
+		}
+
+		// Second content
+		.block2 {
+			padding: rem(20px) 0;
+			text-align: center;
+			@include mq('md') {
+				display: flex;
+				flex-wrap: wrap;
+				text-align: left;
+			}
+			&--col1 {
+				@include mq('md') {
+					padding-right: rem(30px);
+					width: 50%;
+				}
+			}
+			&--col2 {
+				@include mq('md') {
+					width: 50%;
+				}
+			}
+		}
+	}
+}

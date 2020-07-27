@@ -1,0 +1,44 @@
+.event-ponents {
+	display: block;
+	@include mq('md') {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&-item {
+		padding: rem(20px);
+		display: block;
+		text-align: center;
+		margin: rem(10px) auto;
+		cursor: pointer;
+		@include mq('md') {
+			width: 20%;
+			margin: rem(10px) rem(22px);
+		}
+
+		img {
+			border-radius: 50%;
+			display: block;
+			margin: 0 auto rem(15px);
+		}
+
+		h4 {
+			font-family: $bd;
+		}
+
+		&-caption {
+			display: none;
+		}
+	}
+}
+
+.modalmessage {
+	max-width: rem(600px);
+	text-align: center;
+	figure {
+		padding: rem(10px);
+		img {
+			border-radius: 50%;
+			display: inline-block;
+		}
+	}
+}

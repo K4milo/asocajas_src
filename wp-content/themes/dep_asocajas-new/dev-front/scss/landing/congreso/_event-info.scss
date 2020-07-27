@@ -1,0 +1,89 @@
+
+body {
+	&.page-template-templates_congreso-tpl-php {
+		.event-info {
+			padding: rem(12px) 0 rem(30px);
+			background-color: $l-purple;
+
+			@include mq('md') {
+				margin-top: 50px;
+			}
+
+			&-wrapper {
+				display: block;
+				position: relative;
+				padding: rem(22px) 0 0;
+				@include mq('md') {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				// Pattern wave
+				&::before {
+					content: "";
+					display: block;
+					width: 100%;
+					height: rem(30px);
+					@include iconBg('../images/misc/top-wave-purple.svg',116%);
+					position: absolute;
+					top: rem(-30px);
+					left: 0;
+				}
+
+				&__date,
+				&__place {
+					position: relative;
+					padding: rem(12px) rem(12px) rem(12px) rem(62px);
+					margin: 0 rem(16px);
+					color: $white;
+					@include mq('md') {
+						max-width: rem(400px);
+					}
+					&::before {
+						content:"";
+						width: rem(45px);
+						height: rem(45px);
+						@include center('vertical');
+						left: 0;
+					}
+
+					a {
+						color: $white;
+					}
+
+					h3 {
+						@include font(22px);
+					}
+				 }
+
+				&__date {
+					&:before {
+						@include iconBg('../images/icons/gradient-calendar.svg');
+					}
+				}
+				&__place {
+					&:before {
+						@include iconBg('../images/icons/gradient-pointer.svg');
+					}
+				}
+			}
+
+			&-cta {
+				text-align: center;
+				padding: rem(16px) 0 rem(32px);
+				a {
+
+					h3 {
+						margin: 0 0;
+						@include outlineBtn(rem(14px), $white ,$l-pink2);
+						background-color: $l-pink;
+						&:hover {
+							background-color: $l-blue;
+						}
+					}
+				}
+			}
+		}
+	}
+}

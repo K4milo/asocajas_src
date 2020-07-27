@@ -1,0 +1,61 @@
+.objetivo{
+  display: block;
+  background-image: linear-gradient(to right, $lp-yellowLeft ,$lp-yellowRigth );
+
+  @include mq('md') {
+    padding: rem(30px) rem(100px);
+    display: flex;
+
+  }
+  &--contentLeft {
+    display: block;
+    text-align: center;
+    padding: rem(20px);
+    @include mq('md') {
+      text-align: left;
+      width: 50%;
+
+
+    }
+
+    h3 {
+      text-transform: uppercase;
+      color: $white;
+    }
+    p {
+      color: $white;
+    }
+  }
+  .iconos {
+    display: block;
+    padding: rem(20px);
+    @include mq('md') {
+      width: 50%;
+      display: flex;
+
+    }
+    &--item{
+      display: block;
+      text-align: center;
+      margin: rem(20px) auto;
+      @include mq('md') {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        margin: rem(20px) rem(10px);
+      }
+
+      img {
+        max-width: 100%;
+        display: inline-block;
+
+      }
+      p{
+        text-align: center;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+}

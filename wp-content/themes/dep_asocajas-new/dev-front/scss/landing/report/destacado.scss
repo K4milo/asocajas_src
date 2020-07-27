@@ -1,0 +1,56 @@
+section {
+	&#destacado {
+		@include wrapper;
+		min-height: rem(540px);
+		
+		@include mq('md') {
+			padding: rem(38px);
+		}
+
+		@include mq('hd') {
+			margin-top: rem(200px);
+		}
+
+		width: 100%;
+    .destacado-texto{
+
+h1 {
+	font-size:rem(40px);
+	color: $naranja;
+	padding: 0 0 rem(35px);
+	line-height: 1;
+	margin-top: 0;
+	@include mq('md') {
+		font-size:rem(130px);
+	}
+
+}
+p{
+
+}
+    }
+    .destacado-item{
+
+    }
+    .item{
+      	background-color: $naranja;
+		padding: rem(35px);
+		margin: rem(20px) auto;
+		position: relative;
+		&::after {
+			@include mq('md') {
+				content:"";
+				display: block;
+				@include arrow('left', $naranja, rem(30px));
+				position: absolute;
+				bottom: rem(20px);
+				left: rem(-27px);
+			}
+		}
+    }
+		.item p{
+			color: $white;
+			font-size:rem(30px);
+		}
+  }
+}

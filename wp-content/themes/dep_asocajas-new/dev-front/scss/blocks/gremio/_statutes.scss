@@ -1,0 +1,43 @@
+.statute {
+	display: none;
+	text-align: center;
+	min-height: rem(100px);
+	@include bgcover;
+	padding: rem(35px) 0;
+	@include mq('md') {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&--item {
+		text-align: center;
+		padding: 0 rem(22px);
+		@include mq('md') {
+			width: 50%;
+		}
+
+		img {
+			display: block;
+			margin: rem(12px) auto;
+		}
+
+		a {
+			margin: rem(14px) auto;
+			@include marineBtn(14px); 
+		}
+		&:first-child {
+			@include mq('md') {
+				border-right: rem(3px) solid $white;
+			}
+		}
+	}
+}
+
+.organigram-item {
+	text-align: center;
+	img {
+		display: inline-block;
+		max-width: 100%;
+		height: auto;
+	}
+}

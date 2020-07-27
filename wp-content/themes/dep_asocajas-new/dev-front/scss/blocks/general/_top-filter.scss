@@ -1,0 +1,60 @@
+.wrapper-form {
+	&.filter {
+		margin: rem(10px) auto;
+		form {
+			font-family: $rg;
+			text-align: center;
+			background-color: $blue-dk;
+			padding: rem(20px);
+			@include mq('md') {
+				padding: inherit;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				padding: rem(10px) rem(12px);
+			}
+			.form-item {
+				display: block;
+				margin: rem(10px) auto;				
+				
+				&--select {
+					@include mq('md') {
+						width: 20%;
+					}
+					select {
+						@include mq('md') {
+							margin-top: rem(5px);
+						}
+					}
+				}
+				&--label {
+					@include mq('md') {
+						width: 10%;
+					}
+					color: $white;
+				}
+				&--actions {
+					@include mq('md') {
+						width: 34%;
+					}
+
+					> span {
+						display: inline-block;
+						vertical-align: middle;
+						margin: 0 rem(10px);
+					}
+
+					input,
+					a {						
+						@include marineBtn(14px);
+					}
+
+					a {
+						background-color: $white;
+						color: $blue;
+					}
+				}
+			}
+		}
+	}
+}

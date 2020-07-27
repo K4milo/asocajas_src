@@ -1,0 +1,50 @@
+.box {
+	text-align: center;
+	&-wrapf {
+		display: block;
+		padding: rem(20px);
+		@include mq('md') {
+			padding: rem(40px) rem(20px);
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	
+	&--col1,
+	&--col2 {
+		padding: 0 rem(20px);
+	}
+
+	&--col1 {
+		display: block;
+		text-align: left;
+		@include mq('md') {
+			width: 60%;
+			padding: 0 rem(40px);		
+		}
+	}
+	&-col2 {
+		display: block;
+		text-align: center;
+		@include mq('md') {
+			width: 40%;
+		}
+		.img {
+			display: inline-block;
+			vertical-align: top;
+			width: 49%;
+			margin: 0 rem(10px) (20px);
+			@include mq('md') {
+				width: 28%;
+			}
+		}
+	}
+
+	&--cat--img {
+		display: inline-block;
+		margin: 0 rem(20px);
+		img {
+			max-width: 100%;
+		}
+	}
+}

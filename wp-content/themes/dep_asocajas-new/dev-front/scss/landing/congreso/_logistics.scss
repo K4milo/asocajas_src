@@ -1,0 +1,49 @@
+.logistics {
+	@include mq('md') {
+		padding: rem(30px) rem(10px);
+		background-color: transparent;
+		background-image: url('../images/bgs/bg-logistics.png');
+		@include bgcover;
+		background-position: bottom center;
+	}
+
+	&__wrapper {
+		display: block;
+		position: relative;
+		
+		@include mq('md') {
+			display: flex;
+			justify-items: center;
+		}
+
+		&-item {
+			text-align: center;
+			background-color: $gray-f6;
+			h3 {
+				display: block;
+				padding: rem(16px) rem(10px);
+				color: $white;
+				font-family: $rg;
+				margin: 0 0;
+				@include font(16px);
+				@include background-gradient($l-pink,$l-purple,'horizontal');
+			}
+
+			img {
+				display: inline-block;
+				max-width: 70%;
+				border-radius: 100%;
+				margin: rem(30px) 0 rem(12px);
+			}
+
+			@include mq('md') {
+				width: 25%;
+				margin: rem(12px);
+			}
+
+			.informacion-logistica {
+				padding: rem(12px) rem(16px);
+			}
+		}
+	}
+}

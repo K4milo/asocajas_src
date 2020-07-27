@@ -1,0 +1,58 @@
+.page-template-templates_premio-tpl-php {
+	.event-ponents {
+		display: block;
+		@include mq('md') {
+			display: block;
+			flex-wrap: unset;
+		}
+
+		&-item {
+			position: relative;
+			margin: rem(10px) rem(16px) rem(25px);
+			min-height: rem(320px);
+			@include mq('md') {
+				min-height: rem(420px);
+				margin: rem(10px) rem(22px) rem(31px);
+			}
+
+
+			img {
+				border-radius: 50%;
+				display: block;
+				margin: 0 auto rem(15px);
+			}
+
+			h4 {
+
+			}
+
+			&-caption {
+
+			}
+		}
+	}
+}
+.jurados {
+	background-color: $lp-gris;
+	text-align: center;
+	@include mq('md') {
+		padding: rem(30px) rem(100px);
+		text-align: left;
+	}
+	// Header
+	&__header {
+		padding-top: rem(32px);
+
+		> span {
+			text-align: center;
+			display: inline-block;
+			color: $lp-purple;
+			@include mq('md') {
+				text-align: left;
+			}
+			img {
+				display: inline-block;
+			}
+		}
+	}
+}

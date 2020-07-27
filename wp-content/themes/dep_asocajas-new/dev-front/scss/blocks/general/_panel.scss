@@ -1,0 +1,32 @@
+body {
+	.panel {
+		
+		&-group {
+			min-height: 56vh;
+		}
+
+		&-default {
+			border: none;
+			box-shadow: none;
+		}
+		
+		&-heading {
+			background-color: $white !important;
+			padding: rem(20px) 0;
+			border-bottom: rem(2px) solid $gray !important;
+			h4 {
+				text-transform: uppercase;
+				font-family: $bd;
+				@include font(20px);
+				@include mq('md') {
+					@include font(36px);
+				}
+			}
+		}
+		
+		&-body {
+			border: none !important;
+			padding: rem(35px) 0; 
+		}
+	}
+}

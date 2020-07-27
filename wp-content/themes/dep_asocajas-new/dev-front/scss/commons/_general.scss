@@ -1,0 +1,74 @@
+body {
+	font-family: $rg;
+	font-size: 16px;
+	margin-top: 0;
+	color: $gray;
+	max-width: 1280px;
+	width: 100%;
+	margin: 0 auto;
+	strong,
+	b, h1, h2, h3 {
+		font-family: $bd;
+	}
+
+	// Link styles
+
+	a {
+		transition: all 0.3s;
+		&:hover {
+			transition: all 0.2s;
+		}
+	}
+}
+.visible-desktop {
+	display: none !important;
+	@include mq('sm') {
+		display: block !important;
+	}
+}
+.visible-mobile {
+	display: block !important;
+	@include mq('sm') {
+		display: none !important;
+	}
+}
+// Social menu
+#menu-menu-redes,
+#menu-menu-redes-1 {
+	li {
+		display: inline-block;
+		vertical-align: top;
+		width: rem(32px);
+		height: rem(32px);
+		margin: 0 rem(5px);
+		margin-left: 20px;
+		a {
+			display: block;
+			width: rem(47px);
+			height: rem(47px);
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		&.facebook {
+			a {
+				@include iconBg('../images/icons/facebook.svg', 47px);
+			}
+		}
+		&.twitter {
+			a {
+				@include iconBg('../images/icons/twitter.svg', 47px);
+			}
+		}
+		&.youtube {
+			a {
+				@include iconBg('../images/icons/youtube.svg', 47px);
+			}
+		}
+		&.instagram {
+			a {
+				@include iconBg('../images/icons/insta.svg', 47px);
+			}
+		}
+	}
+}

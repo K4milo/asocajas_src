@@ -1,0 +1,52 @@
+.subscriptions {
+	position: relative;
+	padding: rem(12px);
+
+	header {
+		padding: rem(20px) 0;
+	}
+
+	&-form {
+		background-color: $l-pink;
+		@include mq('md') {
+			padding: rem(70px) rem(10px) rem(170px);
+			background-color: transparent;
+			background-image: url('../images/bgs/bg-form-landing.png');
+			@include bgcover;
+			background-position: top center;
+		}
+
+		&__wrapper {
+			&-side {
+				h3 {
+					color: $white;
+					text-transform: uppercase;
+				}
+				.wpcf7-form-control-wrap {
+					input {
+						&[type="text"],
+						&[type="email"],
+						&[type="tel"],
+						&[type="date"],
+						&[type="number"] {
+							color: $gray;
+							border-radius: rem(30px);
+							background-color: $white;
+							border: rem(1px) solid $gray-d8;
+							padding: rem(10px) rem(22px);
+							@include placeholder {
+								color: $gray;
+							}
+						}	
+					}
+				}
+			
+				&.right {
+					@include mq('md') {
+						margin-top: rem(100px);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+#investigacion-titulo {
+	padding: rem(30px) 0;
+	@include mq('md') {
+		padding: rem(70px) rem(20px);
+	}
+}
+
+.hero {
+	text-align: center;
+	&--caption,
+	&--icon {
+		display: inline-block;		
+	}
+
+	&--caption {
+		width: 55%;
+		@include mq('md') {
+			padding: 0 rem(25px);
+		}
+		p {
+			@include font(18px);
+		}
+	}
+	&--icon {
+		width: 20%;
+		img {
+			max-width: 90%;
+			height: auto;
+		}
+
+		&.icon--1 {
+			vertical-align: top;
+			@include mq('md') {
+				margin-top: rem(-45px);
+			}
+		}
+
+		&.icon--2 {
+			vertical-align: bottom;
+			@include mq('md') {
+				margin-top: rem(45px);
+			}
+		}		
+	}
+}

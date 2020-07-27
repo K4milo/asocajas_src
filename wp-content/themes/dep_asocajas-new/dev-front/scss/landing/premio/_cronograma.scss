@@ -1,0 +1,86 @@
+.cronograma {
+  padding: rem(25px);
+  @include mq('md') {
+		padding: rem(30px) rem(100px);
+	}
+
+  // Header
+  &__header {
+    padding-top: rem(32px);
+    text-align: center;
+    @include mq('md') {
+      text-align: left;
+    }
+    > span {
+      text-align: center;
+      display: inline-block;
+      color: $lp-azul2;
+      @include mq('md') {
+        text-align: left;
+      }
+      img {
+        display: inline-block;
+      }
+    }
+  }
+
+  // Wrapper items
+
+  .fechas {
+  	padding: rem(20px);
+  	text-align: center;
+    @include mq('md') {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+    }
+  	&--item {
+  		display: block;
+  		margin: rem(20px) auto;
+      @include mq('md') {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+  		img {
+  			max-width: 100%;
+  			display: inline-block;
+  		}
+
+      &.Lanzamiento {
+        p {
+          color: $lp-dkpurple;
+        }
+      }
+      &.Postulaciones {
+        p {
+          color: $lp-salmon;
+        }
+      }
+      &.postulados {
+        p {
+          color: $lp-purple;
+        }
+      }
+      &.finalistas {
+        p {
+          color: $lp-navy;
+        }
+      }
+      &.Ceremonia {
+        p {
+          color: $lp-azul2;
+        }
+      }
+
+      p {
+        text-align: center !important;
+        text-transform: uppercase;
+        margin-top: rem(16px);
+        @include font(15px);
+        @include mq('md') {
+          @include font(18px);
+        }
+      }
+  	}
+  }
+}

@@ -1,0 +1,108 @@
+.sobre-congreso {
+	background-color: $gray-lt;
+	padding: rem(20px);
+	@include mq('md') {
+		padding: rem(40px);
+	}
+
+	h5 {
+		font-family: $bd;
+		color: $l-pink;
+		text-transform: uppercase;
+	}
+
+	h5, p, ol {
+		@include mq('md') {
+			margin-bottom: rem(16px);
+			padding-left: rem(40px);
+		}
+	}
+
+	ol {
+		li {
+			margin-bottom: rem(20px);
+		}
+	}
+
+	&__wrapper {
+		margin: rem(20px) auto 0;
+		@include mq('md') {
+			display: flex;
+			flex-flow: row wrap;
+			max-width: rem(1200px);
+		}
+	}
+
+	&-info {
+		@include mq('md') {
+			width: 50%;
+		}
+
+		header {
+			display: inline-block;
+			padding: rem(12px) 0;
+			margin-bottom: 16px;
+			border-bottom: rem(2px) solid $l-pink;
+		}
+
+		h4 {
+			display: inline-block;
+			font-family: $bd;
+			margin: 0 0 rem(9px);
+			padding-left: rem(30px); 
+			color: $l-pink;
+			text-transform: uppercase;
+		}
+
+		&__item {
+			margin: rem(12px); 
+			background-color: $white;
+			padding: rem(20px);
+			
+			@include mq('md') {
+				padding: rem(20px) rem(30px) rem(30px) 0;
+			}
+
+			&.tarifa {
+				
+				header {
+					display: block;
+				}
+
+				.tarifa__wrapper-item {
+					@include mq('md') {
+						width: 49%;
+						padding: 0 rem(16px);
+						display: inline-block;
+						vertical-align: top;
+						&:nth-child(2) {
+							border-right: rem(1px) solid $gray;
+						}
+					}
+				}
+			}
+		}
+
+		&-last {
+			@include mq('md') {
+				flex: 1 100%;
+			}
+		}
+	}
+
+	&-terms {
+		text-align: center;
+		padding-left: rem(20px);
+		img {
+			display: inline-block;
+			max-width: rem(300px);
+			margin: rem(40px) auto;
+		}
+
+		p {
+			display: block;
+			margin: rem(10px) auto;
+			max-width: rem(850px);
+		}
+	}
+}

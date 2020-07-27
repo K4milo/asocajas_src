@@ -1,0 +1,37 @@
+.cifras_titulo
+{
+    h2
+    {
+        color: #174886;
+        font-size: rem(40px);
+        margin: 0 0 70px;
+    }
+}
+.cifras__wrapper-item
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    div
+    {
+        width: 90%;
+        margin: 0 auto 90px;
+        text-align: center;
+    }
+    img
+    {
+        margin: 0 auto;
+        display: block;
+    }
+    h1
+    {
+        color: #34b6be;
+        font-size: rem(50px);
+    }
+    
+    p
+    {
+        color: #434244;
+        font-size: rem(18px);
+    }
+}

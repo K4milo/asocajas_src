@@ -1,0 +1,68 @@
+.pod-magazines {
+	padding: rem(20px) 0;
+	
+	&--wrapper {
+		@include mq('md') {
+			display: flex;
+			flex-wrap: wrap;
+		}	
+	}
+
+	&--item {
+		display: block;
+		text-align: center;
+		padding: rem(10px);
+		position: relative;
+		transition: all 0.3s;
+		@include mq('md') {
+			width: 25%;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+			box-shadow: 0 0 rem(10px) $gray-e6;
+		}
+	}
+
+	&--thumb {
+		display: block;
+		margin: 0;
+		width: 100%;
+		height: rem(260px);
+		position: relative;
+		@include bgcover;
+		a {
+			display: block;
+			@include coverAbsolute(1);
+		}
+	}
+
+	&--caption {
+		background-color: $white;
+		padding: rem(17px);
+		text-align: left;
+		h3 {
+			margin-top: 0;
+			position: relative;
+			a {
+				@include font(20px);
+				color: $gray;
+			}
+		}
+		h4 {
+			@include font(18px);
+			display: inline-block;
+			position: relative;
+			padding-left: rem(32px);
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				width: rem(22px);
+				height: rem(22px);
+				@include iconBg('../images/icons/clock.svg', 22px);
+			}
+		}
+	}
+}

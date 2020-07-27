@@ -1,0 +1,89 @@
+body {
+
+	&.page-template-templates_premio-tpl-php {
+      background-image: url('../images/bgs/bg-premio.png');
+			background-size: contain;
+		nav {
+			&.navbar {
+				background-color: $lp-green;
+				&.scroll_menu {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					z-index: 10;
+				}
+				.navbar-collapse {
+					ul {
+						&.navbar-nav {
+							> li {
+                  border: 2px solid $white;
+								&.active {
+									a {
+										color: $white;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+      .navbar-header {
+        @include mq('sm') {
+          display: inline-block !important;
+          vertical-align: middle;
+          float: none;
+        }
+        .navbar-brand {
+          @include iconBg('../images/brand/logoPremio.png', 93px);
+          width: rem(186px);
+          height: rem(65px);
+        }
+      }
+		}
+	}
+
+}
+body{
+	&.page-template-templates_formularioFec-tpl-php {
+
+		nav {
+			&.navbar {
+				background-color: $lp-green;
+				&.scroll_menu {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					z-index: 10;
+				}
+				.navbar-collapse {
+					ul {
+						&.navbar-nav {
+							> li {
+									border: 2px solid $white;
+								&.active {
+									a {
+										color: $white;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.navbar-header {
+				@include mq('sm') {
+					display: inline-block !important;
+					vertical-align: middle;
+					float: none;
+				}
+				.navbar-brand {
+					@include iconBg('../images/brand/logoPremio.png', 93px);
+					width: rem(186px);
+					height: rem(65px);
+				}
+			}
+		}
+	}
+}

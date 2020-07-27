@@ -1,0 +1,41 @@
+section {
+	&#CorporateValues {
+		text-align: center;
+		display: block;
+		@include mq('md') {
+			margin-top: rem(40px);
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.corporate-value {
+			display: block;
+			text-align: center;
+			padding: rem(35px) rem(22px);
+			min-height: rem(400px);
+			@include bgcover;
+			
+			@include mq('md') {
+				width: 50%;
+				padding: rem(85px) rem(62px);
+			}
+
+			img {
+				display: none;
+			}
+
+			&--caption {
+				text-align: center;
+				color: $white;
+				text-shadow: 0 0 rem(10px) $black;
+				h2 {
+					text-transform: uppercase;
+					@include font(50px);
+				}
+				p {
+					@include font(20px);
+				}
+			}
+		}
+	}
+}

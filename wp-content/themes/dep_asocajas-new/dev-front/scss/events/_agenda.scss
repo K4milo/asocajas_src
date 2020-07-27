@@ -1,0 +1,36 @@
+.event-agenda {
+	&-item {
+		padding: rem(20px) 0;
+		&-heading {
+			h3 {
+				text-transform: uppercase;
+				margin: 0 0;
+				padding: 0 0 rem(10px);
+				position: relative;
+				display: inline-block;
+				&::after {
+					content: "";
+					@include background-gradient($green, $aqua, 'horizontal');					
+					display: block;
+					position: absolute;
+					width: 100%;
+					height: rem(5px);
+					left: 0;
+					bottom: 0;
+				}
+			}
+		}
+		&-body {
+			table {
+				td {
+					padding: rem(10px);
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+#eventAgenda {
+	background-color: $gray-f6;
+}

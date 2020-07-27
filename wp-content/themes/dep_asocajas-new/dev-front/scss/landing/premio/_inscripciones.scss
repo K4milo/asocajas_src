@@ -1,0 +1,46 @@
+#inscripciones {
+	min-height: rem(300px);
+	background-size: cover;
+	background-position: bottom right;
+	@include mq('md') {
+		min-height: rem(650px);
+		padding: rem(30px) rem(100px);
+	}
+	.inscripciones {
+		padding: rem(25px);
+		&__header {
+			text-align: left;
+			> span {
+				text-align: left;
+				display: inline-block;
+				color: $white;
+				img {
+					display: inline-block;
+				}
+			}
+		}
+
+		&__info {
+			&-side {
+				color: $white;
+				@include mq('md') {
+					width: 50%;
+				}
+
+				h3 { display: none; }
+
+				p {
+					text-align: left;
+					a {
+						display: inline-block;
+						padding: rem(12px) rem(60px);
+						text-align: center;
+						font-family: $bd;
+						color: $white;
+						background-color: $lp-purple;
+					}
+				}
+			}
+		}
+	}
+}

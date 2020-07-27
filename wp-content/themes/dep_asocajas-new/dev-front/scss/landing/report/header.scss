@@ -1,0 +1,97 @@
+body {
+	&.page-template-_landing-tpl {
+		background-position: top center;
+		background-image: url('../images/bgs/bg-landing.jpg');
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+
+.landing {
+  position: relative;
+  margin: 0 0 0 0;
+  border: none;
+  background-color: $morado;
+}
+
+.nav-creamos {
+	text-align: center;
+	padding: rem(12px);
+	&-wrapper {
+		@include mq('md') {
+			padding: rem(40px);
+			display: flex;
+			flex-wrap: wrap;
+			align-content: center;
+			justify-content: center;
+		}
+	}
+
+	&-brand,
+	&-menu,
+	&-sponsor {
+		
+		float: none;
+		display: block;
+		
+	}
+
+	&-sponsor,
+	&-brand {
+		text-align: left;
+		@include mq('md') {
+			width: 20%;
+		} 
+		img {
+			display: inline-block;
+			max-width: 100%;
+		}
+	}
+
+	&-sponsor {
+		text-align: right;
+	}
+
+	&-menu {
+		@include mq('md') {
+			width: 60%;
+		}
+		// Menu
+		ul {
+			&.navbar-nav {
+				float: none;
+				clear: both;
+				text-align: center;
+				> li {
+					display: block;
+					@include mq('sm') {
+						display: inline-block;
+						vertical-align: middle;
+						margin: 0 rem(10px);
+						float: none;
+					}
+
+					a {
+						padding: rem(12px);
+						text-transform: uppercase;
+						@include font(14px);
+						background-color: transparent;
+						color: $white;
+						border: rem(1px) solid $white;
+						&:hover {
+							background-color: transparent;
+							color: $yellow;
+						}
+					}
+					
+					&.active {
+						a {
+							background-color: transparent;
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+}

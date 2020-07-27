@@ -1,0 +1,48 @@
+section {
+	&#ResearchArticles {
+		display: block;
+		@include mq('md') {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: left;
+			justify-content: left;
+		}
+		article {
+			display: block;
+			padding: rem(20px);
+			display: block;
+			margin: rem(15px) auto;
+			position: relative;
+			min-height: rem(306px);
+			a {
+				display: table;
+				position: absolute;
+				width: 92%;
+				height: 92%;
+				padding: rem(23px);
+				z-index: 2;
+				background-color: $yellow;
+				top: 0;
+				left: 0;
+				span {
+					display: table-cell;
+					vertical-align: middle;
+					color: $white;
+					font-family: $bd;
+					@include font(18px);
+					@include mq('md') {
+						@include font(25px);
+					}
+				}
+				&:hover {
+					text-decoration: none;
+					transform: scale(1.1);
+				}
+			}
+			@include mq('md') {
+				width: 25%;
+				margin: 0;
+			}
+		}
+	}
+}

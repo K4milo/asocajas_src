@@ -1,0 +1,52 @@
+.video-news {
+	padding: rem(20px) 0;
+
+	// Controls
+	.slick-arrow {
+		width: rem(44px);
+		height: rem(44px);
+		z-index: 2;
+		&.slick-prev {			
+			left: rem(10px);
+			@include iconBg('../images/icons/left-arrow.svg', 44px);
+		}
+		&.slick-next {
+			right: rem(10px);
+			@include iconBg('../images/icons/right-arrow.svg', 44px);
+		}
+	}
+
+	&--item {
+		display: block;
+		text-align: center;
+		padding: rem(10px);
+	}
+
+	&--thumb {
+		display: block;
+		margin: 0;
+		width: 100%;
+		height: rem(260px);
+		position: relative;
+		@include bgcover;
+		background-position: top center;
+		a {
+			display: block;
+			@include coverAbsolute(1);
+		}
+	}
+
+	&--caption {
+		background-color: $white;
+		padding: rem(17px);
+		text-align: left;
+		h3 {
+			margin-top: 0;
+			position: relative;
+			a {
+				@include font(20px);
+				color: $gray;
+			}
+		}
+	}
+}

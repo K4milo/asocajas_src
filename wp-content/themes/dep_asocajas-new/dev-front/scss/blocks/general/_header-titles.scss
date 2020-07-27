@@ -1,0 +1,21 @@
+section {
+	header {
+		h2 {
+			margin-top: 0;
+			text-align: center;
+			text-transform: uppercase;
+			text-align: center;
+			@include font(26px);
+			padding: rem(20px) 0 0;
+			@include mq('md') {
+				padding: rem(40px) 0 0;
+				@include font(36px);
+			}
+		}
+
+		h3 {
+			padding: rem(12px) 0;
+			text-align: center;
+		}
+	}
+}

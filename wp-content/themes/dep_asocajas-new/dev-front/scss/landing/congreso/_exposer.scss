@@ -1,0 +1,47 @@
+.page-template-templates_congreso-tpl-php {
+	.event-ponents {
+		display: block;
+		@include mq('md') {
+			display: block;
+			flex-wrap: unset;
+		}
+
+		&-item {
+			position: relative;
+			margin: rem(10px) rem(16px) rem(25px);
+			min-height: rem(320px);
+			@include mq('md') {
+				min-height: rem(420px);
+				margin: rem(10px) rem(22px) rem(31px);
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				width: rem(24px);
+				height: rem(24px);
+				@include center('horizontal');
+				bottom: 0;
+				@include iconBg('../images/icons/plus-purple.svg');
+				@include mq('md') {
+					width: rem(44px);
+					height: rem(44px);
+				}
+			}
+
+			img {
+				border-radius: 50%;
+				display: block;
+				margin: 0 auto rem(15px);
+			}
+
+			h4 {
+				
+			}
+
+			&-caption {
+				
+			}
+		}
+	}
+}

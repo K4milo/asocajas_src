@@ -1,0 +1,26 @@
+.custom-pagination {
+	padding: rem(16px) 0;
+	text-align: center;
+	flex-shrink: 0;
+	flex: 1 100%;
+	a,
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 rem(5px);
+	}
+
+	a {
+		padding: rem(6px) rem(10px);
+		background-color: $white;
+		color: $marine;
+	}
+
+	span {
+		&.current {
+			padding: rem(8px) rem(10px);
+			color: $white;
+			background-color: $marine;
+		}
+	}
+}

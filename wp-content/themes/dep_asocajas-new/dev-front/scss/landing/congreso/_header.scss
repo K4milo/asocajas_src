@@ -1,0 +1,29 @@
+body {
+	&.page-template-templates_congreso-tpl-php {
+		nav {
+			&.navbar {
+				background-color: $l-pink;
+				&.scroll_menu {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					z-index: 10;
+				}
+				.navbar-collapse {
+					ul {
+						&.navbar-nav {
+							> li {
+								&.active {
+									a {
+										color: $white;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

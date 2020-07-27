@@ -1,0 +1,87 @@
+.destacado{
+	header{
+		h2{
+			color:$morado;
+		}
+	}
+}
+.event {
+	&-wrapper {
+		@include mq('md') {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	&-info {
+		h2,
+		h3 {
+			@include font(20px);
+			text-transform: uppercase;
+			@include mq('md') {
+				@include font(30px);
+			}
+		}
+
+		&-text {
+			padding: rem(15px);
+			@include mq('md') {
+				padding: rem(15px) ;
+				width: 65%;
+			}
+		}
+
+		&-details {
+			padding: rem(15px);
+			background-color: $gray-f6;
+			h3 {
+				padding-bottom: rem(10px);
+				position: relative;
+				text-align: center;
+				&::after {
+					content: "";
+					@include background-gradient($morado, $fucsia, 'horizontal');
+					display: block;
+					position: absolute;
+					width: 100%;
+					height: rem(5px);
+					left: 0;
+					bottom: 0;
+				}
+			}
+			@include mq('md') {
+				padding: rem(30px);
+				width: 65%;
+			}
+
+			table {
+				tr {
+					td {
+						padding: rem(12px);
+					}
+				}
+			}
+
+			.cta-actions {
+				padding: rem(22px) 0;
+				a {
+					position: relative;
+					display: block;
+					text-align: center;
+					padding: rem(12px) rem(52px);
+					font-family: $bd;
+					color: $white;
+					@include background-gradient($green, $aqua, 'horizontal');
+					&::before {
+						content: "";
+						width: rem(23px);
+						height: rem(20px);
+						@include center('vertical');
+						@include iconBg('../images/icons/shopping-cart.svg', 23px);
+						left: rem(15px);
+					}
+				}
+			}
+		}
+	}
+}

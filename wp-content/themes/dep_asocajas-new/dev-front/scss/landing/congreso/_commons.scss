@@ -1,0 +1,63 @@
+// Landing Color Vars
+$l-pink:   #DA1B7E;
+$l-pink2:  #E80F8B;
+$l-purple: #461269;
+$l-blue: #4EA9C4;
+
+$lp-azul2: #3cc0c3;
+$lp-yellowLeft:#eb9c1a;
+$lp-yellowRigth:#ebba69;
+$lp-azul3:#172d53;
+$lp-gris:#b9b9b963;
+$lp-purple: #8066AB;
+$lp-dkpurple: #440E6B;
+$lp-gray: #EFEDE4;
+$lp-green: #8CCA81;
+$lp-red: #EA6E80;
+$lp-salmon: #A44B86;
+$lp-dkblue: #172D53;
+$lp-navy: #0F697C;
+$lp-pink-1: #851d61;
+$lp-pink-2: #a44b86;
+
+body {
+	&.page-template-templates_congreso-tpl-php {
+		// Layout fixes
+		.container-fuild {
+			margin: 0 0;
+			padding: 0 0;
+		}
+
+		.row {
+			margin: 0 0;
+			padding: 0 0;
+		}
+
+		// Slick pagers
+		.slick-prev,
+		.slick-next {
+			width: rem(25px);
+			height: rem(45px);
+			@include mq('md') {
+				width: rem(35px);
+				height: rem(55px);
+			}
+		}
+
+		.slick-prev {
+			left: 0;
+			@include mq('md') {
+				left: rem(-70px);
+			}
+			@include iconBg('../images/icons/duo-left.svg');
+		}
+		.slick-next {
+			right: 0;
+			@include mq('md') {
+				right: rem(-70px);
+			}
+			@include iconBg('../images/icons/duo-right.svg');
+		}
+	}
+
+}

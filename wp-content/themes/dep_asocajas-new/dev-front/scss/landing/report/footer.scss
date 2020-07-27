@@ -1,0 +1,24 @@
+section {
+	&#redes {
+		background-color: $fucsia;
+		margin-top: 15px;
+		@include mq('md') {
+			padding: rem(38px);
+		}
+		.titulo-redes p {
+			color: $white;
+			font-family: $bd;
+		}
+		.redes {
+			ul {
+				display: block;
+				text-align: center;
+				padding-left: 0;
+				li {
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}

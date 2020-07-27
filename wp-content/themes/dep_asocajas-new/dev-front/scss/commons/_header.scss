@@ -1,0 +1,105 @@
+.navbar {
+	position: relative;
+	margin: 0 0 0 0;
+	border: none;
+	background: #463a8b; /* Old browsers */
+	background: -moz-linear-gradient(left,  #463a8b 0%, #37a8b7 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #463a8b 0%,#37a8b7 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #463a8b 0%,#37a8b7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#463a8b', endColorstr='#37a8b7',GradientType=1 ); /* IE6-9 */
+
+	@include mq('sm') {
+		padding: rem(20px) 0;
+	}
+
+	> .container-fluid,
+	> .container {
+		position: relative;
+		@include mq('sm') {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	// Scrolled menu styles
+	&.scroll_menu {
+	}
+	// Search
+	.navbar-form	
+	{
+		display: none;
+	}
+	// Networks menu
+	.menu-menu-redes-container {
+		text-align: center;
+		display: none;
+		@include mq('sm') {
+			width: auto;
+			right: rem(-23px);
+			top: (7px);
+		}
+
+		#menu-menu-redes {
+			padding: 0;
+		}
+	}
+
+	.navbar-header {
+		@include mq('sm') {
+			display: inline-block !important;
+			vertical-align: middle;
+			float: none;
+		}
+		.navbar-brand {
+			@include iconBg('../images/brand/logo2.svg', 160px);
+			width: rem(160px);
+			height: rem(44px);
+		}
+	}
+	.navbar-collapse {
+		@include mq('sm') {
+			display: inline-block !important;
+			vertical-align: middle;
+			float: none;
+			margin-left: rem(13px);
+		}
+		// Menu
+		ul {
+			&.navbar-nav {
+				float: none;
+				clear: both;
+				> li {
+					@include mq('sm') {
+						display: inline-block;
+						vertical-align: middle;
+						float: none;
+					}
+					a {
+						padding-top: 0;
+						padding-bottom: 0;
+						text-transform: uppercase;
+						font-family: $bd;
+						@include font(14px);
+						color: $white;
+						@include mq('sm') {
+							@include font(18px);
+						}
+						&:hover,
+						&:focus {
+							background-color: transparent;
+							color: $yellow;
+						}
+					}
+					&.active {
+						a {
+							background-color: transparent;
+							font-family: $bd;
+							color: $yellow;
+						}
+					}
+				}
+			}
+		}
+	}
+}

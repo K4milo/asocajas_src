@@ -1,0 +1,96 @@
+.postulacion {
+	// Header
+	&__header {
+		padding: rem(12px) 0;
+		text-align: left;
+
+		h3 {
+			margin-top: 0;
+		}
+
+		> span {
+			text-align: left;
+			display: inline-block;
+			img {
+				display: inline-block;
+			}
+		}
+		&.requisitos {
+			> span {
+				color: $white;
+			}
+		}
+		&.proceso {
+			> span {
+				color: $lp-yellowRigth;
+			}
+		}
+	}
+
+	//Requisitos
+	&-requisitos {
+
+		@include background-gradient($lp-pink-1, $lp-pink-2, 'horizontal');
+
+		.infografia {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.requisitos__side {
+			width: 50%;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		ul {
+			margin-bottom: rem(65px);
+			li {
+				color: $white;
+				a {
+					color: $white;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	//Procesos
+	&-proceso {
+		.postulacion-item {
+			display: flex;
+			flex-wrap: wrap;
+			&__thumb{
+				width: 35%;
+				img {
+					display: inline-block;
+					max-width: 100%;
+					
+				}
+			}
+			&__text {
+				width: 65%;
+				padding: rem(66px) rem(15px);
+			}
+		}
+	}
+
+	// Container
+	&__wrapper {
+
+		@include mq('md') {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&-side {
+			padding: rem(35px);
+			@include mq('md') {
+				width: 50%;
+				padding: rem(35px) rem(45px);
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+body {
+	&.page-template-templates_contacto-tpl-php {
+		#banner-contact {
+			background-image: url('../images/bgs/bg-contact.jpg');
+			@include bgcover;
+			width: 100%;
+			height: rem(450px);
+			h1 {
+				display: none;
+			}
+		}
+	}
+}

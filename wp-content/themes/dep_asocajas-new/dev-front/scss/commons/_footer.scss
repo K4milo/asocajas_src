@@ -1,0 +1,78 @@
+.site-footer {
+	padding: rem(40px);
+	margin: 0 0 0 0;
+	color: $white;
+	background: #463a8b; /* Old browsers */
+	background: -moz-linear-gradient(left,  #463a8b 0%, #37a8b7 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #463a8b 0%,#37a8b7 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #463a8b 0%,#37a8b7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#463a8b', endColorstr='#37a8b7',GradientType=1 ); /* IE6-9 */
+	a {
+		color: $white;
+	}
+	p{
+		text-align: left !important;
+		font-size: rem(12px);
+	}
+
+	@include mq('md') {
+		padding: rem(55px) rem(70px) rem(20px);
+	}
+
+	&-row {
+		clear: both;
+		display: block;
+		float: none;
+		border-bottom: rem(1px) solid rgba(0,0,0,0.2);
+		padding: rem(15px) 0;
+	}
+
+	// widgets
+	.widget_text {
+		&.text-2 {
+			text-align: left;
+			h4 {
+				display: none;
+			}
+			h5 {
+				display: inline-block;
+				width: rem(395px);
+				height: rem(60px);
+				@include iconBg('../images/brand/logo_footer.png', 395px);
+			}
+			p {
+				text-align: left;
+				padding: rem(20px);
+			}
+		}
+	}
+	
+	.widget_nav_menu {
+		
+		&.nav_menu-2{
+			@include mq('md') {
+				padding: 0 rem(60px);
+			}
+			h4 {
+				display: none;
+			}
+			a{
+				text-decoration: underline;
+			}
+		}
+
+		&.nav_menu-3{
+			h4
+			{
+				font-size: rem(12px);
+				text-align: right;
+			}
+			.menu {
+				display: block;				
+				@include mq('md') {
+					text-align: right;
+				}
+			}
+		}	
+	}	
+}

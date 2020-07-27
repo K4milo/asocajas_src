@@ -1,0 +1,165 @@
+.gallery-news {
+	padding: rem(20px) 0;
+
+	// Controls
+	.slick-arrow {
+		width: rem(44px);
+		height: rem(44px);
+		z-index: 2;
+		&.slick-prev {			
+			left: rem(10px);
+			@include iconBg('../images/icons/left-arrow.svg', 44px);
+		}
+		&.slick-next {
+			right: rem(10px);
+			@include iconBg('../images/icons/right-arrow.svg', 44px);
+		}
+	}
+
+	&--item {
+		display: block;
+		text-align: center;
+		padding: rem(10px);
+	}
+
+	&--thumb {
+		display: block;
+		margin: 0;
+		width: 100%;
+		height: rem(260px);
+		position: relative;
+		@include bgcover;
+		background-position: top center;
+		a {
+			display: block;
+			@include coverAbsolute(1);
+		}
+	}
+
+	&--caption {
+		background-color: $white;
+		padding: rem(17px);
+		text-align: left;
+		h3 {
+			margin-top: 0;
+			position: relative;
+			a {
+				@include font(20px);
+				color: $gray;
+			}
+		}
+	}
+}
+
+.gallery-loop {
+	@include mq('md') {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&-item {
+		display: block;
+		margin: 0;
+		width: 100%;
+		height: rem(260px);
+		position: relative;
+		@include bgcover;
+		background-position: top center;
+		transition: all 0.5s;
+		@include mq('md') {
+			width: 23%;
+			margin: 1%;
+		}
+		a {
+			display: block;
+			@include coverAbsolute(1);
+		}
+
+		&:hover {
+			text-decoration: none;
+			transform: scale(1.1);
+		}
+	}
+
+	// Landing Gallery
+	&--landing {
+		
+		// Controls
+		.slick-arrow {
+			width: rem(44px);
+			height: rem(44px);
+			z-index: 2;
+			&.slick-prev {
+				left: rem(10px);
+				@include iconBg('../images/icons/left-arrow-green.svg', 44px);
+				@include mq('md') {
+					left: rem(-70px);
+				}
+			}
+			&.slick-next {
+				right: rem(10px);
+				@include iconBg('../images/icons/right-arrow-green.svg', 44px);
+				@include mq('md') {
+					right: rem(-70px);
+				}
+			}
+		}
+
+		@include mq('md') {
+			display: block;
+		}
+
+		header {
+			text-align: center;
+			@include mq('md') {
+				text-align: right;
+			}
+			h2 {
+				display: inline-block;
+				text-transform: unset;
+				text-transform: lowercase;
+				text-align: left;
+				line-height: 1;
+				@include font(40px);
+				color: $verde;					
+				@include mq('md') {
+					@include font(130px);
+				}
+			}
+		}
+
+		.gallery-loop-item {
+			width: 100%;
+			height: rem(260px);
+			background-position: bottom right;
+			@include mq('md') {
+				margin: rem(5px);
+			}
+
+			a {
+				display: block;
+				@include coverAbsolute(1);
+			}
+
+			.caption {
+				opacity: 0;
+				@include coverAbsolute(0);
+				background-color: rgba($verde,0.85);
+				text-align: center;
+				h3 {
+					display: inline-block;
+					@include font(18px);
+					color: $white;
+					@include center('both');
+				}
+			}
+
+			&:hover {
+				text-decoration: none;
+				transform: scale(1.1);
+				.caption {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

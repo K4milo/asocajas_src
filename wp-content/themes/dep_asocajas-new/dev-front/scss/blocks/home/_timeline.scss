@@ -1,0 +1,160 @@
+#homeTimeline {
+	background-color: $gray-f6;
+	padding: rem(20px);
+	@include mq('md') {
+		padding: rem(47px) 0 rem(52px);
+	}
+	header {
+		h2 {
+			margin-top: 0;
+			color: $gray;
+			text-align: center;
+			text-transform: uppercase;
+			font-family: $bd;
+			@include font(26px);
+			@include mq('md') {
+				@include font(36px);
+			}
+		}
+	}
+}
+
+// Component
+.time {
+	position: relative;
+
+	// Controls
+	.slick-arrow {
+		width: rem(44px);
+		height: rem(44px);
+		z-index: 4;
+		&.slick-prev {			
+			left: rem(-10px);
+			@include iconBg('../images/icons/left-arrow.svg', 44px);
+		}
+		&.slick-next {
+			right: rem(-10px);
+			@include iconBg('../images/icons/right-arrow.svg', 44px);
+		}
+	}
+
+	&--numbers {
+		padding: rem(50px) 0 0;
+		margin: 0 0 0 0;
+		display: block;
+		text-align: center;
+		position: relative;		
+		.slick-list {
+			position: relative;
+			z-index: 2;
+		}
+
+		&::after {
+			content:"";
+			display: block;
+			width: 100%;
+			height: rem(4px);
+			background-color: $gray-lt; 
+			position: absolute; 
+			top: 50%;
+			left: 0;
+			margin-top: rem(-2px);
+		}
+	}
+
+	&--number {
+		height: rem(120px);
+		display: block;
+		position: relative;
+		z-index: 1;
+		.arrow-up {			
+			@include arrow('top', $purple, 30px);
+			display: none;
+			position: absolute;
+			bottom: rem(-10px);
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 0;			
+		}
+
+		&.active {
+			color: $white;
+			transition: all 0.3s;
+			span {
+				&.time--holder {
+					background-color: $purple;
+					color: $white;
+				}
+
+				h4 {
+					color: $white;
+				}
+
+				&.arrow-up {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&--holder {
+		display: inline-block;
+		width: rem(90px);
+		height: rem(90px);
+		border: rem(4px) solid;
+		border-radius: 100%;
+		background-color: $gray-f6;
+		line-height: rem(90px);
+		h4 {
+			line-height: rem(90px);
+			cursor: pointer;
+			font-family: $bd;
+			@include font(26px);
+			color: $gray;
+			margin: 0; 
+		}
+	}
+
+	&--details {
+		position: relative;
+	}
+
+	&---detail {
+		display: none;
+		background-color: $purple;
+		color: $white;
+		padding: rem(15px);
+		text-align: center;
+		position: relative;
+
+		@include mq('md') {
+			padding: rem(30px);
+		}
+
+		h4 {
+			display: block;			
+			font-family: $bd;
+			@include font(26px);
+			@include mq('md') {
+				display: inline-block;
+				vertical-align: middle;
+				@include font(50px);
+				line-height: rem(90px);
+				text-align: left;
+				padding: 0 rem(30px);
+				border-right: rem(4px) solid;
+			}
+		}
+
+		span {
+			display: block;
+			@include mq('md') {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0 rem(30px);
+				text-align: left;
+				width: 70%;
+			}
+		}
+	}
+}
