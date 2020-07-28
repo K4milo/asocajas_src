@@ -2,14 +2,10 @@
 	position: relative;
 	margin: 0 0 0 0;
 	border: none;
-	background: #463a8b; /* Old browsers */
-	background: -moz-linear-gradient(left,  #463a8b 0%, #37a8b7 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left,  #463a8b 0%,#37a8b7 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right,  #463a8b 0%,#37a8b7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#463a8b', endColorstr='#37a8b7',GradientType=1 ); /* IE6-9 */
+	background: #463a8b; 
 
 	@include mq('sm') {
-		padding: rem(20px) 0;
+		padding: rem(15px) 0;
 	}
 
 	> .container-fluid,

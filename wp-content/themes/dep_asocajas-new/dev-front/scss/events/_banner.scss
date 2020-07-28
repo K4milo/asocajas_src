@@ -4,3 +4,141 @@
 		height: auto;
 	}
 }
+#banners
+{
+	background: url('../images/bgs/bg_morado.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	color: $white;
+	padding: rem(66px) rem(0px) rem(90px);
+}
+
+#banner-encaja
+{
+	background: url('../images/bgs/bg_morado.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	color: $white;
+	padding: rem(66px) rem(0px) rem(90px);
+}
+
+#banners_white
+{
+	background: url('../images/bgs/bg_puntos.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: rem(66px) rem(0px) rem(90px);
+	h3
+	{
+		color: #174886;
+	}
+	p
+	{
+		color: #434244;
+	}
+}
+
+#interactivos
+{
+	background: #f7f7f7 url('../images/bgs/bg_purpura.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: $white;
+	padding: rem(217px) rem(0px);
+}
+
+#banners_purple
+{
+	background: url('../images/bgs/bg_purpura.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: $white;
+	padding: rem(217px) rem(0px);
+}
+#informacion-giass
+{
+	background: url('../images/bgs/bg_giaas.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: $white;
+	padding: rem(117px) rem(0px);
+	text-align: center;
+}
+
+#servicios
+{
+	background: #f7f7f7;
+	padding: rem(50px) rem(0px);
+	h3
+	{
+		color: #174886;
+        font-size: rem(40px);
+        margin: 0 0 70px;
+	}
+	.box_servicios
+	{
+		background: #fff;
+		padding: rem(10px);
+		border-radius: 10px;
+		min-height: 575px;
+		margin-bottom: 20px;
+		box-shadow: 2px 2px 5px #ccc;
+		figure
+		{
+			height: 195px;
+		}
+		img
+		{
+			display: block;
+			margin: 0 auto;
+		}
+		.servicios__wrapper-item-info
+		{
+			h4
+			{
+				color: #174886;
+				font-size: rem(27px);
+				margin-top: 10px;
+				height: 50px;
+			}
+			p
+			{
+				color: #434244;
+				font-size: rem(20px);
+				height: 200px;
+			}
+			p:last-child
+			{
+				height: auto;
+				a
+				{
+					margin-top: 50px;
+					color: #e96773;
+					font-size: rem(18px);
+					display: block;
+				}
+			}
+			
+		}
+	}
+	
+}
+#entes-reguladores
+{
+	background: #f7f7f7;
+	padding: rem(50px) rem(0px);
+	h3
+	{
+		color: #174886;
+        font-size: rem(40px);
+		margin: 0 0 70px;
+		text-align: left !important;
+	}
+	.col-lg-4
+	{
+		margin-bottom: 20px;
+	}
+}

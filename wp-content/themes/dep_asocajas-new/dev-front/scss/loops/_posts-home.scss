@@ -12,6 +12,8 @@
 			text-align: center;
 			text-transform: uppercase;
 			font-family: $bd;
+			max-width: 1000px;
+			margin: 0 auto 30px;
 			@include font(26px);
 			@include mq('md') {
 				@include font(36px);
