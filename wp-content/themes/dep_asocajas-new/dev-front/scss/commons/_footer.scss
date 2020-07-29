@@ -9,6 +9,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#463a8b', endColorstr='#37a8b7',GradientType=1 ); /* IE6-9 */
 	a {
 		color: $white;
+		font-family: 'Open-Sans-Regular';
 	}
 	p{
 		text-align: left !important;
@@ -58,6 +59,7 @@
 			}
 			a{
 				text-decoration: underline;
+				font-family: 'Lato-Bold';
 			}
 		}
 

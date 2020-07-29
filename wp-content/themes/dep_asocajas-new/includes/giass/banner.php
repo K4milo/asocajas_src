@@ -4,7 +4,7 @@
   $informacion=get_field('info_banner');
  ?>
 
- <section id="banner-giass" class="container-fluid">
+ <section id="banner-giass" class="container">
    <div class="giass__wrapper row">
      <div class="giass__wrapper-imagen col-xs-12 col-md-6 col-lg-6">
        <img src="<?php echo $imagen_banner; ?>" alt="">
