@@ -75,7 +75,7 @@
 						padding-top: 0;
 						padding-bottom: 0;
 						text-transform: uppercase;
-						font-family: 'Lato-Light';
+						font-family: $lt;
 						@include font(14px);
 						color: $white;
 						@include mq('sm') {
@@ -90,7 +90,7 @@
 					&.active {
 						a {
 							background-color: transparent;
-							font-family: 'Lato-Light';
+							font-family: $lt;
 							color: $yellow;
 						}
 					}

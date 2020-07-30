@@ -25,7 +25,7 @@
 			font-size: rem(44px);
 			margin: 0 0 30px;
 			text-align: left;
-			font-family: 'Lato-Bold';
+			font-family: $bd;
 		}
 		p
 		{
@@ -44,7 +44,7 @@
 		text-align: center;
 		display: block;
 		margin: 0 auto;
-		font-family: 'Lato-Bold';
+		font-family: $bd;
 		background-image: url('../images/icons/arrow.png');
 		background-position: center right;
 		background-repeat: no-repeat;
@@ -82,7 +82,7 @@
 				color: #174886;
 				font-size: rem(32px);
 				margin: 10px 0;
-				font-family: 'Lato-Bold';
+				font-family: $bd;
 
 			}
 			p
@@ -100,7 +100,7 @@
 		font-size: rem(40px);
 		margin: 0 0 70px;
 		text-align: left;
-		font-family: 'Lato-Bold';
+		font-family: $bd;
 	}
 }
 .destacado{

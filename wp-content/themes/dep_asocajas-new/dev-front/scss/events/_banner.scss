@@ -6,16 +6,32 @@
 }
 #banners
 {
-	background: url('../images/bgs/bg_morado.png');
-	background-repeat: no-repeat;
-	background-size: contain;
 	color: $white;
+	position: relative;
 	padding: rem(66px) rem(0px) rem(90px);
 	font-family: 'Open-Sans-Regular';
+	overflow: hidden;
+
 	h3
 	{
-		font-family: 'Lato-Bold';
+		font-family: $bd;
 	}
+
+	@include mq('md') {
+		min-height: rem(500px);
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		width: 122%;
+		height: 100%;
+		border-bottom-left-radius:50%;
+		border-bottom-right-radius:50%;
+		z-index: -1;
+		@include center('both');
+		@include background-gradient($blue-lt, $blue, 'horizontal');
+	}	
 }
 
 #banner-encaja
@@ -24,11 +40,11 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	color: $white;
-	padding: rem(66px) rem(0px) rem(90px);
+	padding: rem(66px) rem(0px) rem(90px); 
 	font-family: 'Open-Sans-Regular';
 	h3
 	{
-		font-family: 'Lato-Bold';
+		font-family: $bd;
 	}
 }
 
@@ -44,7 +60,7 @@
 	h3
 	{
 		color: #174886;
-		font-family: 'Lato-Bold';
+		font-family: $bd;
 	}
 	p
 	{
@@ -69,7 +85,7 @@
 	font-family: 'Open-Sans-Regular';
 	h3
 	{
-		font-family: 'Lato-Bold';
+		font-family: $bd;
 	}
 	p
 	{
@@ -88,7 +104,7 @@
 		background: #e96773;
 		color: #fff;
 		font-size: 18px;
-		font-family: 'Lato-Bold';
+		font-family: $bd;
 		&:hover
 		{
 			text-decoration: none;
@@ -107,7 +123,7 @@
 	font-family: 'Open-Sans-Regular';
 	h3
 	{
-		font-family: 'Lato-Bold';
+		font-family: $bd;
 	}
 	p
 	{
@@ -126,7 +142,7 @@
 	font-family: 'Open-Sans-Regular';
 	h3
 	{
-		font-family: 'Lato-Bold';
+		font-family: $bd;
 	}
 	p
 	{
@@ -144,7 +160,7 @@
 		color: #174886;
         font-size: rem(40px);
 		margin: 0 0 70px;
-		font-family: 'Lato-Bold';
+		font-family: $bd;
 	}
 	p
 	{
@@ -175,7 +191,7 @@
 				font-size: rem(27px);
 				margin-top: 10px;
 				height: 50px;
-				font-family: 'Lato-Bold';
+				font-family: $bd;
 			}
 			p
 			{
@@ -193,7 +209,7 @@
 					color: #e96773;
 					font-size: rem(18px);
 					display: block;
-					font-family: 'Lato-Bold';
+					font-family: $bd;
 				}
 			}
 			
@@ -212,7 +228,7 @@
         font-size: rem(40px);
 		margin: 0 0 70px;
 		text-align: left !important;
-		font-family: 'Lato-Bold';
+		font-family: $bd;
 	}
 	p
 	{
