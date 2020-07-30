@@ -46,6 +46,25 @@
 	background-size: cover;
 	color: $white;
 	padding: rem(217px) rem(0px);
+	display: inline-block;
+	@include mq('md'){
+		display: flex;
+	}
+	.time__wrapper, .map__wrapper{
+		padding: 20px;
+		&-info{
+			p{
+				a{
+					background-color: $salmon;
+					padding: 10px;
+					color: $white;
+				}
+			}
+		}
+		&-img{
+			text-align: center;
+		}
+	}
 }
 
 #banners_purple
@@ -121,10 +140,10 @@
 					display: block;
 				}
 			}
-			
+
 		}
 	}
-	
+
 }
 #entes-reguladores
 {

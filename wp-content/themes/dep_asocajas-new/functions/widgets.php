@@ -34,7 +34,7 @@ add_action( 'widgets_init', 'bst_widgets_init' );
 
 // Recent post overwrite
 /**
- * Extend Recent Posts Widget 
+ * Extend Recent Posts Widget
  *
  * Adds different formatting to the default WordPress Recent Posts Widget
  */
@@ -42,23 +42,23 @@ add_action( 'widgets_init', 'bst_widgets_init' );
 Class My_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 
   function widget($args, $instance) {
-  
+
     extract( $args );
-    
+
     $title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Posts') : $instance['title'], $instance, $this->id_base);
-        
+
     if( empty( $instance['number'] ) || ! $number = absint( $instance['number'] ) )
       $number = 10;
 
     global $post;
-          
+
     $r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' => $number, 'no_found_rows' => true, 'post_status' => 'publish','post__not_in' => array( $post->ID ), 'ignore_sticky_posts' => true ) ) );
     if( $r->have_posts() ) :
-      
+
       echo $before_widget;
       if( $title ) echo $before_title . $title . $after_title; ?>
       <div class="posts-sidebar">
-        <?php while( $r->have_posts() ) : $r->the_post(); 
+        <?php while( $r->have_posts() ) : $r->the_post();
 
           $def = '#d84e65';
           $color = get_field('color_item');
@@ -70,42 +70,36 @@ Class My_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
             $hover = $def;
           }
 
-          ?>        
-          <article class="posts-sidebar--item">
-            <div class="posts-sidebar--overlay">
-              <span class="overlap-bg" style="background-color: <?php echo $hover; ?>"></span>
-              <div class="over-text">
-                <span class="over-text--center">
-                  <a href="<?php the_permalink(); ?>" class="more-link">
-                    Leer Más
-                    <span class="more-icon"></span>
-                  </a>
-                </span>
-              </div>
-            </div>
-            <figure class="posts-sidebar--thumb" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
-              <a href="<?php the_permalink(); ?>"></a>
-            </figure>
-            <div class="posts-sidebar--caption">
-              <h3>
-                <a href="<?php the_permalink(); ?>">
-                  <?php the_title(); ?>
-                </a>        
-              </h3>
-              <h4>
-                <?php the_time('F j, Y'); ?>
-              </h4>
-            </div>
-          </article>
+          ?>
+          <article class="pod-news--item">
+
+  					<figure class="pod-news--thumb" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+
+  					</figure>
+  					<div class="pod-news--caption">
+  						<p>
+  							<?php the_time('m/d/y'); ?> | NOTICIA
+  						</p>
+  						<h3>
+  							<a href="<?php the_permalink(); ?>">
+  								<?php the_title(); ?>
+  							</a>
+  						</h3>
+  						<div class="ver-mas">
+  							<a href="<?php the_permalink(); ?>">Leer la noticia ></a>
+  						</div>
+  					</div>
+  				</article>
 
         <?php endwhile; ?>
+        <img src="https://wordpress-375621-1382727.cloudwaysapps.com/wp-content/uploads/2020/07/WhatsApp-Image-2020-07-27-at-8.19.10-PM.jpeg" alt="" width="100%" height="auto">
       </div>
-       
+
       <?php
       echo $after_widget;
-    
+
     wp_reset_postdata();
-    
+
     endif;
   }
 }

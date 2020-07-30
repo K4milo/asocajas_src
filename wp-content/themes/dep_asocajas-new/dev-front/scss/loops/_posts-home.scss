@@ -98,7 +98,7 @@
 			font-size: 19px;
 			height: 90px;
 		}
-		
+
 	}
 	.slick-arrow {
 		width: rem(44px);
@@ -116,21 +116,27 @@
 
 	&--wrapper {
 		position: relative;
+		@include mq('md') {
+			display: flex;
+			flex-wrap: wrap;
+		}
 	}
 
 	&--item {
 		position: relative;
-		display: block;
+		display: flex;
 		text-align: center;
 		margin: rem(10px);
-		background-color: $white;
-		&:hover {
-			.home-news--overlay {
-				transition: all 0.5s;
-				opacity: 1;
-				@include coverAbsolute (2);
+			@include mq('md') {
+				width: 48%;
 			}
-		}
+			.ver-mas{
+				text-align: right;
+				a{
+					padding-right: 20px;
+					color: $naranja;
+				}
+			}
 	}
 
 	&--thumb {
@@ -147,6 +153,7 @@
 	}
 
 	&--caption {
+		background-color: $white;
 		padding: rem(17px);
 		text-align: left;
 		h3 {

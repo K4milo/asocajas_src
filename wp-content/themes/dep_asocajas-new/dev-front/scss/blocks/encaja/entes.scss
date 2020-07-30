@@ -1,0 +1,17 @@
+.entes__wrapper{
+  position: relative;
+  padding: 3%;
+  @include mq('md') {
+    padding: 0 10% 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-item{
+    width: 100%;
+    @include mq ('md'){
+      width: 31%;
+    }
+    padding: 10px;
+    margin: 10px;
+  }
+}

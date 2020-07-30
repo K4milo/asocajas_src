@@ -58,8 +58,7 @@
 				</div>
 
 				<div class="form-item form-item--actions">
-					<span><input type="submit" value="Filtrar"></span>
-					<span><a href="<?php the_permalink()?>" class="reset-form">Reiniciar Filtro</a></span>
+					<span><input type="submit" value="Aplicar filtros"></span>
 				</div>
 			</form>
 		</div>
@@ -73,7 +72,7 @@
 					if($cat != 'all'){
 						$args = array (
 							'post_type' => 'post',
-							'posts_per_page' => 9,
+							'posts_per_page' => 6,
 							'paged'          => $paged,
 							'category_name' => $cat,
 							'date_query' => array(
@@ -88,7 +87,7 @@
 					} else {
 						$args = array (
 							'post_type' => 'post',
-							'posts_per_page' => 9,
+							'posts_per_page' => 6,
 							'paged'          => $paged,
 							'date_query' => array(
 							    array(
@@ -105,7 +104,7 @@
 
 					$args = array(
 						'post_type' => 'post',
-						'posts_per_page' => 9,
+						'posts_per_page' => 6,
 						'paged'          => $paged,
 					);
 				}
@@ -131,30 +130,22 @@
 
 			?>
 				<article class="pod-news--item">
-					<div class="pod-news--overlay">
-						<span class="overlap-bg" style="background-color: <?php echo $hover; ?>"></span>
-						<div class="over-text">
-							<span class="over-text--center">
-								<?php the_excerpt(); ?>
-								<a href="<?php the_permalink(); ?>" class="more-link">
-									Leer Más
-									<span class="more-icon"></span>
-								</a>
-							</span>
-						</div>
-					</div>
+
 					<figure class="pod-news--thumb" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
-						<a href="<?php the_permalink(); ?>"></a>
+
 					</figure>
 					<div class="pod-news--caption">
+						<p>
+							<?php the_time('m/d/y'); ?> | NOTICIA
+						</p>
 						<h3>
 							<a href="<?php the_permalink(); ?>">
 								<?php the_title(); ?>
 							</a>
 						</h3>
-						<h4>
-							<?php the_time('F j, Y'); ?>
-						</h4>
+						<div class="ver-mas">
+							<a href="<?php the_permalink(); ?>">Leer la noticia ></a>
+						</div>
 					</div>
 				</article>
 			<?php
@@ -163,7 +154,7 @@
 				if (function_exists(custom_pagination)) {
 					custom_pagination($query->max_num_pages, "", $paged);
 				}
-				
+
 				wp_reset_query();
 				else:
 			?>
