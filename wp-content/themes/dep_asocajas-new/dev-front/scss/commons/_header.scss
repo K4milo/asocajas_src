@@ -75,7 +75,7 @@
 						padding-top: 0;
 						padding-bottom: 0;
 						text-transform: uppercase;
-						font-family: $bd;
+						font-family: $lt;
 						@include font(14px);
 						color: $white;
 						@include mq('sm') {
@@ -90,7 +90,7 @@
 					&.active {
 						a {
 							background-color: transparent;
-							font-family: $bd;
+							font-family: $lt;
 							color: $yellow;
 						}
 					}

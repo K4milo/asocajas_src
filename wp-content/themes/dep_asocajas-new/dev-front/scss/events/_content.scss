@@ -25,6 +25,7 @@
 			font-size: rem(44px);
 			margin: 0 0 30px;
 			text-align: left;
+			font-family: $bd;
 		}
 		p
 		{
@@ -32,6 +33,7 @@
 			font-size: rem(19px);
 			margin: 0 0 50px;
 			text-align: left;
+			font-family: 'Open-Sans-Regular';
 		}
 	}
 	.see_more
@@ -42,6 +44,17 @@
 		text-align: center;
 		display: block;
 		margin: 0 auto;
+		font-family: $bd;
+		background-image: url('../images/icons/arrow.png');
+		background-position: center right;
+		background-repeat: no-repeat;
+		padding-right: 25px;
+		width: 190px;
+		text-decoration: none;
+		&:hover
+		{
+			text-decoration: none;
+		}
 	}
 }
 #organigrama
@@ -69,11 +82,13 @@
 				color: #174886;
 				font-size: rem(32px);
 				margin: 10px 0;
+				font-family: $bd;
 
 			}
 			p
 			{
 				color: #434244;
+				font-family: 'Open-Sans-Regular';
 				font-size: rem(18px);
 				margin: 10px 0;
 			}
@@ -82,9 +97,10 @@
 	.organigrama__wrapper-title
 	{
 		color: #174886;
-		font-size: rem(44px);
+		font-size: rem(40px);
 		margin: 0 0 70px;
 		text-align: left;
+		font-family: $bd;
 	}
 }
 .destacado{

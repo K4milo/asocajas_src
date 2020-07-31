@@ -6,11 +6,32 @@
 }
 #banners
 {
-	background: url('../images/bgs/bg_morado.png');
-	background-repeat: no-repeat;
-	background-size: contain;
 	color: $white;
+	position: relative;
 	padding: rem(66px) rem(0px) rem(90px);
+	font-family: 'Open-Sans-Regular';
+	overflow: hidden;
+
+	h3
+	{
+		font-family: $bd;
+	}
+
+	@include mq('md') {
+		min-height: rem(500px);
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		width: 122%;
+		height: 100%;
+		border-bottom-left-radius:50%;
+		border-bottom-right-radius:50%;
+		z-index: -1;
+		@include center('both');
+		@include background-gradient($blue-lt, $blue, 'horizontal');
+	}
 }
 
 #banner-encaja
@@ -20,22 +41,37 @@
 	background-size: contain;
 	color: $white;
 	padding: rem(66px) rem(0px) rem(90px);
+	font-family: 'Open-Sans-Regular';
+	h3
+	{
+		font-family: $bd;
+	}
 }
 
-#banners_white
+#banners_white,
+#banner-giass,
+#acceso-giass
 {
 	background: url('../images/bgs/bg_puntos.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 	padding: rem(66px) rem(0px) rem(90px);
+	font-family: 'Open-Sans-Regular';
 	h3
 	{
 		color: #174886;
+		font-family: $bd;
 	}
 	p
 	{
 		color: #434244;
+		font-family: 'Open-Sans-Regular';
 	}
+}
+#banner-giass,
+#acceso-giass
+{
+	background-image:none ;
 }
 
 #interactivos
@@ -45,7 +81,7 @@
 	background-position: center;
 	background-size: cover;
 	color: $white;
-	padding: rem(217px) rem(0px);
+	padding: rem(217px) rem(10px);
 	display: inline-block;
 	@include mq('md'){
 		display: flex;
@@ -63,10 +99,37 @@
 		}
 		&-img{
 			text-align: center;
+	font-family: 'Open-Sans-Regular';
+	h3
+	{
+		font-family: $bd;
+	}
+	p
+	{
+		font-family: 'Open-Sans-Regular';
+	}
+	a
+	{
+		width: 195px;
+		height: 60px;
+		border-radius: 5px;
+		display: block;
+		margin: 40px auto 20px;
+		float: left;
+		text-align: center;
+		line-height: 60px;
+		background: #e96773;
+		color: #fff;
+		font-size: 18px;
+		font-family: $bd;
+		&:hover
+		{
+			text-decoration: none;
 		}
 	}
 }
-
+}
+}
 #banners_purple
 {
 	background: url('../images/bgs/bg_purpura.png');
@@ -75,6 +138,15 @@
 	background-size: cover;
 	color: $white;
 	padding: rem(217px) rem(0px);
+	font-family: 'Open-Sans-Regular';
+	h3
+	{
+		font-family: $bd;
+	}
+	p
+	{
+		font-family: 'Open-Sans-Regular';
+	}
 }
 #informacion-giass
 {
@@ -83,19 +155,34 @@
 	background-position: center;
 	background-size: cover;
 	color: $white;
-	padding: rem(117px) rem(0px);
+	padding: rem(617px) rem(0px);
 	text-align: center;
+	font-family: 'Open-Sans-Regular';
+	h3
+	{
+		font-family: $bd;
+	}
+	p
+	{
+		font-family: 'Open-Sans-Regular';
+	}
 }
 
 #servicios
 {
 	background: #f7f7f7;
 	padding: rem(50px) rem(0px);
+	font-family: 'Open-Sans-Regular';
 	h3
 	{
 		color: #174886;
         font-size: rem(40px);
-        margin: 0 0 70px;
+		margin: 0 0 70px;
+		font-family: $bd;
+	}
+	p
+	{
+		font-family: 'Open-Sans-Regular';
 	}
 	.box_servicios
 	{
@@ -112,7 +199,7 @@
 		img
 		{
 			display: block;
-			margin: 0 auto;
+			margin: 0 auto 10px;
 		}
 		.servicios__wrapper-item-info
 		{
@@ -122,12 +209,14 @@
 				font-size: rem(27px);
 				margin-top: 10px;
 				height: 50px;
+				font-family: $bd;
 			}
 			p
 			{
 				color: #434244;
 				font-size: rem(20px);
 				height: 200px;
+				font-family: 'Open-Sans-Regular';
 			}
 			p:last-child
 			{
@@ -138,6 +227,7 @@
 					color: #e96773;
 					font-size: rem(18px);
 					display: block;
+					font-family: $bd;
 				}
 			}
 
@@ -149,12 +239,18 @@
 {
 	background: #f7f7f7;
 	padding: rem(50px) rem(0px);
+	font-family: 'Open-Sans-Regular';
 	h3
 	{
 		color: #174886;
         font-size: rem(40px);
 		margin: 0 0 70px;
 		text-align: left !important;
+		font-family: $bd;
+	}
+	p
+	{
+		font-family: 'Open-Sans-Regular';
 	}
 	.col-lg-4
 	{
