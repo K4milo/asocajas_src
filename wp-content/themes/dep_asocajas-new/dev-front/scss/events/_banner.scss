@@ -257,3 +257,65 @@
 		margin-bottom: 20px;
 	}
 }
+
+.portafolio-banner,
+.banner--white {
+	position: relative;
+	overflow: hidden;
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		@include wrapper;
+		max-width: rem(1000px);
+	}
+
+	&--item {
+
+		@include mq(md) {
+			width: 48%;
+		}
+	}
+
+	&__info {
+
+		@include mq(md) {
+			width: 38%;
+		}
+
+		h3 {
+			font-size: rem(31px);
+		}
+		
+	}
+}
+
+.banner--white {
+	padding: rem(30px) rem(20px);
+
+	@include mq(md) {
+		padding: rem(100px) 0;
+	}
+
+	&:before {
+		content: "";
+		background-color: $white;
+		display: block;
+		width: 122%;
+		height: 100%;
+		border-bottom-left-radius:50%;
+		border-bottom-right-radius:50%;
+		z-index: -1;
+		@include center('both');
+	}
+	
+	&__info {
+		
+		h3 {
+			color: $blue-header;
+			font-family: $bd;
+		}
+	}
+}
