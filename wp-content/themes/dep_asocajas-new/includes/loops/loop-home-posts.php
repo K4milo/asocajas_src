@@ -13,6 +13,86 @@
 		<header>
 			<h2>Noticias</h2>
 		</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-6 col-lg-6">
+					<div class="box_news_big">
+						<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+						</div>
+						<div class="box_padding">
+							<div class="date_news">
+								<?php the_time('F j, Y'); ?>
+							</div>
+							<div class="title_news">
+								<?php the_title(); ?>
+							</div>
+							<div class="link_news">
+								<a href="<?php the_permalink(); ?>">
+									Leer la noticia >
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-6">
+					<div class="row mobile">
+						<div class="box_news_small">
+							<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+							</div>
+							<div class="box_padding">
+								<div class="date_news">
+									<?php the_time('F j, Y'); ?>
+								</div>
+								<div class="title_news">
+									<?php the_title(); ?>
+								</div>
+								<div class="link_news">
+									<a href="<?php the_permalink(); ?>">
+										Leer la noticia >
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="box_news_small">
+							<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+							</div>
+							<div class="box_padding">
+								<div class="date_news">
+									<?php the_time('F j, Y'); ?>
+								</div>
+								<div class="title_news">
+									<?php the_title(); ?>
+								</div>
+								<div class="link_news">
+									<a href="<?php the_permalink(); ?>">
+										Leer la noticia >
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="box_news_small">
+							<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+							</div>
+							<div class="box_padding">
+								<div class="date_news">
+									<?php the_time('F j, Y'); ?>
+								</div>
+								<div class="title_news">
+									<?php the_title(); ?>
+								</div>
+								<div class="link_news">
+									<a href="<?php the_permalink(); ?>">
+										Leer la noticia >
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="home-news--wrapper">
 			<?php
 				$args = array( 'post_type' => 'post', 'posts_per_page' => 6 );

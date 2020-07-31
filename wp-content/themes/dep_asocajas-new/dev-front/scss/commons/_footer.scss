@@ -1,5 +1,5 @@
 .site-footer {
-	padding: rem(40px);
+	padding: rem(10px);
 	margin: 0 0 0 0;
 	color: $white;
 	background: #463a8b; /* Old browsers */
@@ -7,13 +7,23 @@
 	background: -webkit-linear-gradient(left,  #463a8b 0%,#37a8b7 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right,  #463a8b 0%,#37a8b7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#463a8b', endColorstr='#37a8b7',GradientType=1 ); /* IE6-9 */
+	@include mq('md') {
+		padding: rem(40px);
+
+	}	
 	a {
 		color: $white;
 		font-family: 'Open-Sans-Regular';
 	}
 	p{
-		text-align: left !important;
+		text-align: center !important;
 		font-size: rem(12px);
+		margin: 20px 0;
+		@include mq('md') {
+			margin: 10px 0;
+			text-align: left !important;
+			font-size: rem(12px);
+		}
 	}
 
 	@include mq('md') {
@@ -27,19 +37,35 @@
 		border-bottom: rem(1px) solid rgba(0,0,0,0.2);
 		padding: rem(15px) 0;
 	}
+	.col-sm-4
+	{
+		width: 100%;
+		@include mq('md') {
+			width: 33.33333333%;
+		}
+	}
 
 	// widgets
 	.widget_text {
 		&.text-2 {
 			text-align: left;
+			display: none;
+			@include mq('md') {
+				display: block;
+			}
 			h4 {
 				display: none;
 			}
 			h5 {
 				display: inline-block;
-				width: rem(395px);
+				width: rem(300px);
 				height: rem(60px);
-				@include iconBg('../images/brand/logo_footer.png', 395px);
+				@include iconBg('../images/brand/logo_footer.png', 300px);
+				@include mq('md') {
+					width: rem(395px);
+					height: rem(60px);
+					@include iconBg('../images/brand/logo_footer.png', 395px);
+				}
 			}
 			p {
 				text-align: left;
@@ -51,6 +77,10 @@
 	.widget_nav_menu {
 		
 		&.nav_menu-2{
+			display: none;
+			@include mq('md') {
+				display: block;
+			}
 			@include mq('md') {
 				padding: 0 rem(60px);
 			}
@@ -68,6 +98,10 @@
 			{
 				font-size: rem(12px);
 				text-align: right;
+				display: none;
+				@include mq('md') {
+					display: block;
+				}
 			}
 			.menu {
 				display: block;				

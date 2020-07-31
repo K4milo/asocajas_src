@@ -22,8 +22,17 @@
 	}
 	.container
 	{
-		width: 1000px;
+		max-width: 1000px;
+		width: 100%;
 		padding: 0;
+		.row.mobile
+		{
+			margin: 0;
+			@include mq('sm') {
+				margin-right: -15px;
+    			margin-left: -15px;
+			}
+		}
 	}
 }
 
@@ -87,13 +96,24 @@
 		.box_bg
 		{
 			height: 100%;
-			width: 170px;
+			width: 120px;
 			float: left;
+			@include mq('md') {
+				height: 100%;
+				width: 170px;
+				float: left;
+			}
+			
 		}
 		.box_padding
 		{
 			float: left;
-			width: calc(100% - 170px);
+			width: calc(100% - 120px);
+			@include mq('md') {
+				float: left;
+				width: calc(100% - 170px);
+			}
+			
 		}
 		.title_news
 		{
