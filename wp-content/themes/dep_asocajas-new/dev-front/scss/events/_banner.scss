@@ -36,15 +36,30 @@
 
 #banner-encaja
 {
-	background: url('../images/bgs/bg_morado.png');
-	background-repeat: no-repeat;
-	background-size: contain;
 	color: $white;
+	position: relative;
 	padding: rem(66px) rem(0px) rem(90px);
 	font-family: 'Open-Sans-Regular';
+	overflow: hidden;
 	h3
 	{
 		font-family: $bd;
+	}
+	@include mq('md') {
+		min-height: rem(500px);
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		width: 122%;
+		height: 100%;
+		border-bottom-left-radius:50%;
+		border-bottom-right-radius:50%;
+		z-index: -1;
+		@include center('both');
+		@include background-gradient(#37b5be, #481c9b, 'horizontal');
+
 	}
 }
 

@@ -1,36 +1,35 @@
 
-  .servicios__wrapper{
-      position: relative;
-      padding: 3%;
-      @include mq('md') {
-        padding: 10%;
-        display: flex;
-        flex-wrap: wrap;
-      }
-       &-item{
-         border-radius: 20px;
-         width: 100%;
-         @include mq ('md'){
-           width: 31%;
-         }
-         padding: 20px;
-         margin: 10px;
-         background-color: white;
-         figure{
-           text-align: center;
-           img{
-             padding: 15px;
-           }
-         }
-         &-info{
-           h4{
-             color: $blue-dk;
-           }
-           p{
-             a{
-               color: $salmon;
-             }
-           }
-         }
-      }
+.servicios__wrapper{
+    position: relative;
+    padding: 3%;
+    @include mq('md') {
+      padding: 0%;
+      display: flex;
+      flex-wrap: wrap;
     }
+      &-item{
+        border-radius: 20px;
+        width: 100%;
+        @include mq ('md'){
+          width: 31%;
+        }
+        padding: 20px;
+        margin: 10px;
+        figure{
+          text-align: center;
+          img{
+            padding: 15px;
+          }
+        }
+        &-info{
+          h4{
+            color: $blue-dk;
+          }
+          p{
+            a{
+              color: $salmon;
+            }
+          }
+        }
+    }
+  }

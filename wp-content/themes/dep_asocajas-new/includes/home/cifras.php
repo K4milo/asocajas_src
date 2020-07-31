@@ -10,7 +10,7 @@ $titulo=get_field('titulo_cifras');
 $cifras=get_field('cifras');
  ?>
  <section id="cifras">
-   <div class="cifras_titulo">
+   <div class="cifras_titulo container">
      <div>
        <h2><?php echo $titulo; ?></h2>
       </div>
