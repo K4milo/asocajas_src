@@ -46,6 +46,28 @@
 		margin: 0 0 70px;
 		text-align: left !important;
 	}
+	.news_see_more
+	{
+		width: 100%;
+		img
+		{
+			width: 100%;
+		}
+		.desktop
+		{
+			display: none;
+			@include mq('sm') {
+				display: block;
+			}
+		}
+		.mobile
+		{
+			display: block;
+			@include mq('sm') {
+				display: none;
+			}
+		}
+	}
 	.box_news_big,
 	.box_news_small
 	{

@@ -109,6 +109,8 @@
 					background-color: $salmon;
 					padding: 10px;
 					color: $white;
+					margin-top: 30px;
+					display: inline-block;
 				}
 			}
 		}
@@ -137,6 +139,7 @@
 		color: #fff;
 		font-size: 18px;
 		font-family: $bd;
+		
 		&:hover
 		{
 			text-decoration: none;
@@ -163,6 +166,28 @@
 		font-family: 'Open-Sans-Regular';
 	}
 }
+#acceso-giass
+{
+	.acceso__wrapper-info
+	{
+		a
+		{
+			width: 195px;
+			height: 60px;
+			border-radius: 5px;
+			display: block;
+			margin: 40px auto 20px;
+			float: left;
+			text-align: center;
+			line-height: 60px;
+			background: #e96773;
+			color: #fff;
+			font-size: 18px;
+			font-family: $bd;
+		}
+		
+	}
+}
 #informacion-giass
 {
 	background: url('../images/bgs/bg_giaas.png');
@@ -170,9 +195,31 @@
 	background-position: center;
 	background-size: cover;
 	color: $white;
-	padding: rem(617px) rem(0px);
+	padding: rem(150px) rem(0px);
 	text-align: center;
 	font-family: 'Open-Sans-Regular';
+	@include mq('md') {
+		padding: 16.7rem rem(0px);
+	}
+	.row
+	{
+		text-align: center;
+		.col-lg-4
+		{
+			display: inline-block;
+			float: none;
+			width: 100%;
+			margin: 30px 0;
+			img
+			{
+				width: 120px;
+			}
+			@include mq('md') {
+				width: 33%;
+			}
+		}
+	}
+	
 	h3
 	{
 		font-family: $bd;
@@ -180,6 +227,15 @@
 	p
 	{
 		font-family: 'Open-Sans-Regular';
+	}
+	.informacionGiass__wrapper-alcance
+	{
+		margin-top: 90px;
+		text-align: left;
+		p
+		{
+			margin:15px  0;
+		}
 	}
 }
 
@@ -229,9 +285,12 @@
 			p
 			{
 				color: #434244;
-				font-size: rem(20px);
+				font-size: rem(16px);
 				height: 200px;
 				font-family: 'Open-Sans-Regular';
+				@include mq(md) {
+					font-size: rem(20px);
+				}
 			}
 			p:last-child
 			{

@@ -2,7 +2,12 @@
 	position: relative;
 	margin: 0 0 0 0;
 	border: none;
-	background: #463a8b; 
+	padding: rem(15px) rem(00px) rem(10px);
+	background: #463a8b; /* Old browsers */
+	background: -moz-linear-gradient(left,  #463a8b 0%, #37a8b7 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #463a8b 0%,#37a8b7 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #463a8b 0%,#37a8b7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#463a8b', endColorstr='#37a8b7',GradientType=1 ); /* IE6-9 */
 
 	@include mq('sm') {
 		padding: rem(15px) 0;
@@ -17,6 +22,12 @@
 			justify-content: space-between;
 		}
 	}
+	.text-2 {
+		
+		@include mq('sm') {
+			display: none;
+		}
+	}
 
 	// Scrolled menu styles
 	&.scroll_menu {
@@ -29,15 +40,30 @@
 	// Networks menu
 	.menu-menu-redes-container {
 		text-align: center;
-		display: none;
+		display: block;
 		@include mq('sm') {
 			width: auto;
 			right: rem(-23px);
 			top: (7px);
+			display: none;
 		}
-
+		
 		#menu-menu-redes {
 			padding: 0;
+			zoom: 0.8;
+			li
+			{
+				width: auto;
+				height: auto;
+				margin: 0;
+				@include mq('sm') {
+					margin-left: 20px;
+					width: rem(32px);
+					height: rem(32px);
+				}
+			}
+			
+
 		}
 	}
 
@@ -48,17 +74,140 @@
 			float: none;
 		}
 		.navbar-brand {
+			
+			@include mq('sm') {
+				@include iconBg('../images/brand/logo2.svg', 160px);
+				width: rem(160px);
+				height: rem(44px);
+			}
+			width: 35px;
+			margin-left: 10px;
+			background-position: left !important; 
 			@include iconBg('../images/brand/logo2.svg', 160px);
-			width: rem(160px);
 			height: rem(44px);
+			
+		}
+		.navbar-toggle
+		{
+			border: none !important;
+			background-color: transparent;
+			.icon-bar
+			{
+				background-color: #fff;
+			}
+		}
+		.navbar-toggle
+		{
+			.icon-bar
+			{
+				&:nth-child(2)
+				{
+					transform: rotate(45deg);
+    				transform-origin: 3px 5px;
+				}
+				&:nth-child(4)
+				{
+					transform: rotate(-45deg);
+    				transform-origin: 4px -1px;
+				}
+				&:nth-child(3)
+				{
+					visibility: hidden;
+				}
+			}
+			&.collapsed
+			{
+				.icon-bar
+				{
+					&:nth-child(3)
+					{
+						visibility: visible;
+					}
+					&:nth-child(2)
+					{
+						transform: rotate(0deg);
+						transform-origin:0;
+					}
+					&:nth-child(4)
+					{
+						transform: rotate(0deg);
+						transform-origin: 0;
+					}
+				}
+			}
 		}
 	}
 	.navbar-collapse {
+		position: absolute;
+		border: none;
+		background: #463a8b; /* Old browsers */
+		background: -moz-linear-gradient(left,  #463a8b 0%, #37a8b7 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  #463a8b 0%,#37a8b7 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  #463a8b 0%,#37a8b7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#463a8b', endColorstr='#37a8b7',GradientType=1 ); /* IE6-9 */
+		width: 100%;
+		&.collapse.in
+		{
+			height: 100vh !important;
+			.nav>li
+			{
+				padding: rem(15px) rem(20px);
+			}
+			.text-2 {
+				text-align: left;
+				display: block;
+				color: #fff;
+				@include mq('md') {
+					display: none;
+				}
+				h4 {
+					display: none;
+				}
+				h5 {
+					display: inline-block;
+					width: rem(290px);
+					height: rem(60px);
+					@include iconBg('../images/brand/logo_footer.png', 290px);
+					margin: 0 auto;
+					display: block;
+					@include mq('md') {
+						width: rem(395px);
+						height: rem(60px);
+						display: none;
+						@include iconBg('../images/brand/logo_footer.png', 395px);
+					}
+				}
+				p {
+					text-align: center;
+					padding: rem(20px);
+					font-size: 10px;
+					a
+					{
+						color: #fff;
+					}
+				}
+				.link_header_mobile
+				{
+					width: 300px;
+					margin: 0 auto;
+					display: flex;
+					justify-content: space-between;
+					a
+					{
+						font-size: 10px;
+						color: #fff;
+					}
+				}
+			}
+		}
 		@include mq('sm') {
 			display: inline-block !important;
 			vertical-align: middle;
 			float: none;
 			margin-left: rem(13px);
+			position: relative;
+			width: auto;
+			background: transparent;
 		}
 		// Menu
 		ul {

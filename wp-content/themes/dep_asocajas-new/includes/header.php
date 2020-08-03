@@ -47,6 +47,21 @@
                 'walker'            => new wp_bootstrap_navwalker())
             );
         ?>
+
+       
+        <div class="text-2 widget_text"><h4>Información de contacto</h4>			
+          <div class="textwidget">
+            <h5>Asocajas</h5>
+            <p>Tel. <a href="tel:+57 1 323 27 65">+57 1 323 27 65</a> – <a href="tel:+57 1 340 59 24"> Fax 340 59 24</a><br>
+            Calle 94 No. 11 – 30 Piso 6<br>
+            Edificio RGC Chicó – Bogotá – Colombia</p>
+            <div class="link_header_mobile">
+              <a href="https://www.asocajas.org.co/wp-content/uploads/2019/11/POL%C3%8DTICA-PARA-EL-TRATAMIENTO-DE-LA-INFORMACI%C3%93N-EN-ASOCAJAS.pdf">Tratamiento de Datos Personales</a>
+              <a href="http://pruebaasocajas.asocajas.org.co/">Registro y Actualización de Datos</a>
+            </div>
+          </div>     
+        </div>
+        
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
 </nav>

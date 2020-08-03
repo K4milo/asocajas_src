@@ -1,5 +1,5 @@
-<section id="entes-reguladores">
-  <div class="entes__wrapper-titulo">
+<section id="entes-reguladores" >
+  <div class="entes__wrapper-titulo container">
     <header>
       <h3><?php the_field('titulo') ?></h3>
     </header>

@@ -135,5 +135,9 @@
 				wp_reset_query();
 			?>
 		</div>
+		<a href="javascript:void;" class="news_see_more">
+			<img class="desktop" src="<?php echo get_template_directory_uri(); ?>/dev-front/images/bgs/news.png" alt="">
+			<img class="mobile" src="<?php echo get_template_directory_uri(); ?>/dev-front/images/bgs/news_mobile.png" alt="">
+		</a>
 	</div>
 </section>

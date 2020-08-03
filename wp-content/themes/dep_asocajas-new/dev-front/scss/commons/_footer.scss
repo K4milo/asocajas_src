@@ -99,12 +99,14 @@
 				font-size: rem(12px);
 				text-align: right;
 				display: none;
+
 				@include mq('md') {
 					display: block;
 				}
 			}
 			.menu {
-				display: block;				
+				display: block;
+				text-align: center;				
 				@include mq('md') {
 					text-align: right;
 				}
