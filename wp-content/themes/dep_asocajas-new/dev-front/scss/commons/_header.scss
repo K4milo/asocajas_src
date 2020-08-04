@@ -228,6 +228,12 @@
 						@include font(14px);
 						color: $white;
 						@include mq('sm') {
+							@include font(14px);
+						}
+						@include mq('md') {
+							@include font(15px);
+						}
+						@include mq('lg') {
 							@include font(18px);
 						}
 						&:hover,

@@ -19,7 +19,7 @@
       <?php if ( wp_is_mobile() ):?>
         <figure>
           <img src="<?php echo $imagen_mobile; ?>" alt="">
-          <a href="<?php echo $url_boton_mobile; ?>"><?php echo $texto_boton_mobile; ?></a>
+          <a class="link_home_orange" href="<?php echo $url_boton_mobile; ?>"><?php echo $texto_boton_mobile; ?></a>
         </figure>
         <?php else: ?>
           <div class="revista__wrapper-img">
