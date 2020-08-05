@@ -1,16 +1,18 @@
 <section id="categorias">
-  <div class="cajaCategorias__wrapper">
+  <div class="cards__wrapper container">
     <?php
      while(have_rows('categorias')): the_row();
      ?>
-    <div class="cajaCategorias__wrapper-item">
-      <figure>
-        <img src="<?php the_sub_field('icono') ?>" alt="">
-      </figure>
-      <div class="caption">
-        <?php the_sub_field('informacion') ?>
+     <article class="col-md-3">
+      <div class="cards-pod">
+        <figure class="cards-pod__image">
+          <img src="<?php the_sub_field('icono') ?>" alt="">
+        </figure>
+        <div class="cards-pod__caption">
+          <?php the_sub_field('informacion') ?>
+        </div>
       </div>
-    </div>
-  <?php endwhile; ?>
+     </article>
+    <?php endwhile; ?>
   </div>
 </section>

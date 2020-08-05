@@ -4,13 +4,13 @@
   $informacion=get_field('info_banner');
  ?>
 
- <section id="bannersPortafolio">
-   <div class="caja__wrapper">
-     <div class="caja__wrapper-imagen">
-       <img src="<?php echo $imagen_banner; ?>" alt="">
-     </div>
-     <div class="caja__wrapper-info">
-       <?php echo $informacion; ?>
-     </div>
-   </div>
- </section>
+<section id="bannersPortafolio" class="banner--white">
+  <div class="banner--white__wrapper">
+    <div class="banner--white__image banner--white--item">
+      <img src="<?php echo $imagen_banner; ?>" alt="">
+    </div>
+    <div class="banner--white__info">
+      <?php echo $informacion; ?>
+    </div>
+  </div>
+</section>
