@@ -1,0 +1,76 @@
+#contacto{
+  .formulario1{
+    padding: 0 5%;
+    @include mq('md'){
+      padding: 0 10%;
+    }
+    h3{
+      color: $blue-header;
+      font-family: $bd;
+      &::after{
+          content: "";
+          display: block;
+          left: 50%;
+          width: 100%;
+          height: .1rem;
+          background-color: $black;
+          bottom: -1rem;
+
+      }
+    }
+  }
+
+  &__wrapper{
+    .formulario-contacto{
+      .wpcf7{
+        form{
+
+        }
+      }
+    }
+  }
+}
+#banners_purple{
+  .formulario2{
+    padding: 0 5%;
+    @include mq('md'){
+      padding: 0 10%;
+    }
+    h3{
+      color: $white;
+      font-family: $bd;
+      &::after{
+          content: "";
+          display: block;
+          left: 50%;
+          width: 100%;
+          height: .1rem;
+          background-color: $white;
+          bottom: -1rem;
+
+      }
+    }
+  }
+}
+#tratamiento{
+  .formulario3{
+    padding: 0 5%;
+    @include mq('md'){
+      padding: 0 10%;
+    }
+    h3{
+      color: $blue-header;
+      font-family: $bd;
+      &::after{
+          content: "";
+          display: block;
+          left: 50%;
+          width: 100%;
+          height: .1rem;
+          background-color: $black;
+          bottom: -1rem;
+
+      }
+    }
+  }
+}

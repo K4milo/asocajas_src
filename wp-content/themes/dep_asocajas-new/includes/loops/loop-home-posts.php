@@ -17,17 +17,17 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-6 col-lg-6">
 					<div class="box_news_big">
-						<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+						<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/04/Banner-comunicado-proteccion-02.png')">
 						</div>
 						<div class="box_padding">
 							<div class="date_news">
-								<?php the_time('F j, Y'); ?>
+								Abril 29, 2020| NOTICIA
 							</div>
 							<div class="title_news">
-								<?php the_title(); ?>
+								BALANCE DEL BENEFICIO ECONÓMICO DE EMERGENCIA. LA CLASE TRABAJADORA VULNERABLE TAMBIÉN REQUIERE UN PLAN DE SALVAMENTO
 							</div>
 							<div class="link_news">
-								<a href="<?php the_permalink(); ?>">
+								<a href="https://www.asocajas.org.co/balance-del-beneficio-economico-de-emergencia-la-clase-trabajadora-vulnerable-tambien-requiere-un-plan-de-salvamento-2/">
 									Leer la noticia >
 								</a>
 							</div>
@@ -37,17 +37,17 @@
 				<div class="col-xs-12 col-md-6 col-lg-6">
 					<div class="row mobile">
 						<div class="box_news_small">
-							<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+							<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/04/Banner-comunicado-salud-noticia-02.png')">
 							</div>
 							<div class="box_padding">
 								<div class="date_news">
-									<?php the_time('F j, Y'); ?>
+									Abril 29, 2020| NOTICIA
 								</div>
 								<div class="title_news">
-									<?php the_title(); ?>
+									CAJAS DE COMPENSACIÓN FAMILIAR FORTALECEN SERVICIOS DE SALUD PARA GARANTIZAR PROTECCIÓN A MILLONES DE COLOMBIANOS
 								</div>
 								<div class="link_news">
-									<a href="<?php the_permalink(); ?>">
+									<a href="https://www.asocajas.org.co/cajas-de-compensacion-familiar-fortalecen-servicios-de-salud-para-garantizar-proteccion-a-millones-de-colombianos/">
 										Leer la noticia >
 									</a>
 								</div>
@@ -55,17 +55,17 @@
 						</div>
 
 						<div class="box_news_small">
-							<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+							<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/04/balance-home.png')">
 							</div>
 							<div class="box_padding">
 								<div class="date_news">
-									<?php the_time('F j, Y'); ?>
+									Abril 22, 2020| NOTICIA
 								</div>
 								<div class="title_news">
-									<?php the_title(); ?>
+									BALANCE DEL BENEFICIO ECONÓMICO DE EMERGENCIA. LA CLASE TRABAJADORA VULNERABLE TAMBIÉN REQUIERE UN PLAN DE SALVAMENTO
 								</div>
 								<div class="link_news">
-									<a href="<?php the_permalink(); ?>">
+									<a href="https://www.asocajas.org.co/balance-del-beneficio-economico-de-emergencia-la-clase-trabajadora-vulnerable-tambien-requiere-un-plan-de-salvamento/">
 										Leer la noticia >
 									</a>
 								</div>
@@ -73,17 +73,17 @@
 						</div>
 
 						<div class="box_news_small">
-							<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+							<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/04/Banner-Directorio-Cajas-de-Compensaci%C3%B3n-Familiar-2-1.jpg')">
 							</div>
 							<div class="box_padding">
 								<div class="date_news">
-									<?php the_time('F j, Y'); ?>
+									Abril 4, 2020| NOTICIA
 								</div>
 								<div class="title_news">
-									<?php the_title(); ?>
+									Directorio
 								</div>
 								<div class="link_news">
-									<a href="<?php the_permalink(); ?>">
+									<a href="https://www.asocajas.org.co/directorio/">
 										Leer la noticia >
 									</a>
 								</div>
@@ -93,7 +93,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="home-news--wrapper">
+		<!--<div class="home-news--wrapper">
 			<?php
 				$args = array( 'post_type' => 'post', 'posts_per_page' => 6 );
 				$query = new WP_Query( $args );
@@ -134,8 +134,8 @@
 				endwhile;
 				wp_reset_query();
 			?>
-		</div>
-		<a href="javascript:void;" class="news_see_more">
+		</div>-->
+		<a href="https://www.asocajas.org.co/noticias/" class="news_see_more">
 			<img class="desktop" src="<?php echo get_template_directory_uri(); ?>/dev-front/images/bgs/news.png" alt="">
 			<img class="mobile" src="<?php echo get_template_directory_uri(); ?>/dev-front/images/bgs/news_mobile.png" alt="">
 		</a>

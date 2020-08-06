@@ -5,11 +5,11 @@
  ?>
 
  <section id="banners">
-   <div class="noticias__wrapper">
-     <div class="noticias__wrapper-imagen">
+   <div class="noticias__wrapper container">
+     <div class="noticias__wrapper-imagen  col-xs-12 col-md-6 col-lg-6">
        <img src="<?php echo $imagen_banner; ?>" alt="">
      </div>
-     <div class="contacto__wrapper-info">
+     <div class="contacto__wrapper-info  col-xs-12 col-md-6 col-lg-6">
        <?php echo $informacion; ?>
      </div>
    </div>

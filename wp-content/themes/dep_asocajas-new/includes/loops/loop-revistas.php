@@ -16,7 +16,7 @@
 <section id="MainPost">
 	<div class="container pod-news">
 		<header>
-			<h2>Noticias<?php if($cat && $cat != 'all'): ?> de <?php echo ucfirst($cat); ?> <?php endif; ?></h2>
+			<h2>Revistas<?php if($cat && $cat != 'all'): ?> de <?php echo ucfirst($cat); ?> <?php endif; ?></h2>
 			<?php if($month): ?>
 				<h3>Notas emitidas en <?php echo ucfirst($monthName); ?> de <?php echo $year; ?></h3>
 			<?php endif; ?>
@@ -71,7 +71,7 @@
 
 					if($cat != 'all'){
 						$args = array (
-							'post_type' => 'post',
+							'post_type' => 'Revistas',
 							'posts_per_page' => 6,
 							'paged'          => $paged,
 							'category_name' => $cat,
@@ -86,7 +86,7 @@
 						);
 					} else {
 						$args = array (
-							'post_type' => 'post',
+							'post_type' => 'Revistas',
 							'posts_per_page' => 6,
 							'paged'          => $paged,
 							'date_query' => array(
@@ -103,7 +103,7 @@
 				} else {
 
 					$args = array(
-						'post_type' => 'post',
+						'post_type' => 'Revistas',
 						'posts_per_page' => 6,
 						'paged'          => $paged,
 					);
@@ -136,14 +136,14 @@
 								</div>
 								<div class="box_padding">
 									<div class="date_news">
-										<?php the_time('F j, Y'); ?>| NOTICIA
+										<?php the_time('F j, Y'); ?>| REVISTA
 									</div>
 									<div class="title_news">
 										<?php the_title(); ?>
 									</div>
 									<div class="link_news">
 										<a href="<?php the_permalink(); ?>">
-											Leer la noticia >
+											Leer la revista >
 										</a>
 									</div>
 								</div>

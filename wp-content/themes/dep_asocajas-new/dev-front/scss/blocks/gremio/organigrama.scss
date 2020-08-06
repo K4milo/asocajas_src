@@ -1,0 +1,28 @@
+#organigrama{
+  .organigrama__wrapper{
+    &-cajas{
+      .imgs
+      {
+        width: 100%;
+        img
+        {
+          width: 100%;
+        }
+        .desktop
+        {
+          display: none;
+          @include mq('sm') {
+            display: block;
+          }
+        }
+        .mobile
+        {
+          display: block;
+          @include mq('sm') {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

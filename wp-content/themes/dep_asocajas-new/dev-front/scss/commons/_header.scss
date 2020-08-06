@@ -23,7 +23,7 @@
 		}
 	}
 	.text-2 {
-		
+
 		@include mq('sm') {
 			display: none;
 		}
@@ -33,7 +33,7 @@
 	&.scroll_menu {
 	}
 	// Search
-	.navbar-form	
+	.navbar-form
 	{
 		display: none;
 	}
@@ -47,7 +47,7 @@
 			top: (7px);
 			display: none;
 		}
-		
+
 		#menu-menu-redes {
 			padding: 0;
 			zoom: 0.8;
@@ -62,7 +62,7 @@
 					height: rem(32px);
 				}
 			}
-			
+
 
 		}
 	}
@@ -74,7 +74,7 @@
 			float: none;
 		}
 		.navbar-brand {
-			
+
 			@include mq('sm') {
 				@include iconBg('../images/brand/logo2.svg', 160px);
 				width: rem(160px);
@@ -82,10 +82,10 @@
 			}
 			width: 35px;
 			margin-left: 10px;
-			background-position: left !important; 
+			background-position: left !important;
 			@include iconBg('../images/brand/logo2.svg', 160px);
 			height: rem(44px);
-			
+
 		}
 		.navbar-toggle
 		{
@@ -223,7 +223,6 @@
 					a {
 						padding-top: 0;
 						padding-bottom: 0;
-						text-transform: uppercase;
 						font-family: $lt;
 						@include font(14px);
 						color: $white;
@@ -234,19 +233,30 @@
 							@include font(15px);
 						}
 						@include mq('lg') {
-							@include font(18px);
+							@include font(17px);
 						}
 						&:hover,
 						&:focus {
 							background-color: transparent;
-							color: $yellow;
+							font-weight: bold;
 						}
 					}
 					&.active {
 						a {
 							background-color: transparent;
 							font-family: $lt;
-							color: $yellow;
+							font-weight: bold;
+						}
+						&::after{
+							content: "";
+							    display: block;
+							    bottom: 0;
+							    width: 89%;
+							    height: .4rem;
+							    background-color: $white;
+							    margin: 0 12px;
+							    position: relative;
+							    top: 5px;
 						}
 					}
 				}

@@ -71,25 +71,27 @@ Class My_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
           }
 
           ?>
-          <article class="pod-news--item">
-
-  					<figure class="pod-news--thumb" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
-
-  					</figure>
-  					<div class="pod-news--caption">
-  						<p>
-  							<?php the_time('m/d/y'); ?> | NOTICIA
-  						</p>
-  						<h3>
-  							<a href="<?php the_permalink(); ?>">
-  								<?php the_title(); ?>
-  							</a>
-  						</h3>
-  						<div class="ver-mas">
-  							<a href="<?php the_permalink(); ?>">Leer la noticia ></a>
-  						</div>
-  					</div>
-  				</article>
+          <div class=" home-news">
+    						<div class="row mobile">
+    							<div class="box_news_small">
+    								<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+    								</div>
+    								<div class="box_padding">
+    									<div class="date_news">
+    										<?php the_time('F j, Y'); ?>| NOTICIA
+    									</div>
+    									<div class="title_news">
+    										<?php the_title(); ?>
+    									</div>
+    									<div class="link_news">
+    										<a href="<?php the_permalink(); ?>">
+    											Leer la noticia >
+    										</a>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    			</div>
 
         <?php endwhile; ?>
         <img src="https://wordpress-375621-1382727.cloudwaysapps.com/wp-content/uploads/2020/07/WhatsApp-Image-2020-07-27-at-8.19.10-PM.jpeg" alt="" width="100%" height="auto">

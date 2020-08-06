@@ -1,5 +1,8 @@
 .wpcf7 {
 	form {
+		input:placeholder-shown {
+   		font-style: italic;
+       }
 		input {
 			&[type="text"],
 			&[type="email"],
@@ -62,7 +65,7 @@
 	&-col {
 		padding: rem(20px);
 		@include mq('md') {
-			width: 33.3%;
+			width: 100%;
 			padding: inherit;
 			padding-right: rem(15px);
 		}

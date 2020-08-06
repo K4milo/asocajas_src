@@ -4,7 +4,8 @@
 		height: auto;
 	}
 }
-#banners
+#banners,
+#banner1
 {
 	color: $white;
 	position: relative;
@@ -64,6 +65,7 @@
 }
 
 #banners_white,
+#banner2,
 #banner-giass,
 #acceso-giass
 {
@@ -139,7 +141,7 @@
 		color: #fff;
 		font-size: 18px;
 		font-family: $bd;
-		
+
 		&:hover
 		{
 			text-decoration: none;
@@ -148,7 +150,8 @@
 }
 }
 }
-#banners_purple
+#banners_purple,
+#banner3
 {
 	background: url('../images/bgs/bg_purpura.png');
 	background-repeat: no-repeat;
@@ -185,7 +188,7 @@
 			font-size: 18px;
 			font-family: $bd;
 		}
-		
+
 	}
 }
 #informacion-giass
@@ -219,7 +222,7 @@
 			}
 		}
 	}
-	
+
 	h3
 	{
 		font-family: $bd;
@@ -362,7 +365,7 @@
 		h3 {
 			font-size: rem(31px);
 		}
-		
+
 	}
 }
 
@@ -384,9 +387,9 @@
 		z-index: -1;
 		@include center('both');
 	}
-	
+
 	&__info {
-		
+
 		h3 {
 			color: $blue-header;
 			font-family: $bd;

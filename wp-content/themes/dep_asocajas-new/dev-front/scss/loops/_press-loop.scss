@@ -12,6 +12,13 @@ section {
 			display: flex;
 			flex-wrap: wrap;
 		}
+		.home-news{
+			margin: 0 24px;
+			width: 100%;
+			@include mq('md'){
+				width: 45%;
+			}
+		}
 	}
 
 	&--item {
