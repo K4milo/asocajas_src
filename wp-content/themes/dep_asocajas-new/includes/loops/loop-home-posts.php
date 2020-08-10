@@ -24,8 +24,7 @@
 								Abril 29, 2020| NOTICIA
 							</div>
 							<div class="title_news">
-								BALANCE DEL BENEFICIO ECONÓMICO DE EMERGENCIA. LA CLASE TRABAJADORA VULNERABLE TAMBIÉN REQUIERE UN PLAN DE SALVAMENTO
-							</div>
+Balance del beneficio económico de emergencia. la clase trabajadora vulnerable también requiere un plan de salvamento							</div>
 							<div class="link_news">
 								<a href="https://www.asocajas.org.co/balance-del-beneficio-economico-de-emergencia-la-clase-trabajadora-vulnerable-tambien-requiere-un-plan-de-salvamento-2/">
 									Leer la noticia >
@@ -44,8 +43,7 @@
 									Abril 29, 2020| NOTICIA
 								</div>
 								<div class="title_news">
-									CAJAS DE COMPENSACIÓN FAMILIAR FORTALECEN SERVICIOS DE SALUD PARA GARANTIZAR PROTECCIÓN A MILLONES DE COLOMBIANOS
-								</div>
+Cajas de compensación familiar fortalecen servicios de salud para garantizar protección a millones de colombianos								</div>
 								<div class="link_news">
 									<a href="https://www.asocajas.org.co/cajas-de-compensacion-familiar-fortalecen-servicios-de-salud-para-garantizar-proteccion-a-millones-de-colombianos/">
 										Leer la noticia >
@@ -62,7 +60,7 @@
 									Abril 22, 2020| NOTICIA
 								</div>
 								<div class="title_news">
-									BALANCE DEL BENEFICIO ECONÓMICO DE EMERGENCIA. LA CLASE TRABAJADORA VULNERABLE TAMBIÉN REQUIERE UN PLAN DE SALVAMENTO
+									Balance del beneficio económico de emergencia. la clase trabajadora vulnerable también requiere un plan de salvamento							</div>
 								</div>
 								<div class="link_news">
 									<a href="https://www.asocajas.org.co/balance-del-beneficio-economico-de-emergencia-la-clase-trabajadora-vulnerable-tambien-requiere-un-plan-de-salvamento/">

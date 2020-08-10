@@ -34,3 +34,35 @@
         }
     }
   }
+  #fechas{
+    padding: 10% 0;
+      .container{
+        .row{
+          .fechas-item{
+            display: block;
+            padding: 5%;
+            @include mq('md'){
+              display: flex;
+              padding: 1% 15%;
+            }
+            figure{
+              img{
+                max-width: 92px;
+                height: 92px;
+                @include mq('md');
+
+              }
+            }
+            .info{
+              padding: 0 5%;
+              h2{
+                font-family: $bd;
+                font-size: 24px;
+              @include mq('md'){
+                font-size: 30px;
+              }              }
+            }
+          }
+        }
+      }
+  }
