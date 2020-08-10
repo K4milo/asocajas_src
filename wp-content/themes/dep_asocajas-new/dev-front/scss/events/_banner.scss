@@ -363,9 +363,16 @@
 		}
 
 		h3 {
-			font-size: rem(31px);
+			@include mq('md') {
+				@include font(40px);
+			}
 		}
-
+		p {
+			@include mq('md') {
+				@include font(20px);
+				line-height: rem(28px);
+			}
+		}
 	}
 }
 
@@ -393,6 +400,38 @@
 		h3 {
 			color: $blue-header;
 			font-family: $bd;
+		}
+	}
+}
+// Typestack banners
+.banner {
+	&__wrapper-item {
+	
+		h3 {
+			@include mq('md') {
+				@include font(40px);
+			}
+		}
+		p {
+			@include mq('md') {
+				@include font(20px);
+				line-height: rem(28px);
+			}
+		}
+	}
+}
+
+.contacto__wrapper-info,
+.giass__wrapper-info {
+	h3 {
+		@include mq('md') {
+			@include font(40px);
+		}
+	}
+	p {
+		@include mq('md') {
+			@include font(20px);
+			line-height: rem(28px);
 		}
 	}
 }
