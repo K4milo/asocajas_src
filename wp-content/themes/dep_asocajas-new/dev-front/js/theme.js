@@ -68,23 +68,25 @@
     },
 
     fancyScripts: function () {
-      $('[data-fancybox="gallery"]').fancybox({
-        loop: false,
-        gutter: 50,
-        keyboard: true,
-        preventCaptionOverlap: true,
-        arrows: true,
-        infobar: true,
-        buttons: [
-          "zoom",
-          //"share",
-          "slideShow",
-          //"fullScreen",
-          "download",
-          "thumbs",
-          "close",
-        ],
-      });
+      if($('[data-fancybox="gallery"]').length ){
+        $('[data-fancybox="gallery"]').fancybox({
+          loop: false,
+          gutter: 50,
+          keyboard: true,
+          preventCaptionOverlap: true,
+          arrows: true,
+          infobar: true,
+          buttons: [
+            "zoom",
+            //"share",
+            "slideShow",
+            //"fullScreen",
+            "download",
+            "thumbs",
+            "close",
+          ],
+        });
+      }
     },
   };
 
