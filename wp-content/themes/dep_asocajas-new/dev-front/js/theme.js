@@ -103,9 +103,9 @@
 
     // scripts for banner
     homeSlider: function () {
-      let slider_wrapper = $(".slider-wrapper");
+      let slider_wrapper = $(".slider__wrapper");
       let slick_settings = {
-        dots: false,
+        dots: true,
         arrows: true,
         infinite: true,
         autoplay: true,
