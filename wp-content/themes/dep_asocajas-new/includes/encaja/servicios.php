@@ -19,7 +19,6 @@
        </div>
      </div>
         <div class="servicios__wrapper-item col-xs-12 col-md-4 col-lg-4">
-          <a target="_blank" href="<?php the_sub_field('popup') ?>">
           <div class="box_servicios">
             <figure>
               <a data-fancybox href="<?php the_sub_field('popup') ?>"><img src="<?php the_sub_field('imagen') ?>" alt=""></a>
@@ -28,7 +27,6 @@
               <a data-fancybox href="<?php the_sub_field('popup') ?>"><?php the_sub_field('informacion') ?></a>
             </div>
           </div>
-        </a>
         </div>
       <?php endwhile;?>
     </div>

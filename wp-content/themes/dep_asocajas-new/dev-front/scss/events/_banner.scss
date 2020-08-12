@@ -311,7 +311,11 @@ background-color: #f7f7f7;
 			@include mq('md') {
 				width: 33%;
 				margin-top: 20px;
+<<<<<<< HEAD
 				vertical-align: top;
+=======
+				vertical-align: text-top;
+>>>>>>> 0512caf5b594eeeaed7cb568ef857236577b9699
 			}
 		}
 	}
