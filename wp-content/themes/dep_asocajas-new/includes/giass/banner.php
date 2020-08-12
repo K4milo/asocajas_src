@@ -6,7 +6,7 @@
 
  <section id="banner-giass" class="container">
    <div class="giass__wrapper row">
-     <div class="giass__wrapper-imagen col-xs-12 col-md-6 col-lg-6">
+     <div class="giass__wrapper-imagen col-xs-12 col-md-6 col-lg-6 text-center">
        <img src="<?php echo $imagen_banner; ?>" alt="">
      </div>
      <div class="giass__wrapper-info col-xs-12 col-md-6 col-lg-6">

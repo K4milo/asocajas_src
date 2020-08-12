@@ -22,10 +22,10 @@
           <a target="_blank" href="<?php the_sub_field('popup') ?>">
           <div class="box_servicios">
             <figure>
-              <img src="<?php the_sub_field('imagen') ?>" alt="">
+              <a data-fancybox href="<?php the_sub_field('popup') ?>"><img src="<?php the_sub_field('imagen') ?>" alt=""></a>
             </figure>
             <div class="servicios__wrapper-item-info">
-            <?php the_sub_field('informacion') ?>
+              <a data-fancybox href="<?php the_sub_field('popup') ?>"><?php the_sub_field('informacion') ?></a>
             </div>
           </div>
         </a>

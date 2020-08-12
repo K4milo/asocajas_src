@@ -94,7 +94,8 @@ Class My_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
     			</div>
 
         <?php endwhile; ?>
-        <img src="https://wordpress-375621-1382727.cloudwaysapps.com/wp-content/uploads/2020/07/WhatsApp-Image-2020-07-27-at-8.19.10-PM.jpeg" alt="" width="100%" height="auto">
+        <a href="https://www.asocajas.org.co/caja-de-resonancia/"><img src="https://www.asocajas.org.co/wp-content/uploads/2020/08/banner-mini-revista_1.png" alt="" width="100%" height="auto">
+</a>
       </div>
 
       <?php

@@ -16,7 +16,6 @@
 <section id="MainPost">
 	<div class="container pod-news">
 		<header>
-			<h2>Noticias<?php if($cat && $cat != 'all'): ?> de <?php echo ucfirst($cat); ?> <?php endif; ?></h2>
 			<?php if($month): ?>
 				<h3>Notas emitidas en <?php echo ucfirst($monthName); ?> de <?php echo $year; ?></h3>
 			<?php endif; ?>
@@ -136,7 +135,7 @@
 								</div>
 								<div class="box_padding">
 									<div class="date_news">
-										<?php the_time('F j, Y'); ?>| NOTICIA
+										<?php the_time('m/d/y'); ?>| NOTICIA
 									</div>
 									<div class="title_news">
 										<?php the_title(); ?>

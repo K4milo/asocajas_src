@@ -7,7 +7,6 @@
 */
 
 ?>
-
 <section id="HomePost">
 	<div class="container home-news">
 		<header>
@@ -17,11 +16,11 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-6 col-lg-6">
 					<div class="box_news_big">
-						<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/04/Banner-comunicado-proteccion-02.png')">
+						<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/08/Boletin-web.png')">
 						</div>
 						<div class="box_padding">
 							<div class="date_news">
-								Abril 29, 2020| NOTICIA
+							08/05/20| NOTICIA
 							</div>
 							<div class="title_news">
 Balance del beneficio económico de emergencia. la clase trabajadora vulnerable también requiere un plan de salvamento							</div>
@@ -36,16 +35,15 @@ Balance del beneficio económico de emergencia. la clase trabajadora vulnerable 
 				<div class="col-xs-12 col-md-6 col-lg-6">
 					<div class="row mobile">
 						<div class="box_news_small">
-							<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/04/Banner-comunicado-salud-noticia-02.png')">
+						<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/08/Captura-1.png')">
 							</div>
 							<div class="box_padding">
 								<div class="date_news">
-									Abril 29, 2020| NOTICIA
+								08/05/20| NOTICIA
 								</div>
 								<div class="title_news">
-Cajas de compensación familiar fortalecen servicios de salud para garantizar protección a millones de colombianos								</div>
-								<div class="link_news">
-									<a href="https://www.asocajas.org.co/cajas-de-compensacion-familiar-fortalecen-servicios-de-salud-para-garantizar-proteccion-a-millones-de-colombianos/">
+								Las Cajas de Compensación Familiar y la atención en salud durante el COVID-19							<div class="link_news">
+									<a href="https://www.asocajas.org.co/casos-covid-19-en-el-pais-son-atendidos-en-su-mayoria-por-eps-de-las-cajas-de-compensacion/">
 										Leer la noticia >
 									</a>
 								</div>
@@ -53,17 +51,17 @@ Cajas de compensación familiar fortalecen servicios de salud para garantizar pr
 						</div>
 
 						<div class="box_news_small">
-							<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/04/balance-home.png')">
+							<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/08/comfanorte-01-1-1536x1078.png')">
 							</div>
 							<div class="box_padding">
 								<div class="date_news">
-									Abril 22, 2020| NOTICIA
+									
+									08/04/20| NOTICIA
 								</div>
 								<div class="title_news">
-									Balance del beneficio económico de emergencia. la clase trabajadora vulnerable también requiere un plan de salvamento							</div>
-								</div>
+								    Comfanorte: dos décadas de crecimiento								</div>
 								<div class="link_news">
-									<a href="https://www.asocajas.org.co/balance-del-beneficio-economico-de-emergencia-la-clase-trabajadora-vulnerable-tambien-requiere-un-plan-de-salvamento/">
+									<a href="https://www.asocajas.org.co/comfanorte-dos-decadas-de-crecimiento/">
 										Leer la noticia >
 									</a>
 								</div>
@@ -71,17 +69,17 @@ Cajas de compensación familiar fortalecen servicios de salud para garantizar pr
 						</div>
 
 						<div class="box_news_small">
-							<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/04/Banner-Directorio-Cajas-de-Compensaci%C3%B3n-Familiar-2-1.jpg')">
+							<div class="box_bg" style="background-image:url('https://www.asocajas.org.co/wp-content/uploads/2020/08/Banner-comunicado-proteccion_v6-02-1536x1078.png')">
 							</div>
 							<div class="box_padding">
 								<div class="date_news">
-									Abril 4, 2020| NOTICIA
+								    08/03/20| NOTICIA
 								</div>
 								<div class="title_news">
-									Directorio
+								   Con recursos propios, las Cajas financian el Subsidio de Emergencia al Cesante
 								</div>
 								<div class="link_news">
-									<a href="https://www.asocajas.org.co/directorio/">
+									<a href="https://www.asocajas.org.co/con-recursos-propios-las-cajas-financian-el-subsidio-de-emergencia-al-cesante/">
 										Leer la noticia >
 									</a>
 								</div>

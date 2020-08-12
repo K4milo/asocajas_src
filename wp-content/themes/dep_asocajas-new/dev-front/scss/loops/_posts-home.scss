@@ -1,3 +1,25 @@
+.news_see_more
+{
+	width: 100%;
+	img
+	{
+		width: 100%;
+	}
+	.desktop
+	{
+		display: none;
+		@include mq('sm') {
+			display: block;
+		}
+	}
+	.mobile
+	{
+		display: block;
+		@include mq('sm') {
+			display: none;
+		}
+	}
+}
 .pod-news{
 	header{
 		h2{
@@ -103,6 +125,8 @@
 			color: #565556;
 			font-size: 11px;
 			font-family: 'Open-Sans-Regular';
+			padding: 5px 5px 5px 0;
+    		letter-spacing: 2px;
 		}
 		.title_news
 		{
@@ -114,7 +138,6 @@
 		}
 		.link_news
 		{
-			text-align: right;
 			a
 			{
 				color: #e96773;

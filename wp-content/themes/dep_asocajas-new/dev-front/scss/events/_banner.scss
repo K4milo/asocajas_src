@@ -4,8 +4,39 @@
 		height: auto;
 	}
 }
-#banners,
 #banner1
+{
+	color: $white;
+	position: relative;
+	padding: rem(66px) rem(0px) rem(90px);
+	font-family: 'Open-Sans-Regular';
+	overflow: hidden;
+
+	h3
+	{
+		font-size: rem(40px);
+		margin-bottom: 20px;
+		font-family: $bd;
+	}
+
+	@include mq('md') {
+		min-height: rem(500px);
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		width: 122%;
+		height: 100%;
+		border-bottom-left-radius:50%;
+		border-bottom-right-radius:50%;
+		z-index: -1;
+		@include center('both');
+		@include background-gradient(#34AEB6, #461F93, 'horizontal');
+	}
+}
+
+#banners
 {
 	color: $white;
 	position: relative;
@@ -62,13 +93,42 @@
 		border-bottom-right-radius:50%;
 		z-index: -1;
 		@include center('both');
-		@include background-gradient(#37b5be, #481c9b, 'horizontal');
+		@include background-gradient(#8080B4, #4542B6, 'horizontal');
+
+	}
+}
+#contacto-banner
+{
+	position: relative;
+	padding: rem(66px) rem(0px) rem(90px);
+	font-family: 'Open-Sans-Regular';
+	h3
+	{
+		color: $white;
+		font-family: $bd;
+		font-size: rem(40px);
+	}
+	p
+	{
+		color: #434244;
+		font-family: 'Open-Sans-Regular';
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 122%;
+		height: 100%;
+		border-bottom-left-radius:50%;
+		border-bottom-right-radius:50%;
+		z-index: -1;
+		@include center('both');
+		@include background-gradient(#9B5EB6, #5130A7, 'horizontal');
 
 	}
 }
 
+
 #banners_white,
-#banner2,
 #cifras,
 #banner-giass,
 #acceso-giass
@@ -92,6 +152,11 @@
 }
 #banner2
 {
+	background: url('../images/bgs/bg_cifras.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: rem(66px) rem(0px) rem(90px);
+	font-family: 'Open-Sans-Regular';
 	h3
 	{
 		font-size: rem(40px);
@@ -127,7 +192,7 @@
 		&-info{
 			p{
 				a{
-					background-color: $salmon;
+					background-color: $salmonnew;
 					color: $white;
 					margin-top: 30px;
 					display: inline-block;
@@ -153,7 +218,7 @@
 			float: left;
 			text-align: center;
 			line-height: 60px;
-			background: #e96773;
+			background: $salmonnew;
 			color: #fff;
 			font-size: 18px;
 			font-family: $bd;
@@ -207,6 +272,15 @@
 
 	}
 }
+.page-template-_prensa-tpl, .page-template-_revista-tpl
+{
+	background-color: #e7e7e7;
+
+}
+.page-template-_caja-tpl{
+background-color: #f7f7f7;
+}
+
 #informacion-giass
 {
 	background: url('../images/bgs/bg_giaas.png');
@@ -215,7 +289,6 @@
 	background-size: cover;
 	color: $white;
 	padding: rem(150px) rem(0px);
-	text-align: center;
 	font-family: 'Open-Sans-Regular';
 	@include mq('md') {
 		padding: 29.7rem rem(0px);
@@ -238,7 +311,7 @@
 			@include mq('md') {
 				width: 33%;
 				margin-top: 20px;
-				vertical-align: bottom;
+				vertical-align: top;
 			}
 		}
 	}
@@ -385,9 +458,16 @@
 		}
 
 		h3 {
-			font-size: rem(31px);
+			@include mq('md') {
+				@include font(40px);
+			}
 		}
-
+		p {
+			@include mq('md') {
+				@include font(20px);
+				line-height: rem(28px);
+			}
+		}
 	}
 }
 
@@ -415,6 +495,38 @@
 		h3 {
 			color: $blue-header;
 			font-family: $bd;
+		}
+	}
+}
+// Typestack banners
+.banner {
+	&__wrapper-item {
+
+		h3 {
+			@include mq('md') {
+				@include font(40px);
+			}
+		}
+		p {
+			@include mq('md') {
+				@include font(20px);
+				line-height: rem(28px);
+			}
+		}
+	}
+}
+
+.contacto__wrapper-info,
+.giass__wrapper-info {
+	h3 {
+		@include mq('md') {
+			@include font(40px);
+		}
+	}
+	p {
+		@include mq('md') {
+			@include font(20px);
+			line-height: rem(28px);
 		}
 	}
 }

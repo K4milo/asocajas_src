@@ -10,7 +10,7 @@
 	@include mq('md') {
 		padding: rem(40px);
 
-	}	
+	}
 	a {
 		color: $white;
 		font-family: 'Open-Sans-Regular';
@@ -60,11 +60,11 @@
 				display: inline-block;
 				width: rem(300px);
 				height: rem(60px);
-				@include iconBg('../images/brand/logo_footer.png', 300px);
+				@include iconBg('../images/brand/logo_footer2.png', 300px);
 				@include mq('md') {
 					width: rem(395px);
 					height: rem(60px);
-					@include iconBg('../images/brand/logo_footer.png', 395px);
+					@include iconBg('../images/brand/logo_footer2.png', 395px);
 				}
 			}
 			p {
@@ -73,9 +73,9 @@
 			}
 		}
 	}
-	
+
 	.widget_nav_menu {
-		
+
 		&.nav_menu-2{
 			display: none;
 			@include mq('md') {
@@ -106,11 +106,11 @@
 			}
 			.menu {
 				display: block;
-				text-align: center;				
+				text-align: center;
 				@include mq('md') {
 					text-align: right;
 				}
 			}
-		}	
-	}	
+		}
+	}
 }

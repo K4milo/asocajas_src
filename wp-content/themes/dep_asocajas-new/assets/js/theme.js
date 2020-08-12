@@ -74,9 +74,7 @@
 
 
 (function ($) {
-
   var $GeneralScope = {
-
     // Constructor
     init: function init() {
       this.menuScripts();
@@ -87,9 +85,8 @@
     // scripts for Menu
     menuScripts: function menuScripts() {
       $(window).scroll(function () {
-
         var scroll = $(window).scrollTop();
-        var header_el = $('.navbar');
+        var header_el = $(".navbar");
 
         if (scroll >= 100) {
           header_el.addClass("scroll_menu");
@@ -105,15 +102,15 @@
       // Remove links that don't actually link to anything
       .not('[href="#"]').not('[href="#0"]').click(function (event) {
         // On-page links
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
           // Figure out element to scroll to
           var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
           // Does a scroll target exist?
           if (target.length) {
             // Only prevent default if animation is actually gonna happen
             event.preventDefault();
-            $('html, body').animate({
+            $("html, body").animate({
               scrollTop: target.offset().top
             }, 1000, function () {
               // Callback after animation
@@ -124,9 +121,9 @@
                 // Checking if the target was focused
                 return false;
               } else {
-                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
                 $target.focus(); // Set focus again
-              };
+              }
             });
           }
         }
@@ -134,25 +131,26 @@
     },
 
     fancyScripts: function fancyScripts() {
-      $('[data-fancybox="gallery"]').fancybox({
-        loop: false,
-        gutter: 50,
-        keyboard: true,
-        preventCaptionOverlap: true,
-        arrows: true,
-        infobar: true,
-        buttons: ["zoom",
-        //"share",
-        "slideShow",
-        //"fullScreen",
-        "download", "thumbs", "close"]
-      });
+      if ($('[data-fancybox="gallery"]').length) {
+        $('[data-fancybox="gallery"]').fancybox({
+          loop: false,
+          gutter: 50,
+          keyboard: true,
+          preventCaptionOverlap: true,
+          arrows: true,
+          infobar: true,
+          buttons: ["zoom",
+          //"share",
+          "slideShow",
+          //"fullScreen",
+          "download", "thumbs", "close"]
+        });
+      }
     }
   };
 
   // -- Home -- //
   var $HomeScope = {
-
     // Constructor
     init: function init() {
       // Instance functions
@@ -164,9 +162,9 @@
 
     // scripts for banner
     homeSlider: function homeSlider() {
-      var slider_wrapper = $('.slider-wrapper');
+      var slider_wrapper = $(".slider__wrapper");
       var slick_settings = {
-        dots: false,
+        dots: true,
         arrows: true,
         infinite: true,
         autoplay: true,
@@ -177,14 +175,14 @@
         adaptiveHeight: true
       };
 
-      if (!slider_wrapper.hasClass('slick-initialized')) {
+      if (!slider_wrapper.hasClass("slick-initialized")) {
         var slick_slider = slider_wrapper.slick(slick_settings);
       }
     },
 
     // scripts for news
     newsSlider: function newsSlider() {
-      var slider_wrapper = $('.home-news--wrapper');
+      var slider_wrapper = $(".home-news--wrapper");
       var slick_settings = {
         dots: false,
         arrows: true,
@@ -200,17 +198,17 @@
         }]
       };
 
-      if (!slider_wrapper.hasClass('slick-initialized')) {
+      if (!slider_wrapper.hasClass("slick-initialized")) {
         var slick_slider = slider_wrapper.slick(slick_settings);
       }
     },
 
     // scripts for history
     timeSlider: function timeSlider() {
-      var slider_wrapper = $('.time--numbers');
-      var time_items = slider_wrapper.find('.time--number');
-      var time_tab = $('.time---detail');
-      var numbersball = time_items.find('.time--holder');
+      var slider_wrapper = $(".time--numbers");
+      var time_items = slider_wrapper.find(".time--number");
+      var time_tab = $(".time---detail");
+      var numbersball = time_items.find(".time--holder");
 
       var slick_settings = {
         dots: false,
@@ -228,29 +226,29 @@
         }]
       };
 
-      if (!slider_wrapper.hasClass('slick-initialized')) {
+      if (!slider_wrapper.hasClass("slick-initialized")) {
         var slick_slider = slider_wrapper.slick(slick_settings);
       }
 
       if (time_items) {
         time_items.each(function (index, el) {
           var instance = $(this);
-          var yearclick = instance.data('year');
-          var yearcolor = instance.data('color');
-          var numberball = instance.find('.time--holder');
+          var yearclick = instance.data("year");
+          var yearcolor = instance.data("color");
+          var numberball = instance.find(".time--holder");
 
           instance.click(function (event) {
             /* Act on the event */
-            time_items.removeClass('active');
-            time_tab.css('display', 'none');
-            numbersball.css('background-color', '#f6f6f6');
+            time_items.removeClass("active");
+            time_tab.css("display", "none");
+            numbersball.css("background-color", "#f6f6f6");
 
-            instance.addClass('active');
-            $('.time--details').find("[data-year=" + yearclick + "]").css({
-              'display': 'block',
-              'background-color': yearcolor
+            instance.addClass("active");
+            $(".time--details").find("[data-year=" + yearclick + "]").css({
+              display: "block",
+              "background-color": yearcolor
             });
-            numberball.css('background-color', yearcolor);
+            numberball.css("background-color", yearcolor);
           });
         });
       }
@@ -258,19 +256,18 @@
 
     // scripts for counter
     homeCounter: function homeCounter() {
+      var numberItems = $(".cifras__wrapper-item");
 
-      var numberItems = $('.numbers--item');
-
-      $('.counter').counterUp({
+      $(".counter").counterUp({
         delay: 10,
-        separator: '.',
+        separator: ".",
         time: 1500
       });
 
       if (numberItems) {
         numberItems.each(function (index, el) {
           var instance = $(this);
-          var numberItem = instance.find('h4');
+          var numberItem = instance.find("h4");
         });
       }
     }
@@ -278,7 +275,6 @@
 
   // -- Press -- //
   var $PressScope = {
-
     // Constructor
     init: function init() {
       // Instance functions
@@ -288,7 +284,7 @@
 
     // Scripts Video
     videoSlider: function videoSlider() {
-      var slider_wrapper = $('.video-news--wrapper');
+      var slider_wrapper = $(".video-news--wrapper");
       var slick_settings = {
         dots: false,
         arrows: true,
@@ -304,14 +300,14 @@
         }]
       };
 
-      if (!slider_wrapper.hasClass('slick-initialized')) {
+      if (!slider_wrapper.hasClass("slick-initialized")) {
         var slick_slider = slider_wrapper.slick(slick_settings);
       }
     },
 
     // Scripts Gallery
     gallerySlider: function gallerySlider() {
-      var slider_wrapper = $('.gallery-news--wrapper');
+      var slider_wrapper = $(".gallery-news--wrapper");
       var slick_settings = {
         dots: false,
         arrows: true,
@@ -327,7 +323,7 @@
         }]
       };
 
-      if (!slider_wrapper.hasClass('slick-initialized')) {
+      if (!slider_wrapper.hasClass("slick-initialized")) {
         var slick_slider = slider_wrapper.slick(slick_settings);
       }
     }
@@ -341,52 +337,52 @@
     },
 
     mapScripts: function mapScripts() {
-      var map = L.map('mapid', {
+      var map = L.map("mapid", {
         center: [4.632, -74.299],
         zoom: 6
       });
 
       var gl = L.mapboxGL({
         attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
-        accessToken: 'no-token',
-        style: 'https://api.maptiler.com/maps/070eadaf-a6cd-45ba-b39b-d2c301279159/style.json?key=4ByPNrAy6wHbEZdnwieo'
+        accessToken: "no-token",
+        style: "https://api.maptiler.com/maps/070eadaf-a6cd-45ba-b39b-d2c301279159/style.json?key=4ByPNrAy6wHbEZdnwieo"
       }).addTo(map);
 
       // Set sidebar
-      var sidebar = L.control.sidebar('sidebar', {
+      var sidebar = L.control.sidebar("sidebar", {
         closeButton: true,
-        position: 'left'
+        position: "left"
       });
 
       map.addControl(sidebar);
 
       // Set markers
-      var MarkerPointer = $('#mapMarkers li');
+      var MarkerPointer = $("#mapMarkers li");
 
       if (MarkerPointer) {
         MarkerPointer.each(function (index, el) {
           var instance = $(this);
           // Mav item vars
-          var latLen = instance.data('lat-len');
-          var itemTitle = instance.data('name');
+          var latLen = instance.data("lat-len");
+          var itemTitle = instance.data("name");
           var itemBody = instance.html();
 
           var latSplited = latLen.split(",");
           var Lat = parseFloat(latSplited[0]);
           var Len = parseFloat(latSplited[1]);
-          var div_circle = L.divIcon({ className: 'circle' });
+          var div_circle = L.divIcon({ className: "circle" });
 
-          console.log('latLen', Lat, Len);
+          console.log("latLen", Lat, Len);
 
-          var markerItem = L.marker([Lat, Len], { icon: div_circle }).addTo(map).on('click', function () {
-            $('#sidebar').html('');
+          var markerItem = L.marker([Lat, Len], { icon: div_circle }).addTo(map).on("click", function () {
+            $("#sidebar").html("");
             sidebar.toggle();
-            $('#sidebar').html('<h2>' + itemTitle + '</h2>' + itemBody);
+            $("#sidebar").html("<h2>" + itemTitle + "</h2>" + itemBody);
           });
         });
       }
 
-      map.on('click', function () {
+      map.on("click", function () {
         sidebar.hide();
       });
     }
@@ -400,17 +396,17 @@
     },
 
     popScripts: function popScripts() {
-      var popItems = $('.event-ponents-item');
+      var popItems = $(".event-ponents-item");
 
       if (popItems) {
         popItems.each(function (index, el) {
           var instance = $(this);
-          var imageWrapper = instance.find('img');
-          var captionPop = instance.find('.event-ponents-item-caption');
+          var imageWrapper = instance.find("img");
+          var captionPop = instance.find(".event-ponents-item-caption");
 
           instance.click(function (event) {
             /* Act on the event */
-            $.fancybox.open('<div class="modalmessage"><figure><img src="' + imageWrapper.attr('src') + '"></figure><div class="caption">' + captionPop.html() + '</div></div>');
+            $.fancybox.open('<div class="modalmessage"><figure><img src="' + imageWrapper.attr("src") + '"></figure><div class="caption">' + captionPop.html() + "</div></div>");
           });
         });
       }
@@ -419,7 +415,6 @@
 
   // -- Landing -- //
   var $LandingScope = {
-
     // Constructor
     init: function init() {
       // Instance functions
@@ -429,7 +424,7 @@
 
     // Scripts Video
     videoSlider: function videoSlider() {
-      var slider_wrapper = $('.video-news--wrapper');
+      var slider_wrapper = $(".video-news--wrapper");
       var slick_settings = {
         dots: false,
         arrows: true,
@@ -445,14 +440,14 @@
         }]
       };
 
-      if (!slider_wrapper.hasClass('slick-initialized')) {
+      if (!slider_wrapper.hasClass("slick-initialized")) {
         var slick_slider = slider_wrapper.slick(slick_settings);
       }
     },
 
     // Scripts Gallery
     gallerySlider: function gallerySlider() {
-      var slider_wrapper = $('.gallery-landing--wrapper');
+      var slider_wrapper = $(".gallery-landing--wrapper");
       var slick_settings = {
         dots: false,
         arrows: true,
@@ -468,14 +463,13 @@
         }]
       };
 
-      if (!slider_wrapper.hasClass('slick-initialized')) {
+      if (!slider_wrapper.hasClass("slick-initialized")) {
         var slick_slider = slider_wrapper.slick(slick_settings);
       }
     }
   };
 
   var $MemoriasScope = {
-
     // Constructor
     init: function init() {
       // Instance functions
@@ -485,7 +479,7 @@
 
     // Scripts Video
     videoSlider: function videoSlider() {
-      var slider_wrapper = $('.video-news--wrapper');
+      var slider_wrapper = $(".video-news--wrapper");
       var slick_settings = {
         dots: false,
         arrows: true,
@@ -501,14 +495,14 @@
         }]
       };
 
-      if (!slider_wrapper.hasClass('slick-initialized')) {
+      if (!slider_wrapper.hasClass("slick-initialized")) {
         var slick_slider = slider_wrapper.slick(slick_settings);
       }
     },
 
     // Scripts Gallery
     gallerySlider: function gallerySlider() {
-      var slider_wrapper = $('.gallery-memorias--wrapper');
+      var slider_wrapper = $(".gallery-memorias--wrapper");
       var slick_settings = {
         dots: false,
         arrows: true,
@@ -524,7 +518,7 @@
         }]
       };
 
-      if (!slider_wrapper.hasClass('slick-initialized')) {
+      if (!slider_wrapper.hasClass("slick-initialized")) {
         var slick_slider = slider_wrapper.slick(slick_settings);
       }
     }
@@ -538,7 +532,7 @@
     },
 
     ponentsCarousel: function ponentsCarousel() {
-      var eventWrapper = $('.event-ponents');
+      var eventWrapper = $(".event-ponents");
 
       if (eventWrapper.length > 0) {
         var slick_settings = {
@@ -557,51 +551,83 @@
           }]
         };
 
-        if (!eventWrapper.hasClass('slick-initialized')) {
+        if (!eventWrapper.hasClass("slick-initialized")) {
           var eventWrapperSlider = eventWrapper.slick(slick_settings);
         }
       }
     }
   };
 
+  // -- Gremio New -- //
+  var $gremioScope = {
+    // Constructor
+    init: function init() {
+      this.hideItems = $('.afiliadas__wrapper-cajas > div');
+      this.trigger = $('.see_more');
+      this.toogleItems(this.hideItems);
+    },
+
+    toogleItems: function toogleItems(items) {
+      items.each(function (i1, obj) {
+        if (i1 > 11) {
+          $(this).hide();
+        }
+      });
+
+      this.trigger.click(function (e) {
+        e.preventDefault();
+
+        items.each(function () {
+          $(this).show(500);
+        });
+
+        $(this).hide(400);
+      });
+    }
+  };
   // Trigger
   $GeneralScope.init();
 
   // Home Scripts
-  if ($('body').hasClass('home')) {
+  if ($("body").hasClass("home")) {
     $HomeScope.init();
   }
 
   // Press / Blog Scripts
-  if ($('body').hasClass('page-template-templates_prensa-tpl-php') || $('body').hasClass('single-post')) {
+  if ($("body").hasClass("page-template-templates_prensa-tpl-php") || $("body").hasClass("single-post")) {
     $PressScope.init();
   }
 
   // Map Scripts
-  if ($('body').hasClass('page-template-_map-tpl')) {
+  if ($("body").hasClass("page-template-_map-tpl")) {
     $MapScope.init();
   }
 
   // Event Single
-  if ($('body').hasClass('single-eventos')) {
+  if ($("body").hasClass("single-eventos")) {
     $eventScope.init();
   }
 
   // Landing Scripts
-  if ($('body').hasClass('page-template-templates_landing-tpl-php')) {
+  if ($("body").hasClass("page-template-templates_landing-tpl-php")) {
     $LandingScope.init();
   }
-  if ($('body').hasClass('page-template-templates_memorias-tpl-php')) {
+  if ($("body").hasClass("page-template-templates_memorias-tpl-php")) {
     $MemoriasScope.init();
   }
 
-  if ($('body').hasClass('page-template-templates_congreso-tpl-php')) {
+  if ($("body").hasClass("page-template-templates_congreso-tpl-php")) {
     $eventScope.init();
     $congressScope.init();
   }
-  if ($('body').hasClass('page-template-templates_premio-tpl-php')) {
+  if ($("body").hasClass("page-template-templates_premio-tpl-php")) {
     $eventScope.init();
     $congressScope.init();
+  }
+
+  // gremio script
+  if ($("body").hasClass("page-template-templates_gremio-tpl-php")) {
+    $gremioScope.init();
   }
 })(jQuery);
 

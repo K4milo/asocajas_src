@@ -6,7 +6,6 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	font-family: $lt;
-	strong,
 	b, h1, h2, h3 {
 		font-family: $lt;
 	}
@@ -71,7 +70,7 @@ body {
 		height: rem(32px);
 		margin: 0 rem(5px);
 		margin-left: 20px;
-		
+
 		a {
 			display: block;
 			width: rem(47px);

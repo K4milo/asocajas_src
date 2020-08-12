@@ -19,6 +19,7 @@
         figure{
           text-align: center;
           img{
+            max-width: 220px;
             padding: 15px;
           }
         }
@@ -27,6 +28,9 @@
             color: $blue-dk;
           }
           p{
+            strong{
+              color: $salmonnew;
+            }
             a{
               color: $salmon;
             }

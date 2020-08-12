@@ -145,17 +145,30 @@ section {
 // --- SIDEBAR --- //
 #sidebar{
 	background-color: $gray-f6;
+	.sidebar{
+		padding: 15px;
+		.recent-posts-2{
+			.posts-sidebar{
+				a{
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
 }
 .widget_recent_entries {
 	> h4 {
-		color: $blue-dk;
-		@include font(30px);
+		color: $blue-header;
+		@include font(35px);
 		font-family: $bd;
-		text-transform: uppercase;
 		margin: 0 0;
 		padding: 0 0 rem(10px);
 		position: relative;
 		display: inline-block;
+		padding: 10% 10% 10% 0;
 	}
 }
 
@@ -279,7 +292,10 @@ section {
 		section{
 			header{
 				h2{
-					color: $blue-dk;
+					text-transform: initial;
+					color: $blue-header;
+					font-family: $bd;
+					text-align: left;
 				}
 			}
 		}

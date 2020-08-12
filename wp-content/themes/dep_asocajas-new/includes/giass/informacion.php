@@ -12,13 +12,17 @@
         while(have_rows('items')): the_row();
         ?>
          <div class="informacionGiass__wrapper-controles-item col-xs-12 col-md-4 col-lg-4">
-           <img src="<?php the_sub_field('icono') ?>" alt="">
-           <p><?php the_sub_field('info') ?></p>
+           <figure>
+             <img src="<?php the_sub_field('icono') ?>" alt="">
+           </figure>
+           <div class="">
+             <p><?php the_sub_field('info') ?></p>
+           </div>
          </div>
        <?php endwhile;?>
      </div>
      <div class="informacionGiass__wrapper-alcance container">
        <?php the_field('alcance') ?>
-     </div>     
+     </div>
    </div>
  </section>
