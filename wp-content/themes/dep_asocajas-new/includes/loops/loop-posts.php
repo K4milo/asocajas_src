@@ -132,6 +132,8 @@
 						<div class="row mobile">
 							<div class="box_news_small">
 								<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+									<a href="<?php the_permalink(); ?>">
+									</a>
 								</div>
 								<div class="box_padding">
 									<div class="date_news">

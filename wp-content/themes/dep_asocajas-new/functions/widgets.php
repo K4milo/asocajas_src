@@ -75,13 +75,18 @@ Class My_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
     						<div class="row mobile">
     							<div class="box_news_small">
     								<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
-    								</div>
+                      <a href="<?php the_permalink(); ?>">
+    									</a>
+                    </div>
     								<div class="box_padding">
     									<div class="date_news">
-    										<?php the_time('F j, Y'); ?>| NOTICIA
+    										<?php the_time('m/d/y'); ?>| NOTICIA
     									</div>
     									<div class="title_news">
-    										<?php the_title(); ?>
+                        <a href="<?php the_permalink(); ?>">
+                          <?php the_title(); ?>
+                        </a>
+
     									</div>
     									<div class="link_news">
     										<a href="<?php the_permalink(); ?>">
