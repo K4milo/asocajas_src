@@ -28,11 +28,15 @@
 		display: block;
 		width: 122%;
 		height: 100%;
-		border-bottom-left-radius:50%;
-		border-bottom-right-radius:50%;
+		border-bottom-left-radius:0%;
+		border-bottom-right-radius:0%;
 		z-index: -1;
 		@include center('both');
 		@include background-gradient(#34AEB6, #461F93, 'horizontal');
+		@include mq('md') {
+			border-bottom-left-radius:50%;
+			border-bottom-right-radius:50%;
+		}
 	}
 }
 
@@ -60,11 +64,15 @@
 		display: block;
 		width: 122%;
 		height: 100%;
-		border-bottom-left-radius:50%;
-		border-bottom-right-radius:50%;
+		border-bottom-left-radius:0%;
+		border-bottom-right-radius:0%;
 		z-index: -1;
 		@include center('both');
 		@include background-gradient($blue-lt, $blue, 'horizontal');
+		@include mq('md') {
+			border-bottom-left-radius:50%;
+			border-bottom-right-radius:50%;
+		}
 	}
 }
 
@@ -89,11 +97,15 @@
 		display: block;
 		width: 122%;
 		height: 100%;
-		border-bottom-left-radius:50%;
-		border-bottom-right-radius:50%;
+		border-bottom-left-radius:0%;
+		border-bottom-right-radius:0%;
 		z-index: -1;
 		@include center('both');
 		@include background-gradient(#8080B4, #4542B6, 'horizontal');
+		@include mq('md') {
+			border-bottom-left-radius:50%;
+			border-bottom-right-radius:50%;
+		}
 
 	}
 }
@@ -118,11 +130,15 @@
 		display: block;
 		width: 122%;
 		height: 100%;
-		border-bottom-left-radius:50%;
-		border-bottom-right-radius:50%;
+		border-bottom-left-radius:0%;
+		border-bottom-right-radius:0%;
 		z-index: -1;
 		@include center('both');
 		@include background-gradient(#9B5EB6, #5130A7, 'horizontal');
+		@include mq('md') {
+			border-bottom-left-radius:50%;
+			border-bottom-right-radius:50%;
+		}
 
 	}
 }
@@ -311,11 +327,8 @@ background-color: #f7f7f7;
 			@include mq('md') {
 				width: 33%;
 				margin-top: 20px;
-<<<<<<< HEAD
 				vertical-align: top;
-=======
 				vertical-align: text-top;
->>>>>>> 0512caf5b594eeeaed7cb568ef857236577b9699
 			}
 		}
 	}
@@ -488,10 +501,14 @@ background-color: #f7f7f7;
 		display: block;
 		width: 122%;
 		height: 100%;
-		border-bottom-left-radius:50%;
-		border-bottom-right-radius:50%;
+		border-bottom-left-radius:0%;
+		border-bottom-right-radius:0%;
 		z-index: -1;
 		@include center('both');
+		@include mq('md') {
+			border-bottom-left-radius:50%;
+			border-bottom-right-radius:50%;
+		}
 	}
 
 	&__info {
