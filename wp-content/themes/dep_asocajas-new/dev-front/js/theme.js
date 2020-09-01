@@ -550,7 +550,7 @@ import { CountUp } from './vendors/counterup';
 
     toogleItems(items) {
       items.each(function(i1,obj) {
-        if (i1 > 11){
+        if (i1 > 3){
            $(this).hide();
         }
       })

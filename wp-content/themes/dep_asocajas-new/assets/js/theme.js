@@ -63,12 +63,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76,7 +75,7 @@
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
 
-var _vendorsCounterup = __webpack_require__(67);
+var _vendorsCounterup = __webpack_require__(2);
 
 (function ($) {
   var $GeneralScope = {
@@ -584,7 +583,7 @@ var _vendorsCounterup = __webpack_require__(67);
 
     toogleItems: function toogleItems(items) {
       items.each(function (i1, obj) {
-        if (i1 > 11) {
+        if (i1 > 3) {
           $(this).hide();
         }
       });
@@ -647,24 +646,13 @@ var _vendorsCounterup = __webpack_require__(67);
 })(jQuery);
 
 /***/ }),
-
-/***/ 1:
+/* 1 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(0);
-module.exports = __webpack_require__(1);
-
-
-/***/ }),
-
-/***/ 67:
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -721,6 +709,13 @@ var __assign = undefined && undefined.__assign || function () {
   }, t;
 })();exports.CountUp = CountUp;
 
-/***/ })
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/******/ });
+__webpack_require__(0);
+module.exports = __webpack_require__(1);
+
+
+/***/ })
+/******/ ]);

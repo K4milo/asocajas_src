@@ -62,5 +62,31 @@
 				}
 			}
 		}
+
+		&--magazine {
+			form {
+				@include mq('md') {
+					justify-content: flex-end;
+				}
+
+				.form-item {
+					@include mq('md') { 
+						margin: inherit;
+					}
+					&--select {
+						@include mq('md') { 
+							width: 40%;
+							margin: inherit;
+						}
+						select {
+
+							@include mq('md') {
+								margin-left: rem(25px);
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
