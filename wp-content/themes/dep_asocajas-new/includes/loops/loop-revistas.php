@@ -20,42 +20,15 @@
 				<h3>Notas emitidas en <?php echo ucfirst($monthName); ?> de <?php echo $year; ?></h3>
 			<?php endif; ?>
 		</header>
-		<div class="wrapper-form filter">
+		<div class="wrapper-form filter filter--magazine">
 			<form id="FilterTop" action="<?php the_permalink()?>" method="post">
 				<div class="form-item form-item--select">
 					<select required name="register_cat">
-						<option value="">Categoría</option>
-						<option value="all">Todas</option>
-						<option value="asocajas">Asocajas</option>
-						<option value="afiliadas">Afiliadas</option>
+						<option value="">Edición</option>
+						<option value="34">Edición 34</option>
+						<option value="35">Edición 35</option>
 					</select>
 				</div>
-				<div class="form-item form-item--select">
-					<select required name="register_month">
-						<option value="">Mes</option>
-						<option value="01">Enero</option>
-						<option value="02">Febrero</option>
-						<option value="03">Marzo</option>
-						<option value="04">Abril</option>
-						<option value="05">Mayo</option>
-						<option value="06">Junio</option>
-						<option value="07">Julio</option>
-						<option value="08">Agosto</option>
-						<option value="09">Septiembre</option>
-						<option value="10">Octubre</option>
-						<option value="11">Noviembre</option>
-						<option value="12">Diciembre</option>
-					</select>
-				</div>
-				<div class="form-item form-item--select">
-					<select required name="register_year">
-						<option value="">Año</option>
-						<option value="2017">2017</option>
-						<option value="2018">2018</option>
-						<option value="2019">2019</option>
-					</select>
-				</div>
-
 				<div class="form-item form-item--actions">
 					<span><input type="submit" value="Aplicar filtros"></span>
 				</div>
@@ -102,7 +75,7 @@
 				} else {
 
 					$args = array(
-						'post_type' => 'Revistas',
+						'post_type' => 'revistas',
 						'posts_per_page' => 6,
 						'paged'          => $paged,
 					);
@@ -129,25 +102,25 @@
 
 			?>
 			<div class=" home-news">
-						<div class="row mobile">
-							<div class="box_news_small">
-								<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
-								</div>
-								<div class="box_padding">
-									<div class="date_news">
-										<?php the_time('m/d/y'); ?>| REVISTA
-									</div>
-									<div class="title_news">
-										<?php the_title(); ?>
-									</div>
-									<div class="link_news">
-										<a href="<?php the_permalink(); ?>">
-											Leer la revista >
-										</a>
-									</div>
-								</div>
+				<div class="row mobile">
+					<div class="box_news_small">
+						<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+						</div>
+						<div class="box_padding">
+							<div class="date_news">
+								<?php the_time('m/d/y'); ?>| REVISTA
+							</div>
+							<div class="title_news">
+								<?php the_title(); ?>
+							</div>
+							<div class="link_news">
+								<a href="<?php the_permalink(); ?>">
+									Leer la revista >
+								</a>
 							</div>
 						</div>
+					</div>
+				</div>
 			</div>
 
 			<?php

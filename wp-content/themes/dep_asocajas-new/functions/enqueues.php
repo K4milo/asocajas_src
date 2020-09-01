@@ -38,9 +38,6 @@ function bst_enqueues() {
 	wp_register_script('bst-js', get_template_directory_uri() . '/js/bst.js', false, null, true);
 	wp_enqueue_script('bst-js');
 
-	wp_register_script('waypoints-js', get_template_directory_uri() . '/js/waypoints.js', false, null, true);
-	wp_enqueue_script('waypoints-js');
-
 	wp_register_script('leaflet-js', get_template_directory_uri() . '/js/leaflet.js', false, null, true);
 	wp_enqueue_script('leaflet-js');
 
@@ -53,7 +50,7 @@ function bst_enqueues() {
 	wp_register_script('mapbox-js', get_template_directory_uri() . '/js/mapbox.js', false, null, true);
 	wp_enqueue_script('mapbox-js');
 
-	wp_register_script('main-js', get_template_directory_uri() . '/assets/js/vendors/theme.js', false, null, true);
+	wp_register_script('main-js', get_template_directory_uri() . '/assets/js/theme.js', false, null, true);
 	wp_enqueue_script('main-js');
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {

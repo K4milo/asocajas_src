@@ -25,11 +25,7 @@ $cifras=get_field('cifras');
          <div class="cifras__wrapper-item  col-xs-6 col-md-3 col-lg-3 ">
            <div>
             <img src="<?php echo $icono; ?>" alt="">
-<<<<<<< HEAD
-            <h1 class="counter"><?php echo $cifra; ?></h1>
-=======
             <h1><span class="counter"><?php echo $cifra; ?></span></h1>
->>>>>>> 0512caf5b594eeeaed7cb568ef857236577b9699
             <p><?php echo $info; ?></p>
            </div>
          </div>

@@ -17,14 +17,15 @@
 				margin: rem(10px) auto;
 
 				&--select {
-					@include mq('md') {
+					@include mq('md') { 
 						width: 20%;
 					}
 					select {
 						border-radius: 10px;
 						color:$naranja;
 						@include font(22px);
-						height: 40px;
+						height: auto;
+
 						@include mq('md') {
 							margin-top: rem(5px);
 						}

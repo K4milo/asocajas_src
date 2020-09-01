@@ -189,6 +189,27 @@ function create_posttype() {
 	    'rewrite' => array( 'slug' => 'tipo-recurso')
 	));
 
+	// Tipos de revista
+
+	$magazine_type = array(
+		'name' => _x( 'Edición', 'Edición de revista' ),
+		'singular_name' => _x( 'Tipo', 'edicion-revista' ),
+		'search_items' =>  __( 'Buscar edición de revista' ),
+		'all_items' => __( 'Todas las ediciones de revista' )
+	);
+
+	register_taxonomy('edicion-revista', array('revistas'), array(
+		'hierarchical' => true,
+		'labels' => $magazine_type,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'show_in_rest' => true,
+		'rest_base' => 'revistas',
+		'rest_controller_class' => 'WP_REST_Terms_Controller',
+		'query_var' => true,
+		'rewrite' => array( 'slug' => 'edicion-revista')
+	));
+
 	flush_rewrite_rules();
 }
 

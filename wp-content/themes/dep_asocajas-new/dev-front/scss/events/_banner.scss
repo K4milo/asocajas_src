@@ -459,12 +459,26 @@ background-color: #f7f7f7;
 		align-items: center;
 		@include wrapper;
 		max-width: rem(1000px);
+		padding: 0 rem(20px);
+
+		@include mq(md) {
+			padding: 0;
+		}
 	}
 
 	&--item {
 
 		@include mq(md) {
 			width: 48%;
+		}
+	}
+
+	&__image {
+		padding: 0 rem(30px);
+		
+		img {
+			max-width: 100%;
+			height: auto;
 		}
 	}
 

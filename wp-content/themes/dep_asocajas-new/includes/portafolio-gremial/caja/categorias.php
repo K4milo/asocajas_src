@@ -3,8 +3,8 @@
     <?php
      while(have_rows('categorias')): the_row();
      ?>
-     <article class="col-md-3">
-      <div class="cards-pod">
+     <article class="col-md-6">
+      <div class="cards-pod cards-pod--big">
         <figure class="cards-pod__image">
           <img src="<?php the_sub_field('icono') ?>" alt="">
         </figure>
