@@ -9,13 +9,11 @@ body {
 	b, h1, h2, h3 {
 		font-family: $lt;
 	}
-	img
-	{
+	
+	img {
 
-		width: 100%;
-		@include mq('sm') {
-			width: auto;
-		}
+		max-width: 100%;
+		height: auto;
 	}
 
 	// Link styles
