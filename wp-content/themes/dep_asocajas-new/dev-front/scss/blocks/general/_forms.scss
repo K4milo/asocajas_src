@@ -9,6 +9,7 @@
 			&[type="tel"],
 			&[type="date"],
 			&[type="number"] {
+				font-size: 16px;
 				display: block;
 				color: $gray;
 				border-radius: 0;
@@ -36,6 +37,8 @@
 			border: rem(1px) solid $gray-d8;
 			background-color: $gray-e6;
 			padding: rem(10px);
+			font-style: italic;
+			font-size: 16px;
 		}
 		textarea {
 			display: block;
@@ -45,6 +48,8 @@
 			border: rem(1px) solid $gray-d8;
 			background-color: $gray-e6;
 			padding: rem(10px);
+			font-style: italic;
+			font-size: 16px;
 			@include placeholder {
 				color: $gray;
 			}

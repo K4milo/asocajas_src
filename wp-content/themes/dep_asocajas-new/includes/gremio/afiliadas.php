@@ -8,13 +8,18 @@
       A continuación, encontrará nuestras 35 Cajas de Compensación Familiar afiliadas a nivel nacional.
     </p>
     <div class="afiliadas__wrapper-cajas ">
+
       <?php
        while(have_rows('cajas')): the_row();
        ?>
-        <div class="banner__wrapper-cajas__item col-xs-12 col-md-6 col-lg-3">
-          <img src="<?php the_sub_field('logo') ?>" alt="">
+        <div class="banner__wrapper-cajas__item">
+          <a href="<?php the_sub_field('url') ?>">
+            <img src="<?php the_sub_field('logo') ?>" alt="">
+          </a>
+
         </div>
       <?php endwhile;?>
+
     </div>
 
 

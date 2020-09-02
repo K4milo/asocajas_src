@@ -2,25 +2,33 @@
 {
 	background: #f7f7f7;
 	padding: rem(30px) 0;
-	
+
 	.row
 	{
 		max-width: 1100px;
 		width: 100%;
 		margin: 0 auto;
 		padding: 0 rem(15px);
-		.banner__wrapper-cajas__item
+		.afiliadas__wrapper-cajas
 		{
-			height: 253px;
-		
-			img
+			flex-wrap: wrap;
+			display: flex;
+			.banner__wrapper-cajas__item
 			{
-				display: block;
-				margin: 0 auto;
-				width: auto;
-				height: 100%;
+				width: 50%;
+				height: 253px;
+				@include mq('md'){
+					width: 20%;
+				}
+
+				img
+				{
+					display: block;
+					margin: 0 auto;
+				}
 			}
 		}
+
 		.afiliadas__wrapper-title
 		{
 			color: #174886;
