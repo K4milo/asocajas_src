@@ -6,7 +6,7 @@ The Single Posts Loop
 ?>
 
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
-    <section id="PostDetail">
+    <section id="PostDetailRevista">
         <article role="article" id="post_<?php the_ID()?>" <?php post_class()?> class="post">
             <section>
                 <figure class="post-image">

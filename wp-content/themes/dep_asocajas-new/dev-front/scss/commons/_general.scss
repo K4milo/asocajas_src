@@ -9,7 +9,7 @@ body {
 	b, h1, h2, h3 {
 		font-family: $lt;
 	}
-	
+
 	img {
 
 		max-width: 100%;
@@ -95,6 +95,11 @@ body {
 		&.instagram {
 			a {
 				@include iconBg('../images/icons/insta.svg', 47px);
+			}
+		}
+		&.linkedin {
+			a{
+				@include iconBg('../images/icons/linkedin.svg', 47px);
 			}
 		}
 	}

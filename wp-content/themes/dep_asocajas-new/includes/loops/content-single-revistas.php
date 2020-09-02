@@ -3,13 +3,13 @@
 The Single Posts Loop
 =====================
 */
-?> 
+?>
 
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
-    <section id="PostDetail" class="magazine-single">
+    <section id="PostDetailRevista" class="magazine-single">
         <article role="article" id="post_<?php the_ID()?>" <?php post_class()?> class="post">
             <header>
-                <h2><?php the_title()?></h2>            
+                <h2>titulo: <?php the_title()?></h2>
             </header>
             <div class="magazine-wrapper">
                 <?php the_content()?>

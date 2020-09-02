@@ -111,7 +111,7 @@
 				}
 			}
 			.menu {
-				display: block;
+				display: inline-flex;
 				text-align: center;
 				@include mq('md') {
 					text-align: right;

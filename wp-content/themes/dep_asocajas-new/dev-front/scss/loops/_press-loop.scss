@@ -17,8 +17,8 @@ section {
 			width: 100%;
 
 			@include mq('md'){
-				margin: 0 24px;
-				width: 45%;
+				margin: 0;
+				width: 50%;
 			}
 		}
 
@@ -305,6 +305,27 @@ section {
 					color: $blue-header;
 					font-family: $bd;
 					text-align: left;
+				}
+				hr{
+					border-top: 1px solid #000;
+				}
+			}
+		}
+	}
+}
+#PostDetailRevista{
+	padding: 5%;
+	article{
+		section{
+			header{
+				h2{
+					text-transform: initial;
+					color: $purple;
+					font-family: $bd;
+					text-align: left;
+				}
+				hr{
+					border-top: 1px solid #000;
 				}
 			}
 		}
