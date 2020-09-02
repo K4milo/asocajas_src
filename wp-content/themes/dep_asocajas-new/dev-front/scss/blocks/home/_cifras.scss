@@ -38,8 +38,9 @@
     {
 
         color: #34b6be;
-        font-size: rem(30px);
+        font-size: rem(20px);
         font-family: 'Heavitas';
+
         @include mq('md') {
             font-size: rem(45px);
         }

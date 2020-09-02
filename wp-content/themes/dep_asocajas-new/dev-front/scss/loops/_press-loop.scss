@@ -12,11 +12,20 @@ section {
 			display: flex;
 			flex-wrap: wrap;
 		}
+
 		.home-news{
-			margin: 0 24px;
 			width: 100%;
+
 			@include mq('md'){
+				margin: 0 24px;
 				width: 45%;
+			}
+		}
+
+		.row {
+			&.mobile {
+				margin: 0;
+				padding: 0 rem(20px);
 			}
 		}
 	}

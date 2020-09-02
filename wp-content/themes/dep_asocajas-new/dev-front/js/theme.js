@@ -1,3 +1,5 @@
+import { CountUp } from './vendors/counterup';
+
 (function ($) {
   const $GeneralScope = {
     // Constructor
@@ -203,18 +205,26 @@
 
     // scripts for counter
     homeCounter: function () {
-      let numberItems = $(".cifras__wrapper-item");
-
-      $(".counter").counterUp({
-        delay: 10,
-        separator: ".",
-        time: 1500,
-      });
+      const numberItems = [...document.querySelectorAll(".cifras__wrapper-item")];
 
       if (numberItems) {
-        numberItems.each(function (index, el) {
-          let instance = $(this);
-          let numberItem = instance.find("h4");
+
+        const options = {
+          duration: 7,
+          separator: '.',
+          decimal: ',',
+        };
+
+        numberItems.forEach((el) => {
+          let numberItem = el.querySelector(".counter").textContent;
+          let cleanN = parseInt(numberItem.split('.').join(""));
+          let trigger = new CountUp(el.querySelector(".counter"), cleanN, options);
+          
+          if (!trigger.error) {
+            trigger.start()
+          } else {
+            console.error(trigger.error);
+          }
         });
       }
     },
@@ -540,7 +550,7 @@
 
     toogleItems(items) {
       items.each(function(i1,obj) {
-        if (i1 > 11){
+        if (i1 > 3){
            $(this).hide();
         }
       })

@@ -37,6 +37,7 @@
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    outline: none;
 }
 
 .slick-track {
@@ -46,6 +47,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    outline: none;
 
     &:before,
     &:after {
@@ -55,6 +57,10 @@
 
     &:after {
         clear: both;
+    }
+
+    &:focus {
+        outline: none;
     }
 
     .slick-loading & {
@@ -73,6 +79,10 @@
     }
     &.slick-loading img {
         display: none;
+    }
+
+    &:focus {
+        outline: none;
     }
 
     display: none;
@@ -198,7 +208,7 @@
             background: transparent;
             display: block;
             border-radius: 100%;
-            background-color: rgba($white, .6);
+            background-color: rgba($white, .6); 
             height: 100%;
             width: 100%;
             outline: none;

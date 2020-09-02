@@ -80,6 +80,11 @@
         border-radius: rem(16px);
         box-shadow: 0 0 rem(10px) $gray;
 
+        &--big {
+            @include mq('md') {
+                min-height: 400px;
+            }
+        }
         &__image {
             text-align: center;
 
@@ -104,7 +109,9 @@
     }
 
     &--resources {
-
+        @include mq('md') {
+            min-height: 330px;
+        }
         p, a {
             font-family: $bd;
             padding: 0 rem(12px);
