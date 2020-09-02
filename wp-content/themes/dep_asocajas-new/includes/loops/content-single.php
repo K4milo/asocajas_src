@@ -19,7 +19,7 @@ The Single Posts Loop
             </section>
         </article>
     </section>
-<?php // comments_template('/includes/loops/comments.php'); ?>
+<?php comments_template('/includes/loops/comments.php'); ?>
 <?php endwhile; ?>
 <?php else: get_template_part('includes/loops/content', 'none'); ?>
 <?php endif; ?>
