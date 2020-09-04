@@ -58,16 +58,27 @@ body {
 		display: none !important;
 	}
 }
+
 // Social menu
 #menu-menu-redes,
 #menu-menu-redes-1 {
+	text-align: center;
+
+	@include mq('m') {
+		text-align: right;
+	}
+
 	li {
 		display: inline-block;
 		vertical-align: top;
-		width: rem(32px);
-		height: rem(32px);
+		width: rem(47px);
+		height: rem(47px);
 		margin: 0 rem(5px);
-		margin-left: 20px;
+
+		@include mq('m') {
+			width: rem(32px);
+			height: rem(32px);
+		}
 
 		a {
 			display: block;

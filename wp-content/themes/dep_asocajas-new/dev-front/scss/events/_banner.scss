@@ -64,7 +64,7 @@
 	&:before {
 		content: "";
 		display: block;
-		width: 122%;
+		width: 177%;
 		height: 100%;
 		border-bottom-left-radius:0%;
 		border-bottom-right-radius:0%;
@@ -73,8 +73,9 @@
 		@include background-gradient($blue-lt, $blue, 'horizontal');
 		border-bottom-left-radius:50%;
 		border-bottom-right-radius:50%;
+
 		@include mq('md') {
-			width: 190%;	
+			width: 120%;	
 		}
 	}
 }
@@ -98,7 +99,7 @@
 	&:before {
 		content: "";
 		display: block;
-		width: 122%;
+		width: 190%;
 		height: 100%;
 		border-bottom-left-radius:0%;
 		border-bottom-right-radius:0%;
@@ -109,7 +110,7 @@
 		border-bottom-right-radius:50%;
 		
 		@include mq('md') {
-			width: 190%;	
+			width: 122%;	
 		}
 
 	}
@@ -133,7 +134,7 @@
 	&:before {
 		content: "";
 		display: block;
-		width: 122%;
+		width: 190%;
 		height: 100%;
 		border-bottom-left-radius:0%;
 		border-bottom-right-radius:0%;
@@ -144,9 +145,8 @@
 		border-bottom-right-radius:50%;
 		
 		@include mq('md') {
-			width: 190%;	
+			width: 122%;	
 		}
-
 	}
 }
 
@@ -521,13 +521,14 @@ background-color: #f7f7f7;
 		content: "";
 		background-color: $white;
 		display: block;
-		width: 122%;
+		width: 190%;
 		height: 100%;
 		border-bottom-left-radius:0%;
 		border-bottom-right-radius:0%;
 		z-index: -1;
 		@include center('both');
 		@include mq('md') {
+			width: 122%;
 			border-bottom-left-radius:50%;
 			border-bottom-right-radius:50%;
 		}
