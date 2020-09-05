@@ -137,7 +137,7 @@
 								</div>
 								<div class="box_padding">
 									<div class="date_news">
-										<?php the_time('m/d/y'); ?>| NOTICIA
+										<?php the_time('d/m/Y'); ?>| NOTICIA
 									</div>
 									<div class="title_news">
 										<?php the_title(); ?>
@@ -170,15 +170,14 @@
 		</div>
 		<div id="destacados">
 			<header>
-				<h2>Noticias Destacadas</h2>
+				<h2>Revistas Destacadas</h2>
 			</header>
 			<div  class="pod-news--wrapper">
 				<?php
 				$args = array (
-					'post_type' => 'post',
-					'posts_per_page' => 9,
-					'paged'          => $paged,
-					'category_name' => 'destacado',
+					'post_type' => 'Revistas',
+					'posts_per_page' => 2,
+					'edicion-revista' => 'destacado'
 				);
 				$query = new WP_Query( $args );
 
@@ -193,14 +192,14 @@
 									 </div>
 									 <div class="box_padding">
 										 <div class="date_news">
-											 <?php the_time('F j, Y'); ?>| NOTICIA
+											 <?php the_time('d/m/Y'); ?>| REVISTA
 										 </div>
 										 <div class="title_news">
 											 <?php the_title(); ?>
 										 </div>
 										 <div class="link_news">
 											 <a href="<?php the_permalink(); ?>">
-												 Leer la noticia >
+												 Leer la revista >
 											 </a>
 										 </div>
 									 </div>
@@ -208,7 +207,9 @@
 							 </div>
 				 </div>
 			 <?php endwhile; ?>
-			 <?php endif; ?>
+			 <?php endif;
+			 				wp_reset_query();
+			 ?>
 			</div>
 		</div>
 

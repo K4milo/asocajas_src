@@ -211,6 +211,12 @@
 			&.navbar-nav {
 				float: none;
 				clear: both;
+				.contacto{
+					display: block;
+					@include mq('md'){
+						display: none;
+					}
+				}
 				> li {
 					@include mq('sm') {
 						display: inline-block;

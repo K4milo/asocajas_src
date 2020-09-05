@@ -168,6 +168,33 @@ section {
 		}
 	}
 }
+#sidebar2{
+	background-color: $gray-f6;
+		padding: 30px;
+		.recent-posts-2{
+			.posts-sidebar{
+				a{
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+		header{
+			h4{
+				color: #174886;
+				font-size: 35px;
+				font-size: 3.5rem;
+				font-family: Lato-Bold;
+				margin: 0;
+				padding: 0 0 1rem;
+				position: relative;
+				display: inline-block;
+				padding: 10% 10% 10% 0;
+			}
+		}
+}
 .widget_recent_entries {
 	> h4 {
 		color: $blue-header;

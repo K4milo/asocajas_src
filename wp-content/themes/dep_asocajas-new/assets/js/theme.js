@@ -583,7 +583,7 @@ var _vendorsCounterup = __webpack_require__(2);
 
     toogleItems: function toogleItems(items) {
       items.each(function (i1, obj) {
-        if (i1 > 3) {
+        if (i1 > 4) {
           $(this).hide();
         }
       });

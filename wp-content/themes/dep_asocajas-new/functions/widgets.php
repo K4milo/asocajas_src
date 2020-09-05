@@ -80,7 +80,7 @@ Class My_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
                     </div>
     								<div class="box_padding">
     									<div class="date_news">
-    										<?php the_time('m/d/y'); ?>| NOTICIA
+    										<?php the_time('d/m/Y'); ?>| NOTICIA
     									</div>
     									<div class="title_news">
                         <a href="<?php the_permalink(); ?>">

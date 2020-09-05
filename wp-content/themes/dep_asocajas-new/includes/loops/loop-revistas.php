@@ -108,7 +108,7 @@
 						</div>
 						<div class="box_padding">
 							<div class="date_news">
-								<?php the_time('m/d/y'); ?>| REVISTA
+								<?php the_time('d/m/Y'); ?>| REVISTA
 							</div>
 							<div class="title_news">
 								<?php the_title(); ?>
@@ -138,6 +138,50 @@
 				</div>
 			<?php endif; ?>
 
+		</div>
+		<div id="destacados">
+			<header>
+				<h2>Noticias Destacadas</h2>
+			</header>
+			<div  class="pod-news--wrapper">
+				<?php
+				$args = array (
+					'post_type' => 'post',
+					'posts_per_page' => 2,
+					'category_name' => 'destacado'
+				);
+				$query = new WP_Query( $args );
+
+				if($query->have_posts()):
+
+				while ( $query->have_posts() ) : $query->the_post();
+				 ?>
+				 <div class=" home-news">
+							 <div class="row mobile">
+								 <div class="box_news_small">
+									 <div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+									 </div>
+									 <div class="box_padding">
+										 <div class="date_news">
+											 <?php the_time('d/m/Y'); ?>| NOTICIA
+										 </div>
+										 <div class="title_news">
+											 <?php the_title(); ?>
+										 </div>
+										 <div class="link_news">
+											 <a href="<?php the_permalink(); ?>">
+												 Leer la noticia >
+											 </a>
+										 </div>
+									 </div>
+								 </div>
+							 </div>
+				 </div>
+			 <?php endwhile; ?>
+			 <?php endif;
+							wp_reset_query();
+			 ?>
+			</div>
 		</div>
 	</div>
 </section>

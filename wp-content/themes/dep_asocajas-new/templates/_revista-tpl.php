@@ -11,5 +11,6 @@
 	/*Revistas*/
 	get_template_part('includes/loops/loop','revistas');
 
+	get_template_part('includes/revista/banner-destacado');
 
 	get_template_part('includes/footer');

@@ -219,7 +219,7 @@ import { CountUp } from './vendors/counterup';
           let numberItem = el.querySelector(".counter").textContent;
           let cleanN = parseInt(numberItem.split('.').join(""));
           let trigger = new CountUp(el.querySelector(".counter"), cleanN, options);
-          
+
           if (!trigger.error) {
             trigger.start()
           } else {
@@ -550,7 +550,7 @@ import { CountUp } from './vendors/counterup';
 
     toogleItems(items) {
       items.each(function(i1,obj) {
-        if (i1 > 3){
+        if (i1 > 4){
            $(this).hide();
         }
       })
@@ -612,5 +612,5 @@ import { CountUp } from './vendors/counterup';
   // gremio script
   if ($("body").hasClass("page-template-templates_gremio-tpl-php")) {
     $gremioScope.init();
-  } 
+  }
 })(jQuery);
