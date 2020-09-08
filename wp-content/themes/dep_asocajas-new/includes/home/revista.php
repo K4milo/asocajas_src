@@ -25,7 +25,7 @@
           <div class="revista__wrapper-img">
             <img src=<?php echo $imagen_revista; ?> alt="">
           </div>
-          <a class="link_home_orange" href="javascript:void(0);">
+          <a class="link_home_orange" href="<?php echo $url_boton_mobile; ?>">
             Ir a la revista >
           </a>
       <?php endif;?>
