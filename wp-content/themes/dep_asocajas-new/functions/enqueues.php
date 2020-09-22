@@ -15,7 +15,9 @@ function bst_enqueues() {
 
 	wp_enqueue_style( 'open-sans', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap', false );
 
-	wp_enqueue_style( 'open-sans', 'https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap', false );
+	wp_enqueue_style( 'lato', 'https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap', false );
+
+	wp_enqueue_style( 'font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', false );
 
 	wp_register_style('main-css', get_template_directory_uri() . '/assets/css/theme.css', false, null);
 	wp_enqueue_style('main-css');

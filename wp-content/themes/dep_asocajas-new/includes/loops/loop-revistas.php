@@ -20,6 +20,7 @@
 				<h3>Notas emitidas en <?php echo ucfirst($monthName); ?> de <?php echo $year; ?></h3>
 			<?php endif; ?>
 		</header>
+		<div class="wrapper-form--search"><?php get_search_form(); ?></div>
 		<div class="wrapper-form filter filter--magazine">
 			<form id="FilterTop" action="<?php the_permalink()?>" method="post">
 				<div class="form-item form-item--select">

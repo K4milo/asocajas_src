@@ -105,7 +105,8 @@
 			h4
 			{
 				font-size: rem(12px);
-				text-align: right;
+				text-align: left;
+				padding: 0 rem(76px) rem(16px);
 				display: none;
 
 				@include mq('md') {

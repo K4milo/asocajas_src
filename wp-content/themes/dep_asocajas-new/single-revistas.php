@@ -11,7 +11,7 @@
 
     <div class="col-xs-12 col-sm-4" id="sidebar2" role="navigation">
       <header>
-        <h4>Otros Articulos</h4>
+        <h4>Otros Artículos</h4>
       </header>
       <?php
       $args = array (

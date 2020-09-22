@@ -20,6 +20,7 @@
 				<h3>Notas emitidas en <?php echo ucfirst($monthName); ?> de <?php echo $year; ?></h3>
 			<?php endif; ?>
 		</header>
+		<div class="wrapper-form--search"><?php get_search_form(); ?></div>
 		<div class="wrapper-form filter">
 			<form id="FilterTop" action="<?php the_permalink()?>" method="post">
 				<div class="form-item form-item--select">
@@ -140,7 +141,7 @@
 										<?php the_time('d/m/Y'); ?>| NOTICIA
 									</div>
 									<div class="title_news">
-										<?php the_title(); ?>
+										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 									</div>
 									<div class="link_news">
 										<a href="<?php the_permalink(); ?>">

@@ -119,6 +119,11 @@
 			width: 100%;
 			background-size: cover;
 			background-position: center;
+			position: relative;
+
+			a {
+				@include coverAbsolute(1);
+			}
 		}
 		.date_news
 		{
@@ -158,6 +163,10 @@
 				height: 100%;
 				width: 170px;
 				float: left;
+			}
+			position: relative;
+			a {
+				@include coverAbsolute(1);
 			}
 
 		}

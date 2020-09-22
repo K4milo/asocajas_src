@@ -1,0 +1,29 @@
+.search-top {
+  display: flex;
+  border-bottom: rem(2px) solid $gray;
+
+  @include mq(md) {
+    margin-left: 50%;
+  }
+
+  &__input {
+    height: auto;
+    max-height: inherit;
+    padding: rem(12px) 0;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+
+    @include placeholder {
+      @include font(20px);
+    }
+  }
+
+  &__button {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    @include font(20px);
+  }
+}

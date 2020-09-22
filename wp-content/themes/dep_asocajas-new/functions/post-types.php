@@ -146,7 +146,7 @@ function create_posttype() {
 	            'singular_name' => __( 'Revista' )
 	        ),
 	        'rewrite' => array('slug' => 'revista'),
-	        'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields'),
+	        'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'comments'),
 	        'public' => true,
 	        'hierarchical'        => false,
 	        'show_ui'             => true,
