@@ -599,6 +599,37 @@ var _vendorsCounterup = __webpack_require__(2);
       });
     }
   };
+
+  // -- Landing Creamos
+  var $creamosScope = {
+
+    init: function init() {
+      this.initCarousel();
+    },
+
+    initCarousel: function initCarousel() {
+      var slider_wrapper = $('.js-speakers');
+      var slick_settings = {
+        dots: false,
+        arrows: true,
+        slidesToShow: 5,
+        infinite: false,
+        slidesToScroll: 1,
+        responsive: [{
+          breakpoint: 680,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }]
+      };
+
+      if (!slider_wrapper.hasClass("slick-initialized")) {
+        var slick_slider = slider_wrapper.slick(slick_settings);
+      }
+    }
+  };
+
   // Trigger
   $GeneralScope.init();
 
@@ -642,6 +673,11 @@ var _vendorsCounterup = __webpack_require__(2);
   // gremio script
   if ($("body").hasClass("page-template-templates_gremio-tpl-php")) {
     $gremioScope.init();
+  }
+
+  // gremio script
+  if ($("body").hasClass("page-template-templates_landing-foro-valor-php")) {
+    $creamosScope.init();
   }
 })(jQuery);
 

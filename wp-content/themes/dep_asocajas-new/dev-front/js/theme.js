@@ -566,6 +566,39 @@ import { CountUp } from './vendors/counterup';
       })
     }
   }
+
+  // -- Landing Creamos
+  const $creamosScope = {
+
+    init: function() {
+      this.initCarousel()
+    },
+
+    initCarousel () {
+      const slider_wrapper = $('.js-speakers')
+      const slick_settings = {
+        dots: false,
+        arrows: true,
+        slidesToShow: 5,
+        infinite: false,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 680,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      }
+
+      if (!slider_wrapper.hasClass("slick-initialized")) {
+        const slick_slider = slider_wrapper.slick(slick_settings)
+      }
+    }
+  }
+
   // Trigger
   $GeneralScope.init();
 
@@ -612,5 +645,10 @@ import { CountUp } from './vendors/counterup';
   // gremio script
   if ($("body").hasClass("page-template-templates_gremio-tpl-php")) {
     $gremioScope.init();
+  }
+
+   // gremio script
+   if ($("body").hasClass("page-template-templates_landing-foro-valor-php")) {
+    $creamosScope.init();
   }
 })(jQuery);
