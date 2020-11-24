@@ -4,7 +4,7 @@
    * 
    */
 
-   $agenda_items = get_field('agenda');
+$agenda_items = get_field('agenda');
 
 if ($agenda_items): ?>
 <section id="forumAgenda" class="agenda">
@@ -26,8 +26,12 @@ if ($agenda_items): ?>
       <div class="row agenda__row">
         <div class="col-md-5">
           <div class="agenda__date">
+          <?php 
+            if ($agenda_date):?>
             <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <?php echo $agenda_date; ?>
+            <span><?php echo $agenda_date; ?></span>
+          <?php
+          endif; ?>            
           </div>
         </div>
         <div class="col-md-7">
