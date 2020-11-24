@@ -1,4 +1,16 @@
 .footer-foro{
   color: $white;
   background-color: $morado-foro;
+  .col-md-6{
+    padding: 20px;
+    text-align: center;
+    @include mq('md'){
+      text-align: left;
+    }
+    p{
+      span{
+        font-size: 13px;
+      }
+    }
+  }
 }
