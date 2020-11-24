@@ -1,0 +1,68 @@
+.page-template-_landing-foro-valor{
+  background-color: $gris-foro;
+}
+.hero-banner{
+  &__image-bg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 100px;
+  }
+  &__caption{
+    text-align: center;
+    img{
+      padding: 2%;
+    }
+  }
+  &__logo-top{
+    padding: 4%;
+  }
+  &__date{
+    background: $fucsia-foro;
+    border-radius: 30px;
+    color: $white;
+    padding: 12px;
+    margin: 0 20%;
+    font-family: $rg;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
+.lp-forum__content{
+  .container{
+    background: $white;
+    margin: -20px 10%;
+    padding: 5%;
+    position: absolute;
+    h4{
+      font-size: 1.5rem;
+      text-align: center;
+      font-family: $rg;
+      font-weight: bold;
+    }
+    h5{
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      text-align: center;
+      font-family: $rg;
+      font-weight: bold;
+      color: $fucsia-foro;
+    }
+    ul{
+      display: flex;
+      justify-content: center;
+      li{
+        margin:auto;
+        list-style:none;
+        background-color: $azul-foro;
+        padding: 20px;
+        border-radius: 30px;
+        color: $white;
+        font-size: 1.5rem;
+        a{
+          color: $white;
+        }
+      }
+    }
+  }
+}
