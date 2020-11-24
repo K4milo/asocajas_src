@@ -25,6 +25,7 @@
         display: flex;
         justify-content: center;
         li{
+          border: solid $azul-foro;
           font-family: $rg;
           margin:auto;
           list-style:none;
