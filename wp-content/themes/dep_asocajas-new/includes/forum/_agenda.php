@@ -1,7 +1,7 @@
 <?php
   /**
    * Agenda component
-   * 
+   *
    */
 
 $agenda_items = get_field('agenda');
@@ -26,25 +26,25 @@ if ($agenda_items): ?>
       <div class="row agenda__row">
         <div class="col-md-5">
           <div class="agenda__date">
-          <?php 
+          <?php
             if ($agenda_date):?>
             <i class="fa fa-clock-o" aria-hidden="true"></i>
             <span><?php echo $agenda_date; ?></span>
           <?php
-          endif; ?>            
+          endif; ?>
           </div>
         </div>
         <div class="col-md-7">
           <div class="agenda__event">
-            <?php 
+            <?php
             if ($agenda_headline):?>
               <h4><?php echo $agenda_headline; ?></h4>
             <?php
             endif; ?>
 
-            <?php 
+            <?php
             if ($agenda_speakers):?>
-              
+
               <?php
                 while(have_rows('agenda_speakers')):the_row();
 
@@ -64,7 +64,7 @@ if ($agenda_items): ?>
 
                 <?php if ($speaker_video): ?>
                   <div class="agenda__speaker--video">
-                    <a data-fancybox 
+                    <a data-fancybox
                       href="https://www.youtube.com/embed/<?php echo $speaker_video; ?>?rel=0&fs=1&autoplay=0">
                       Ver Video
                     </a>
@@ -76,6 +76,7 @@ if ($agenda_items): ?>
                 endwhile;
             endif; ?>
           </div>
+          <hr>
         </div>
       </div>
       <?php

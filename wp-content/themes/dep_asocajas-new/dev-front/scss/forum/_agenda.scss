@@ -23,7 +23,7 @@
 
         h3 {
             border-radius: 0 0 rem(20px) rem(20px);
-            background-color: $fucsia-foro;            
+            background-color: $fucsia-foro;
             display: inline-block;
             margin: 0 0 rem(30px);
             color: $white;
@@ -40,6 +40,9 @@
 
         @include mq('md') {
             padding: rem(20px) rem(40px);
+        }
+        hr{
+            border-top: 1px solid $black;
         }
     }
 
