@@ -8,7 +8,7 @@ $speakers = get_field('speakers');
 
 if($speakers) : ?>
   <section class="speakers">
-    <header class="speakers__headline">
+    <header class="container speakers__headline">
       <h2>PONENTES</h2>
     </header>
     <div class="js-speakers">
@@ -19,8 +19,8 @@ if($speakers) : ?>
         $speaker_title = get_sub_field('speaker_title'); ?>
 
     <div class="speakers__item">
-      <div class="speakers__item-bg"
-            style="background-image: url(<?php echo $speaker_image['url']; ?>)">
+      <img src="<?php echo $speaker_image['url']; ?>" alt="<?php echo $speaker_name; ?>">
+      <!--div class="speakers__item-bg">
         <div class="speakers__caption">
           <h3 class="speakers__title">
             <?php echo $speaker_name; ?>
@@ -29,7 +29,7 @@ if($speakers) : ?>
             <?php echo $speaker_title; ?>
           </h4>
         </div>
-      </div>
+      </div-->
     </div>
         <?php
     endwhile; ?>

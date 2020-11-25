@@ -1,0 +1,17 @@
+body {
+    &.page-template-_landing-foro-valor {
+        font-family: $rg;
+
+        h1, h2, h3, p {
+            font-family: $rg;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 900;
+        }
+
+        .site-footer {
+            display: none;
+        }
+    }
+}

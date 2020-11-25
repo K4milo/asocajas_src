@@ -1,0 +1,37 @@
+.speakers {
+
+    .js-speakers {
+        margin-bottom: 0;
+    }
+    
+    &__headline {
+        background-color: $white;
+        padding-bottom: rem(40px);
+
+        h2 {
+            color: $fucsia-foro;
+            @include font(24px);
+            text-align: center;
+        }
+    }
+
+    &__item {
+        position: relative;
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+        
+        &-bg {
+            height: 100%;
+            width: 100%;
+            @include bgcover;
+            background-position: top center;
+        }
+    }
+
+    .slick-dots {
+        bottom: rem(-70px);
+    }
+}

@@ -610,16 +610,19 @@ var _vendorsCounterup = __webpack_require__(2);
     initCarousel: function initCarousel() {
       var slider_wrapper = $('.js-speakers');
       var slick_settings = {
-        dots: false,
-        arrows: true,
+        dots: true,
+        arrows: false,
         slidesToShow: 5,
         infinite: false,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
         responsive: [{
           breakpoint: 680,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            autoplay: false
           }
         }]
       };
@@ -676,7 +679,7 @@ var _vendorsCounterup = __webpack_require__(2);
   }
 
   // gremio script
-  if ($("body").hasClass("page-template-templates_landing-foro-valor-php")) {
+  if ($("body").hasClass("page-template-_landing-foro-valor")) {
     $creamosScope.init();
   }
 })(jQuery);

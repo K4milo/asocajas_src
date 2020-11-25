@@ -577,23 +577,26 @@ import { CountUp } from './vendors/counterup';
     initCarousel () {
       const slider_wrapper = $('.js-speakers')
       const slick_settings = {
-        dots: false,
-        arrows: true,
+        dots: true,
+        arrows: false,
         slidesToShow: 5,
         infinite: false,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
         responsive: [
           {
             breakpoint: 680,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
+              autoplay: false,
             },
           },
         ],
       }
 
-      if (!slider_wrapper.hasClass("slick-initialized")) {
+      if (! slider_wrapper.hasClass("slick-initialized")) { 
         const slick_slider = slider_wrapper.slick(slick_settings)
       }
     }
@@ -648,7 +651,7 @@ import { CountUp } from './vendors/counterup';
   }
 
    // gremio script
-   if ($("body").hasClass("page-template-templates_landing-foro-valor-php")) {
+   if ($("body").hasClass("page-template-_landing-foro-valor")) {
     $creamosScope.init();
   }
 })(jQuery);

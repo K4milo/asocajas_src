@@ -1,0 +1,70 @@
+.agenda {
+    background-color: $green-olive;
+
+    &__header {
+        padding-top: rem(90px);
+
+        h2 {
+            color: $white;
+            text-transform: uppercase;
+            letter-spacing: rem(2px);
+        }
+    }
+
+    &__wrapper {
+        background-color: $white;
+        border-radius: rem(40px);
+        margin-top: rem(40px);
+        margin-bottom: rem(60px);
+    }
+
+    &__headline {
+        text-align: center;
+
+        h3 {
+            border-radius: 0 0 rem(20px) rem(20px);
+            background-color: $fucsia-foro;            
+            display: inline-block;
+            margin: 0 0 rem(30px);
+            color: $white;
+            padding: rem(12px);
+
+            @include mq('md') {
+                padding: rem(18px) rem(23px);
+            }
+        }
+    }
+
+    &__row {
+        padding: rem(10px) rem(20px);
+
+        @include mq('md') {
+            padding: rem(20px) rem(40px);
+        }
+    }
+
+    &__event {
+        h4 {
+            font-size: rem(24px);
+            margin: 0 0 rem(20px);
+        }
+    }
+
+    &__speaker {
+        margin-bottom: rem(20px);
+
+        &--name {
+            font-size: rem(24px);
+            font-weight: 900;
+        }
+
+        &--video {
+            margin: rem(20px) 0;
+            a {
+                color: $fucsia-foro;
+                font-weight: 900;
+                font-size: rem(20px);
+            }
+        }
+    }
+}
