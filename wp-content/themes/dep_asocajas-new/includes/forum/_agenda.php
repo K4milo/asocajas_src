@@ -77,7 +77,7 @@ if ($agenda_items): ?>
                 endwhile;
             endif; ?>
           </div>
-          <?php if($hr): ?>
+          <?php if($hr==true): ?>
           <hr>
         <?php endif; ?>
         </div>
