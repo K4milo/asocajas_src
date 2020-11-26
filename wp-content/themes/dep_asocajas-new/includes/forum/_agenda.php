@@ -51,6 +51,7 @@ if ($agenda_items): ?>
                 $speaker_name = get_sub_field('agenda_speakers_name');
                 $speaker_position = get_sub_field('agenda_speakers_position');
                 $speaker_video = get_sub_field('agenda_speakers_video');
+                $hr = get_sub_field('divisor');
               ?>
 
               <div class="agenda__speaker">
@@ -76,7 +77,9 @@ if ($agenda_items): ?>
                 endwhile;
             endif; ?>
           </div>
+          <?php if($divisor) ?>
           <hr>
+          <?php endif; ?>
         </div>
       </div>
       <?php
