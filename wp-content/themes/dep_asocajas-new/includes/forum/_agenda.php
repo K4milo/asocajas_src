@@ -22,6 +22,7 @@ if ($agenda_items): ?>
         $agenda_date = get_sub_field('agenda_schedule');
         $agenda_headline = get_sub_field('agenda_headline');
         $agenda_speakers = get_sub_field('agenda_speakers');
+        $hr = get_sub_field('divisor');
       ?>
       <div class="row agenda__row">
         <div class="col-md-5">
@@ -51,7 +52,7 @@ if ($agenda_items): ?>
                 $speaker_name = get_sub_field('agenda_speakers_name');
                 $speaker_position = get_sub_field('agenda_speakers_position');
                 $speaker_video = get_sub_field('agenda_speakers_video');
-                $hr = get_sub_field('divisor');
+
               ?>
 
               <div class="agenda__speaker">
