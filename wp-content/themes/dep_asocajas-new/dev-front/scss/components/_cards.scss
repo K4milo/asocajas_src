@@ -47,7 +47,11 @@
             }
 
             img {
-                max-width: 90%;
+              max-width: 250px;
+              @include mq('md'){
+                max-width: 200px;
+              }
+
             }
         }
 

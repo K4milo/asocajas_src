@@ -1,7 +1,7 @@
-<section id="banners">
+<section id="banners-historia">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-lg-6">
+      <div class="col-xs-12 col-md-6 col-lg-6 text-center">
         <img src="<?php the_field('imagen_banner') ?>" alt="">
       </div>
       <div class="col-xs-12 col-md-6 col-lg-6">
@@ -18,11 +18,15 @@
        while(have_rows('fechas')): the_row();
        ?>
        <div class="fechas-item">
-         <figure>
+         <div class="icono">
            <img src="<?php the_sub_field('icono') ?>" alt="">
-         </figure>
+         </div>
          <div class="info">
-           <?php the_sub_field('info') ?>
+           <h2 style="color:<?php the_sub_field('color') ?>"><?php the_sub_field('ano') ?></h2>
+           <div class="texto">
+             <?php the_sub_field('info') ?>
+           </div>
+
          </div>
        </div>
      <?php endwhile; ?>

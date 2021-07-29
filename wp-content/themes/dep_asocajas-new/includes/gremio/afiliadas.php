@@ -1,12 +1,8 @@
 <section id="afiliadas"  class="container-fluid">
   <div class="afiliadas__wrapper row">
     <div class="afiliadas__wrapper-title">
-      <?php echo the_sub_field('titulo') ?>
-      Nuestras Afiliadas
+      <?php  the_field('titulo') ?>
     </div>
-    <p>
-      A continuación, encontrará nuestras 35 Cajas de Compensación Familiar afiliadas a nivel nacional.
-    </p>
     <div class="afiliadas__wrapper-cajas ">
 
       <?php

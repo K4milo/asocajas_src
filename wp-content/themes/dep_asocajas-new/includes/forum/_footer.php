@@ -6,7 +6,7 @@
       </div>
       <div class="col-md-6 footer-foro__content-info">
         <p> <span>Para más información:</span> </p>
-        <p>foro@asocajas.org.co comunicaciones@asocajas.org.co</p>
+        <p>foro@asocajas.org.co      comunicaciones@asocajas.org.co</p>
       </div>
     </div>
     <div class="row text-center">

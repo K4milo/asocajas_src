@@ -171,7 +171,7 @@
 		</div>
 		<div id="destacados">
 			<header>
-				<h2>Revistas Destacadas</h2>
+				<h2>Artículos Destacados</h2>
 			</header>
 			<div  class="pod-news--wrapper">
 				<?php

@@ -47,24 +47,33 @@
             padding: 5%;
             @include mq('md'){
               display: flex;
-              padding: 1% 15%;
+              padding: 0% 15%;
             }
-            figure{
+            .icono{
+
+              @include mq('md'){
+                border-right: 30px solid #d3d3d3;
+                padding-right: 20px;
+              }
               img{
                 max-width: 92px;
                 height: 92px;
-                @include mq('md');
-
               }
             }
             .info{
               padding: 0 5%;
               h2{
-                font-family: $bd;
-                font-size: 24px;
+                font-family: $hv;
+                font-size: 28px;
               @include mq('md'){
-                font-size: 30px;
-              }              }
+                font-size: 38px;
+              }
+            }
+            .texto{
+              background: $white;
+              margin-left: -61px;
+              padding: 20px 20px 20px 40px;
+            }
             }
           }
         }
