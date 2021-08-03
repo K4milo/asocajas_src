@@ -2,14 +2,10 @@
 
 	// Filter component by date
 	setlocale(LC_ALL,"es_ES");
-
-	$month = $_POST['register_month'];
-	$year = $_POST['register_year'];
-	$cat = $_POST['register_cat'];
-	$date = DateTime::createFromFormat('!m', $month);
-	$monthName = strftime('%B', mktime(0, 0, 0, $month));
+	$cat = (isset($_POST['register_cat'])) ? $_POST['register_cat'] : 'all';
 	$args;
 	$paged = (get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+	$editions = get_terms(array('taxonomy' => 'edicion-revista'));
 
 ?>
 
@@ -26,8 +22,14 @@
 				<div class="form-item form-item--select">
 					<select required name="register_cat">
 						<option value="">Edición</option>
-						<option value="34">Edición 34</option>
-						<option value="35">Edición 35</option>
+						<option value="all">Todas</option>
+						<?php
+						foreach ( $editions as $edition ):
+						?>
+							<option value="<?php echo $edition->slug; ?>"><?php echo $edition->name; ?></option>
+						<?php
+						endforeach;
+						?>
 					</select>
 				</div>
 				<div class="form-item form-item--actions">
@@ -40,38 +42,19 @@
 			<?php
 				// Filter component by date
 
-				if($month && $year && $cat) {
-
-					if($cat != 'all'){
-						$args = array (
-							'post_type' => 'Revistas',
-							'posts_per_page' => 6,
-							'paged'          => $paged,
-							'category_name' => $cat,
-							'date_query' => array(
-							    array(
-							    	'column'  => 'post_date',
-							        'after' => $year.'-'.$month.'-'.'01',
-							        'before' => $year.'-'.$month.'-'.'30',
-							        'inclusive' => true,
-							    ),
-							),
-						);
-					} else {
-						$args = array (
-							'post_type' => 'Revistas',
-							'posts_per_page' => 6,
-							'paged'          => $paged,
-							'date_query' => array(
-							    array(
-							    	'column'  => 'post_date',
-							        'after' => $year.'-'.$month.'-'.'01',
-							        'before' => $year.'-'.$month.'-'.'30',
-							        'inclusive' => true,
-							    ),
-							),
-						);
-					}
+				if($cat != 'all') {
+					$args = array (
+						'post_type' => 'revistas',
+						'posts_per_page' => 6,
+						'paged'          => $paged,
+						'tax_query' => array(
+							array (
+								'taxonomy' => 'edicion-revista',
+								'field' => 'slug',
+								'terms' => $cat,
+							)
+						),
+					);
 
 				} else {
 

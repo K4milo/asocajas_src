@@ -24,15 +24,15 @@
 		<div class="wrapper-form filter">
 			<form id="FilterTop" action="<?php the_permalink()?>" method="post">
 				<div class="form-item form-item--select">
-					<select required name="register_cat">
-						<option value="">Categoría</option>
+					<select name="register_cat">
+						<option value="all">Categoría</option>
 						<option value="all">Todas</option>
 						<option value="asocajas">Asocajas</option>
 						<option value="afiliadas">Afiliadas</option>
 					</select>
 				</div>
 				<div class="form-item form-item--select">
-					<select required name="register_month">
+					<select name="register_month">
 						<option value="">Mes</option>
 						<option value="01">Enero</option>
 						<option value="02">Febrero</option>
@@ -49,11 +49,13 @@
 					</select>
 				</div>
 				<div class="form-item form-item--select">
-					<select required name="register_year">
+					<select name="register_year">
 						<option value="">Año</option>
 						<option value="2017">2017</option>
 						<option value="2018">2018</option>
 						<option value="2019">2019</option>
+						<option value="2020">2020</option>
+						<option value="2021">2021</option>
 					</select>
 				</div>
 
@@ -67,39 +69,47 @@
 			<?php
 				// Filter component by date
 
-				if($month && $year && $cat) {
+				if($month && $year && $cat != 'all') {
 
-					if($cat != 'all'){
-						$args = array (
-							'post_type' => 'post',
-							'posts_per_page' => 6,
-							'paged'          => $paged,
-							'category_name' => $cat,
-							'date_query' => array(
-							    array(
-							    	'column'  => 'post_date',
-							        'after' => $year.'-'.$month.'-'.'01',
-							        'before' => $year.'-'.$month.'-'.'30',
-							        'inclusive' => true,
-							    ),
+					$args = array (
+						'post_type' => 'post',
+						'posts_per_page' => 6,
+						'paged'          => $paged,
+						'category_name' => $cat,
+						'date_query' => array(
+							array(
+								'column'  => 'post_date',
+								'after' => $year.'-'.$month.'-'.'01',
+								'before' => $year.'-'.$month.'-'.'30',
+								'inclusive' => true,
 							),
-						);
-					} else {
-						$args = array (
-							'post_type' => 'post',
-							'posts_per_page' => 6,
-							'paged'          => $paged,
-							'date_query' => array(
-							    array(
-							    	'column'  => 'post_date',
-							        'after' => $year.'-'.$month.'-'.'01',
-							        'before' => $year.'-'.$month.'-'.'30',
-							        'inclusive' => true,
-							    ),
-							),
-						);
-					}
-
+						),
+					);
+				} else if ($year) {
+					$args = array (
+						'post_type' => 'post',
+						'posts_per_page' => 6,
+						'paged'          => $paged,
+						'date_query' => array(
+							array('year' => $year),
+						),
+					);
+				} else if ($month) {
+					$args = array (
+						'post_type' => 'post',
+						'posts_per_page' => 6,
+						'paged'          => $paged,
+						'date_query' => array(
+							array('month' => $month),
+						),
+					);
+				} else if ($cat != 'all') {
+					$args = array (
+						'post_type' => 'post',
+						'posts_per_page' => 6,
+						'paged'          => $paged,
+						'category_name' => $cat,
+					);
 				} else {
 
 					$args = array(
