@@ -13,7 +13,8 @@ section {
 			flex-wrap: wrap;
 		}
 
-		.home-news{
+		.home-news,
+		.home-news--featured {
 			width: 100%;
 
 			@include mq('md'){

@@ -70,7 +70,7 @@
 
 
 
-				if($query->have_posts()):
+			if($query->have_posts()):
 
 				while ( $query->have_posts() ) : $query->the_post();
 
@@ -110,60 +110,61 @@
 			<?php
 				endwhile;
 
-				if (function_exists(custom_pagination)) {
+				if (function_exists(custom_pagination)):
 					custom_pagination($query->max_num_pages, "", $paged);
-				}
-
-				wp_reset_query();
-				else:
+				endif;
+			else:
 			?>
 				<div class="no-content">
 					<h2>No existen Notas de Prensa con ese criterio de fechas o categoría, por favor intenta de nuevo</h2>
 				</div>
-			<?php endif; ?>
-
+			<?php
+			
+			endif; wp_reset_query(); ?>
 		</div>
+
 		<div id="destacados">
-			<header>
-				<h2>Noticias Destacadas</h2>
-			</header>
-			<div  class="pod-news--wrapper">
+		<header>
+			<h2>Noticias Destacadas</h2>
+		</header>
+		<div  class="pod-news--wrapper">
 				<?php
-				$args = array (
+				$args_news = array (
 					'post_type' => 'post',
 					'posts_per_page' => 2,
 					'category_name' => 'destacado'
 				);
-				$query = new WP_Query( $args );
+				$query_news = new WP_Query( $args_news );
 
-				if($query->have_posts()):
+				if($query_news->have_posts()):
 
-				while ( $query->have_posts() ) : $query->the_post();
+				while ( $query_news->have_posts() ) : $query_news->the_post();
 				 ?>
-				 <div class=" home-news">
-							 <div class="row mobile">
-								 <div class="box_news_small">
-									 <div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
-									 </div>
-									 <div class="box_padding">
-										 <div class="date_news">
-											 <?php the_time('d/m/Y'); ?>| NOTICIA
-										 </div>
-										 <div class="title_news">
-											 <?php the_title(); ?>
-										 </div>
-										 <div class="link_news">
-											 <a href="<?php the_permalink(); ?>">
-												 Leer la noticia >
-											 </a>
-										 </div>
-									 </div>
-								 </div>
-							 </div>
+				 <div class="home-news--featured">
+					<div class="row mobile">
+						<div class="box_news_small">
+							<div class="box_bg" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')">
+							</div>
+							<div class="box_padding">
+								<div class="date_news">
+									<?php the_time('d/m/Y'); ?>| NOTICIA
+								</div>
+								<div class="title_news">
+									<?php the_title(); ?>
+								</div>
+								<div class="link_news">
+									<a href="<?php the_permalink(); ?>">
+										Leer la noticia >
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				 </div>
-			 <?php endwhile; ?>
-			 <?php endif;
-							wp_reset_query();
+			 <?php 
+			 	endwhile; 
+			 	endif;
+				wp_reset_query();
 			 ?>
 			</div>
 		</div>

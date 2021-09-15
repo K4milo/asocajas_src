@@ -114,7 +114,7 @@
 
     &--resources {
         @include mq('md') {
-            min-height: 330px;
+            min-height: 440px;
         }
         p, a {
             font-family: $bd;
